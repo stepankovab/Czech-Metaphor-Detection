@@ -48,3 +48,14 @@ I find it a bit too strict.
     - *Each word, including function words, is annotated as metaphoric or literal*
     - *including the non-spatial meaning of in* [*An analysis of language models for metaphor recognition*]
 
+
+
+
+## [*Using GPT-4 for Conventional Metaphor Detection in English  News Texts*]
+
+
+- extreme dobry intro na vysvetleni metafory
+
+```
+Since the cognitive turn of the 1980s, metaphors are no longer seen as mere decorative devices or instances of deviant language use. They are recognized as a fundamental cognitive tool in human understanding and communication. Metaphors allow us to think and talk about abstract, complex and unfamiliar concepts, such as time or the economy, in terms of more concrete, simple and familiar ones, such as physical space, movement or living entities. For example, we say that something happened ‘in’ 2024 or ‘between’ 2020 and 2023, that our holidays ‘flew by so fast’, or that prices are ‘soaring’ while zhe or ‘flourishes’. Lakoff and Johnson’s (1980, 1999) groundbreaking work showed that such metaphorical uses of words and phrases – e.g. ‘in’ and ‘withers’ – form systematic patterns in our everyday language use because they are the linguistic realizations of underlying conventional conceptual metaphors – ‘in 2024’ → time is space and ‘the economy withers’ → the economy is a plant / living organism. Since most of the metaphors we use are conventional both in language and thought, we normally use and understand them automatically and effortlessly, without even realizing that they are metaphors.
+```

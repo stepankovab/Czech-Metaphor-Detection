@@ -94,6 +94,22 @@ The dataset is difficult to use from a machine-learning perspective, because it 
 - big spanish MIPVU anotated dataset
 
 
+### CZECH DATA
+
+- 2400 tokens
+- 4 genres:
+    - academic
+    - fiction
+    - news
+    - spoken
+
+- From Dalibor Pavlas
+- [*Applying MIPVU Metaphor Identification Procedure on Czech*]
+    - some parts unpublished - originally for a PhD thesis
+
+
+
+
 ## Metaphor Paraphrasing
 
 ### Bizzoni

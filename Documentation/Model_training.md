@@ -14,3 +14,9 @@ https://github.com/EhsanAghazadeh/Metaphors_in_PLMs
 - finetune in one language and zero shot in a different one
 
 
+### Enhanced Siamese Networkd
+
+https://github.com/SilasTHU/MisNet
+
+- the best performance till today (pry)
+    - f1 = 79 myslim

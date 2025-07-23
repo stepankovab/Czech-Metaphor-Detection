@@ -16,3 +16,11 @@ A genre-based comparison of metaphor in literature would involve a wide-ranging 
 ### Transfer learning between languages: data amount or linguicstic closeness
 
 - Compare transfer learning from English, Spanish, Slovenian
+
+
+### Generalization to different domains
+
+- to poetry
+- to song lyrics
+- to legal text
+- to medical documents idfk

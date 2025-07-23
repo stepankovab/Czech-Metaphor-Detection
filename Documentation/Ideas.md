@@ -10,3 +10,9 @@ A genre-based comparison of metaphor in literature would involve a wide-ranging 
 
 - Vysvetlit co tim autor chtel rict?
 - navazat na [*Cross-lingual Metaphor Paraphrase Detection – Experimental Corpus and Baselines*]
+
+
+
+### Transfer learning between languages: data amount or linguicstic closeness
+
+- Compare transfer learning from English, Spanish, Slovenian

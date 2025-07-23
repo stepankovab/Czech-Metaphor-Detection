@@ -1,5 +1,7 @@
 # Metaphor definition
 
+Metaphor can broadly be defined as the interpretation of a concept belonging to one domain in terms of another concept from a different domain (Lakoff and Johnson, 1980).
+
 ## *[Metaphor Detection in a Poetry Corpus]*
 
 Metaphor differs from idioms, because one can understand a metaphor even with no prior knowledge 

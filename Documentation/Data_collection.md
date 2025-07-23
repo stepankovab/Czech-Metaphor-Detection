@@ -2,7 +2,7 @@
 
 ## Metaphor Detection
 
-### Tsvestkov
+### Tsvetkov
 
 From paper *Metaphor Detection with Cross-Lingual Model Transfer*
 
@@ -72,6 +72,26 @@ Mohammad et al 2016
 ### TroFi
 
 - verb metaphor detection dataset consisting of sentences from the 1987-89 Wall Street Journal Corpus Release 1
+
+
+### LCC - English, Spanish, Russian, Farsi
+
+- big
+- anotating pairs of words
+- [TODO] stahnout
+
+
+### KOMET - Slovenian
+
+The dataset is difficult to use from a machine-learning perspective, because it has a very broad definition of metaphorical language, and many noisy examples. In terms of metaphor types, the corpus contains direct and indirect metaphors1, edge-case metaphors which can be interpreted literally or metaphorically depending on the wider (extra-textual) context, and metaphoric signifier information which denotes so called “metaphor flags” - expressions that indicate metaphorical use (such as “like” or “metaphorically speaking”). For a large number of metaphors, no type is specified. [*Extracting and Analysing Metaphors in Migration Media Discourse: towards a Metaphor Annotation Scheme*]
+
+- 200k words
+- MIPVU
+
+
+### CoMeta - Spanish
+
+- big spanish MIPVU anotated dataset
 
 
 ## Metaphor Paraphrasing

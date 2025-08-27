@@ -17,6 +17,12 @@ A genre-based comparison of metaphor in literature would involve a wide-ranging 
 
 - Compare transfer learning from English, Spanish, Slovenian
 
+```
+We follow the idea that metaphoric  words often stay robust or conceptual across languages (Stowe et al., 2021; Shutova and Teufel, 2010; Yan et al., 2010).
+```
+- from Transfer Learning Parallel Metaphor using Bilingual Embeddings
+
+
 
 ### Generalization to different domains
 

@@ -126,3 +126,84 @@ it is a task to decide whether a given English sentence containing a metaphor co
 - the first sentence in English contains a metaphorical expression, the second sentence, in Czech, is a potential paraphrase candidate followed by its translation to English
 
 - https://github.com/martinvita/FigurativeLanguageParaphrasing/blob/master/crossLingualMetaphorParaphraseEN-CZ.csv
+
+
+
+
+
+
+
+
+
+
+
+## Multilingual MIPVU
+
+It seems like there are multiple datasets in multiple languages
+
+Many MIPVU strategies described in a book **Metaphor Identification in Multiple Languages: MIPVU around the World**, however no Karlovka acess
+
+### English
+
+obv
+
+### Spanish
+
+- Cometa
+- meta4xnlli
+
+### german
+
+[German Metaphor Corpus](https://aclanthology.org/2022.lrec-1.273/)
+[TODO]
+
+### Hungarian
+
+https://link.springer.com/article/10.1007/s10579-023-09705-9
+
+- Predstavuji spoustu troubles s vytvarenim MIPVU schematu ale data venku nemaji. 
+- Pry je daji upon request... Nerikaji kolik jich tam je ani.  
+- (Tak pry 5976 tokens)
+
+#### Finnish-Hungarian
+
+
+- FiHuCoMet corpus
+- pry parallel???
+- [TODO]
+
+### Czech
+
+- nejakych tech 2400 tokens?
+
+### Slovenian
+
+- yes
+
+
+### Polish
+
+- Annotation of metaphorical expressions in the Basic Corpus of Polish Metaphors
+- small ale neco to je
+- Researchers interested in accessing the dataset or collaborating on metaphor research in Polish are encouraged to contact the author, Elżbieta Hajnicz, at hajnicz@ipipan.waw.pl.
+
+
+### Danish, Swedish, Norwegian
+
+while not available (as Chapter 7. Linguistic metaphor identification in Scandinavian is restricted), their data are free
+- https://search.dataone.org/view/sha256%3A4b82718b4a0962fe09e9938373f7fe7ff953e803eadab9f767055cd711c24894
+- probably?
+- [TODO]
+- pry 2k slov od kazdyho
+
+
+### Italian
+
+pry proverbs
+
+PROMETHEUS: A Corpus of Proverbs Annotated with Metaphors
+
+nevim co to presne znamena 
+
+[TODO]
+

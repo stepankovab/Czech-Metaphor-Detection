@@ -207,3 +207,6 @@ nevim co to presne znamena
 
 [TODO]
 
+
+
+### V meta4xnli je tabulka ruznych datasetu

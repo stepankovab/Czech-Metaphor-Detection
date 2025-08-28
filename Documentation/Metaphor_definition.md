@@ -59,3 +59,12 @@ I find it a bit too strict.
 ```
 Since the cognitive turn of the 1980s, metaphors are no longer seen as mere decorative devices or instances of deviant language use. They are recognized as a fundamental cognitive tool in human understanding and communication. Metaphors allow us to think and talk about abstract, complex and unfamiliar concepts, such as time or the economy, in terms of more concrete, simple and familiar ones, such as physical space, movement or living entities. For example, we say that something happened ‘in’ 2024 or ‘between’ 2020 and 2023, that our holidays ‘flew by so fast’, or that prices are ‘soaring’ while zhe or ‘flourishes’. Lakoff and Johnson’s (1980, 1999) groundbreaking work showed that such metaphorical uses of words and phrases – e.g. ‘in’ and ‘withers’ – form systematic patterns in our everyday language use because they are the linguistic realizations of underlying conventional conceptual metaphors – ‘in 2024’ → time is space and ‘the economy withers’ → the economy is a plant / living organism. Since most of the metaphors we use are conventional both in language and thought, we normally use and understand them automatically and effortlessly, without even realizing that they are metaphors.
 ```
+
+
+
+
+
+## Berger ugh
+
+
+For the labeling procedure, we follow the MIPVU guidelines (Steen et al., 2010). MIPVU requires the annotator to, for each word, identify the meaning of the word in the context it is used, then look it up in the dictionary and determine if a ”more basic” (that means more concrete or human-oriented) meaning is present. If such a more basic meaning can be found, then, as a last step, decide if these two meanings are related by similarity and still sufficiently distinct. If both points are true, then the word can be labelled as metaphor. These guidelines offer a tremendous help during the decision process on whether a word is used metaphorically or literally in the given context.

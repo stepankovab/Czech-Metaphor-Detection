@@ -1,0 +1,987 @@
+<?xml version="1.0" encoding="utf-8"?>
+   <div xml:id="komet72" xmlns="http://www.tei-c.org/ns/1.0" xml:lang="sl">
+      <bibl corresp="#komet72" n="komet72">
+         <title>V ZRAKU JE LJUBEZEN</title>
+         <publisher>Salomon, d. o. o.</publisher>
+         <date>2018</date>
+         <term ref="#Ft.K.P" type="Ft">publicistika</term>
+      </bibl>
+      <p xml:id="komet72.1">
+         <s xml:id="komet72.1.1">
+            <seg type="metaphor" subtype="frame" ana="#met.idiom">
+               <w ana="mte:Sl" msd="UposTag=ADP|Case=Loc" lemma="v" xml:id="komet72.1.1.t1">V</w><c> </c>
+               <seg type="metaphor" subtype="frame" ana="#met.metonymy">
+                  <seg type="metaphor" subtype="WIDLI">
+                     <w ana="mte:Ncmsl" msd="UposTag=NOUN|Case=Loc|Gender=Masc|Number=Sing" lemma="zrak" xml:id="komet72.1.1.t2">ZRAKU</w>
+                  </seg>
+               </seg><c> </c>
+               <w ana="mte:Va-r3s-n" msd="UposTag=VERB|Mood=Ind|Number=Sing|Person=3|Polarity=Pos|Tense=Pres|VerbForm=Fin" lemma="biti" xml:id="komet72.1.1.t3">JE</w><c> </c>
+               <w ana="mte:Ncfsn" msd="UposTag=NOUN|Case=Nom|Gender=Fem|Number=Sing" lemma="ljubezen" xml:id="komet72.1.1.t4">LJUBEZEN</w>
+            </seg>
+            <linkGrp corresp="#komet72.1.1" targFunc="head argument" type="UD-SYN">
+               <link ana="ud-syn:case" target="#komet72.1.1.t2 #komet72.1.1.t1"/>
+               <link ana="ud-syn:obl" target="#komet72.1.1.t3 #komet72.1.1.t2"/>
+               <link ana="ud-syn:root" target="#komet72.1.1 #komet72.1.1.t3"/>
+               <link ana="ud-syn:nsubj" target="#komet72.1.1.t3 #komet72.1.1.t4"/>
+            </linkGrp>
+         </s>
+      </p>
+      <p xml:id="komet72.2">
+         <s xml:id="komet72.2.1">
+            <w ana="mte:Agpfsn" msd="UposTag=ADJ|Case=Nom|Degree=Pos|Gender=Fem|Number=Sing" lemma="bogat" xml:id="komet72.2.1.t1">Bogata</w><c> </c>
+            <w ana="mte:Ncfsn" msd="UposTag=NOUN|Case=Nom|Gender=Fem|Number=Sing" lemma="kneževina" xml:id="komet72.2.1.t2">kneževina</w><c> </c>
+            <w ana="mte:Npmsn" msd="UposTag=PROPN|Case=Nom|Gender=Masc|Number=Sing" lemma="Monako" xml:id="komet72.2.1.t3">Monako</w>
+            <pc ana="mte:Z" msd="UposTag=PUNCT" xml:id="komet72.2.1.t4">,</pc><c> </c>
+            <w ana="mte:Sl" msd="UposTag=ADP|Case=Loc" lemma="v" xml:id="komet72.2.1.t5">v</w><c> </c>
+            <w ana="mte:Pq-fsl" msd="UposTag=DET|Case=Loc|Gender=Fem|Number=Sing|PronType=Int" lemma="kateri" xml:id="komet72.2.1.t6">kateri</w><c> </c>
+            <w ana="mte:Px------y" msd="UposTag=PRON|PronType=Prs|Reflex=Yes|Variant=Short" lemma="se" xml:id="komet72.2.1.t7">se</w><c> </c>
+            <w ana="mte:Sl" msd="UposTag=ADP|Case=Loc" lemma="v" xml:id="komet72.2.1.t8">v</w><c> </c>
+            <w ana="mte:Ncnsl" msd="UposTag=NOUN|Case=Loc|Gender=Neut|Number=Sing" lemma="zakulisje" xml:id="komet72.2.1.t9">zakulisju</w><c> </c>
+            <w ana="mte:Vmpr3s" msd="UposTag=VERB|Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin" lemma="dogajati" xml:id="komet72.2.1.t10">dogaja</w><c> </c>
+            <w ana="mte:Pi-nsa" msd="UposTag=PRON|Case=Acc|Gender=Neut|Number=Sing|PronType=Ind" lemma="marsikaj" xml:id="komet72.2.1.t11">marsikaj</w><c> </c>
+            <w ana="mte:Cs" msd="UposTag=SCONJ" lemma="kot" xml:id="komet72.2.1.t12">kot</w><c> </c>
+            <w ana="mte:Sl" msd="UposTag=ADP|Case=Loc" lemma="v" xml:id="komet72.2.1.t13">v</w><c> </c>
+            <w ana="mte:Pq-fsl" msd="UposTag=DET|Case=Loc|Gender=Fem|Number=Sing|PronType=Int" lemma="kakšen" xml:id="komet72.2.1.t14">kakšni</w><c> </c>
+            <w ana="mte:Agpfsl" msd="UposTag=ADJ|Case=Loc|Degree=Pos|Gender=Fem|Number=Sing" lemma="hollywoodski" xml:id="komet72.2.1.t15">hollywoodski</w><c> </c>
+            <w ana="mte:Ncfsl" msd="UposTag=NOUN|Case=Loc|Gender=Fem|Number=Sing" lemma="nadaljevanka" xml:id="komet72.2.1.t16">nadaljevanki</w>
+            <pc ana="mte:Z" msd="UposTag=PUNCT" xml:id="komet72.2.1.t17">,</pc><c> </c>
+            <w ana="mte:Pg-nsn" msd="UposTag=DET|Case=Nom|Gender=Neut|Number=Sing|PronType=Tot" lemma="vsak" xml:id="komet72.2.1.t18">vsako</w><c> </c>
+            <w ana="mte:Ncnsn" msd="UposTag=NOUN|Case=Nom|Gender=Neut|Number=Sing" lemma="leto" xml:id="komet72.2.1.t19">leto</w><c> </c>
+            <w ana="mte:Q" msd="UposTag=PART" lemma="še" xml:id="komet72.2.1.t20">še</w><c> </c>
+            <w ana="mte:Rgp" msd="UposTag=ADV|Degree=Pos" lemma="posebej" xml:id="komet72.2.1.t21">posebej</w><c> </c>
+            <w ana="mte:Vmer3s" msd="UposTag=VERB|Aspect=Perf|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin" lemma="pritegniti" xml:id="komet72.2.1.t22">pritegne</w><c> </c>
+            <w ana="mte:Ncfsa" msd="UposTag=NOUN|Case=Acc|Gender=Fem|Number=Sing" lemma="pozornost" xml:id="komet72.2.1.t23">pozornost</w><c> </c>
+            <seg type="metaphor" subtype="frame" ana="#met.means_of_action">
+               <seg type="metaphor" subtype="MRWi">
+                  <w ana="mte:Si" msd="UposTag=ADP|Case=Ins" lemma="z" xml:id="komet72.2.1.t24">s</w>
+               </seg>
+            </seg><c> </c>
+            <w ana="mte:Agpmsi" msd="UposTag=ADJ|Case=Ins|Degree=Pos|Gender=Masc|Number=Sing" lemma="tradicionalen" xml:id="komet72.2.1.t25">tradicionalnim</w><c> </c>
+            <w ana="mte:Agpmsi" msd="UposTag=ADJ|Case=Ins|Degree=Pos|Gender=Masc|Number=Sing" lemma="dobrodelen" xml:id="komet72.2.1.t26">dobrodelnim</w><c> </c>
+            <w ana="mte:Ncmsi" msd="UposTag=NOUN|Case=Ins|Gender=Masc|Number=Sing" lemma="gala" xml:id="komet72.2.1.t27">gala</w><c> </c>
+            <w ana="mte:Ncmsi" msd="UposTag=NOUN|Case=Ins|Gender=Masc|Number=Sing" lemma="ples" xml:id="komet72.2.1.t28">Plesom</w><c> </c>
+            <w ana="mte:Ncfpg" msd="UposTag=NOUN|Case=Gen|Gender=Fem|Number=Plur" lemma="vrtnica" xml:id="komet72.2.1.t29">vrtnic</w><c> </c>
+            <w ana="mte:Sl" msd="UposTag=ADP|Case=Loc" lemma="v" xml:id="komet72.2.1.t30">v</w><c> </c>
+            <w ana="mte:Agpmsl" msd="UposTag=ADJ|Case=Loc|Degree=Pos|Gender=Masc|Number=Sing" lemma="prestižen" xml:id="komet72.2.1.t31">prestižnem</w><c> </c>
+            <w ana="mte:Npmsn" msd="UposTag=PROPN|Case=Nom|Gender=Masc|Number=Sing" lemma="Sportin" xml:id="komet72.2.1.t32">Sporting</w><c> </c>
+            <w ana="mte:Ncmsl" msd="UposTag=NOUN|Case=Loc|Gender=Masc|Number=Sing" lemma="Club" xml:id="komet72.2.1.t33">Clubu</w>
+            <pc ana="mte:Z" msd="UposTag=PUNCT" xml:id="komet72.2.1.t34">.</pc>
+            <linkGrp corresp="#komet72.2.1" targFunc="head argument" type="UD-SYN">
+               <link ana="ud-syn:amod" target="#komet72.2.1.t2 #komet72.2.1.t1"/>
+               <link ana="ud-syn:nsubj" target="#komet72.2.1.t22 #komet72.2.1.t2"/>
+               <link ana="ud-syn:nmod" target="#komet72.2.1.t2 #komet72.2.1.t3"/>
+               <link ana="ud-syn:punct" target="#komet72.2.1.t10 #komet72.2.1.t4"/>
+               <link ana="ud-syn:case" target="#komet72.2.1.t6 #komet72.2.1.t5"/>
+               <link ana="ud-syn:obl" target="#komet72.2.1.t10 #komet72.2.1.t6"/>
+               <link ana="ud-syn:expl" target="#komet72.2.1.t10 #komet72.2.1.t7"/>
+               <link ana="ud-syn:case" target="#komet72.2.1.t9 #komet72.2.1.t8"/>
+               <link ana="ud-syn:obl" target="#komet72.2.1.t10 #komet72.2.1.t9"/>
+               <link ana="ud-syn:acl" target="#komet72.2.1.t2 #komet72.2.1.t10"/>
+               <link ana="ud-syn:obj" target="#komet72.2.1.t10 #komet72.2.1.t11"/>
+               <link ana="ud-syn:case" target="#komet72.2.1.t16 #komet72.2.1.t12"/>
+               <link ana="ud-syn:case" target="#komet72.2.1.t16 #komet72.2.1.t13"/>
+               <link ana="ud-syn:det" target="#komet72.2.1.t16 #komet72.2.1.t14"/>
+               <link ana="ud-syn:amod" target="#komet72.2.1.t16 #komet72.2.1.t15"/>
+               <link ana="ud-syn:obl" target="#komet72.2.1.t10 #komet72.2.1.t16"/>
+               <link ana="ud-syn:punct" target="#komet72.2.1.t10 #komet72.2.1.t17"/>
+               <link ana="ud-syn:det" target="#komet72.2.1.t19 #komet72.2.1.t18"/>
+               <link ana="ud-syn:nsubj" target="#komet72.2.1.t22 #komet72.2.1.t19"/>
+               <link ana="ud-syn:advmod" target="#komet72.2.1.t22 #komet72.2.1.t20"/>
+               <link ana="ud-syn:advmod" target="#komet72.2.1.t22 #komet72.2.1.t21"/>
+               <link ana="ud-syn:root" target="#komet72.2.1 #komet72.2.1.t22"/>
+               <link ana="ud-syn:obj" target="#komet72.2.1.t22 #komet72.2.1.t23"/>
+               <link ana="ud-syn:case" target="#komet72.2.1.t27 #komet72.2.1.t24"/>
+               <link ana="ud-syn:amod" target="#komet72.2.1.t27 #komet72.2.1.t25"/>
+               <link ana="ud-syn:amod" target="#komet72.2.1.t27 #komet72.2.1.t26"/>
+               <link ana="ud-syn:nmod" target="#komet72.2.1.t23 #komet72.2.1.t27"/>
+               <link ana="ud-syn:nmod" target="#komet72.2.1.t27 #komet72.2.1.t28"/>
+               <link ana="ud-syn:nmod" target="#komet72.2.1.t28 #komet72.2.1.t29"/>
+               <link ana="ud-syn:case" target="#komet72.2.1.t33 #komet72.2.1.t30"/>
+               <link ana="ud-syn:amod" target="#komet72.2.1.t33 #komet72.2.1.t31"/>
+               <link ana="ud-syn:nmod" target="#komet72.2.1.t33 #komet72.2.1.t32"/>
+               <link ana="ud-syn:nmod" target="#komet72.2.1.t28 #komet72.2.1.t33"/>
+               <link ana="ud-syn:punct" target="#komet72.2.1.t22 #komet72.2.1.t34"/>
+            </linkGrp>
+         </s><c> </c>
+         <s xml:id="komet72.2.2">
+            <w ana="mte:Agpmpn" msd="UposTag=ADJ|Case=Nom|Degree=Pos|Gender=Masc|Number=Plur" lemma="lep" xml:id="komet72.2.2.t1">Lepi</w>
+            <pc ana="mte:Z" msd="UposTag=PUNCT" xml:id="komet72.2.2.t2">,</pc><c> </c>
+            <w ana="mte:Agpmpn" msd="UposTag=ADJ|Case=Nom|Degree=Pos|Gender=Masc|Number=Plur" lemma="slaven" xml:id="komet72.2.2.t3">slavni</w><c> </c>
+            <w ana="mte:Cc" msd="UposTag=CCONJ" lemma="in" xml:id="komet72.2.2.t4">in</w><c> </c>
+            <w ana="mte:Agpmpn" msd="UposTag=ADJ|Case=Nom|Degree=Pos|Gender=Masc|Number=Plur" lemma="bogat" xml:id="komet72.2.2.t5">bogati</w><c> </c>
+            <seg type="metaphor" subtype="frame" ana="#met.direction">
+               <seg type="metaphor" subtype="MRWi">
+                  <w ana="mte:Rgp" msd="UposTag=ADV|Degree=Pos" lemma="naravnost" xml:id="komet72.2.2.t6">naravnost</w>
+               </seg>
+            </seg><c> </c>
+            <w ana="mte:Vmpr3p" msd="UposTag=VERB|Aspect=Imp|Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin" lemma="oboževati" xml:id="komet72.2.2.t7">obožujejo</w><c> </c>
+            <w ana="mte:Agpfsa" msd="UposTag=ADJ|Case=Acc|Degree=Pos|Gender=Fem|Number=Sing" lemma="knežji" xml:id="komet72.2.2.t8">knežjo</w><c> </c>
+            <w ana="mte:Ncfsa" msd="UposTag=NOUN|Case=Acc|Gender=Fem|Number=Sing" lemma="družina" xml:id="komet72.2.2.t9">družino</w>
+            <pc ana="mte:Z" msd="UposTag=PUNCT" xml:id="komet72.2.2.t10">,</pc><c> </c>
+            <w ana="mte:Cs" msd="UposTag=SCONJ" lemma="ki" xml:id="komet72.2.2.t11">ki</w><c> </c>
+            <w ana="mte:Rgp" msd="UposTag=ADV|Degree=Pos" lemma="vsakič" xml:id="komet72.2.2.t12">vsakič</w><c> </c>
+            <w ana="mte:Vmer3s" msd="UposTag=VERB|Aspect=Perf|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin" lemma="poskrbeti" xml:id="komet72.2.2.t13">poskrbi</w><c> </c>
+            <seg type="metaphor" subtype="frame" ana="#met.spatial_orientation">
+               <seg type="metaphor" subtype="MRWi">
+                  <w ana="mte:Sa" msd="UposTag=ADP|Case=Acc" lemma="za" xml:id="komet72.2.2.t14">za</w>
+               </seg>
+            </seg><c> </c>
+            <seg type="metaphor" subtype="frame" ana="#met.cooking">
+               <seg type="metaphor" subtype="MRWi">
+                  <w ana="mte:Agpfpa" msd="UposTag=ADJ|Case=Acc|Degree=Pos|Gender=Fem|Number=Plur" lemma="pikanten" xml:id="komet72.2.2.t15">pikantne</w>
+               </seg>
+            </seg><c> </c>
+            <w ana="mte:Ncfpa" msd="UposTag=NOUN|Case=Acc|Gender=Fem|Number=Plur" lemma="govorica" xml:id="komet72.2.2.t16">govorice</w>
+            <pc ana="mte:Z" msd="UposTag=PUNCT" xml:id="komet72.2.2.t17">.</pc>
+            <linkGrp corresp="#komet72.2.2" targFunc="head argument" type="UD-SYN">
+               <link ana="ud-syn:nsubj" target="#komet72.2.2.t7 #komet72.2.2.t1"/>
+               <link ana="ud-syn:punct" target="#komet72.2.2.t3 #komet72.2.2.t2"/>
+               <link ana="ud-syn:conj" target="#komet72.2.2.t1 #komet72.2.2.t3"/>
+               <link ana="ud-syn:cc" target="#komet72.2.2.t5 #komet72.2.2.t4"/>
+               <link ana="ud-syn:conj" target="#komet72.2.2.t1 #komet72.2.2.t5"/>
+               <link ana="ud-syn:advmod" target="#komet72.2.2.t7 #komet72.2.2.t6"/>
+               <link ana="ud-syn:root" target="#komet72.2.2 #komet72.2.2.t7"/>
+               <link ana="ud-syn:amod" target="#komet72.2.2.t9 #komet72.2.2.t8"/>
+               <link ana="ud-syn:obj" target="#komet72.2.2.t7 #komet72.2.2.t9"/>
+               <link ana="ud-syn:punct" target="#komet72.2.2.t13 #komet72.2.2.t10"/>
+               <link ana="ud-syn:mark" target="#komet72.2.2.t13 #komet72.2.2.t11"/>
+               <link ana="ud-syn:advmod" target="#komet72.2.2.t13 #komet72.2.2.t12"/>
+               <link ana="ud-syn:acl" target="#komet72.2.2.t9 #komet72.2.2.t13"/>
+               <link ana="ud-syn:case" target="#komet72.2.2.t16 #komet72.2.2.t14"/>
+               <link ana="ud-syn:amod" target="#komet72.2.2.t16 #komet72.2.2.t15"/>
+               <link ana="ud-syn:obl" target="#komet72.2.2.t13 #komet72.2.2.t16"/>
+               <link ana="ud-syn:punct" target="#komet72.2.2.t7 #komet72.2.2.t17"/>
+            </linkGrp>
+         </s><c> </c>
+         <s xml:id="komet72.2.3">
+            <w ana="mte:Cc" msd="UposTag=CCONJ" lemma="a" xml:id="komet72.2.3.t1">A</w><c> </c>
+            <w ana="mte:Rgp" msd="UposTag=ADV|Degree=Pos" lemma="tokrat" xml:id="komet72.2.3.t2">tokrat</w><c> </c>
+            <w ana="mte:Va-r3s-n" msd="UposTag=AUX|Mood=Ind|Number=Sing|Person=3|Polarity=Pos|Tense=Pres|VerbForm=Fin" lemma="biti" xml:id="komet72.2.3.t3">je</w><c> </c>
+            <w ana="mte:Agpmsnn" msd="UposTag=ADJ|Case=Nom|Definite=Ind|Degree=Pos|Gender=Masc|Number=Sing" lemma="čaroben" xml:id="komet72.2.3.t4">čaroben</w><c> </c>
+            <w ana="mte:Ncmsn" msd="UposTag=NOUN|Case=Nom|Gender=Masc|Number=Sing" lemma="ambient" xml:id="komet72.2.3.t5">ambient</w>
+            <pc ana="mte:Z" msd="UposTag=PUNCT" xml:id="komet72.2.3.t6">,</pc><c> </c>
+            <seg type="metaphor" subtype="frame" ana="#met.market">
+               <seg type="metaphor" subtype="MRWi">
+                  <w ana="mte:Rgp" msd="UposTag=ADV|Degree=Pos" lemma="bogato" xml:id="komet72.2.3.t7">bogato</w>
+               </seg>
+            </seg><c> </c>
+            <w ana="mte:Appmsnn" msd="UposTag=ADJ|Case=Nom|Definite=Ind|Degree=Pos|Gender=Masc|Number=Sing|VerbForm=Part" lemma="okrašen" xml:id="komet72.2.3.t8">okrašen</w><c> </c>
+            <seg type="metaphor" subtype="frame" ana="#met.means_of_action">
+               <seg type="metaphor" subtype="MRWi">
+                  <w ana="mte:Si" msd="UposTag=ADP|Case=Ins" lemma="z" xml:id="komet72.2.3.t9">s</w>
+               </seg>
+            </seg><c> </c>
+            <w ana="mte:Mdc" msd="UposTag=NUM|NumForm=Digit|NumType=Card" lemma="14.000" xml:id="komet72.2.3.t10">14.000</w><c> </c>
+            <w ana="mte:Ncfpi" msd="UposTag=NOUN|Case=Ins|Gender=Fem|Number=Plur" lemma="vrtnica" xml:id="komet72.2.3.t11">vrtnicami</w>
+            <pc ana="mte:Z" msd="UposTag=PUNCT" xml:id="komet72.2.3.t12">,</pc><c> </c>
+            <w ana="mte:Vmpp-sm" msd="UposTag=VERB|Aspect=Imp|Gender=Masc|Number=Sing|VerbForm=Part" lemma="prevevati" xml:id="komet72.2.3.t13">preveval</w><c> </c>
+            <w ana="mte:Ncmsan" msd="UposTag=NOUN|Animacy=Inan|Case=Acc|Gender=Masc|Number=Sing" lemma="duh" xml:id="komet72.2.3.t14">duh</w><c> </c>
+            <w ana="mte:Ncfsg" msd="UposTag=NOUN|Case=Gen|Gender=Fem|Number=Sing" lemma="sreča" xml:id="komet72.2.3.t15">sreče</w>
+            <pc ana="mte:Z" msd="UposTag=PUNCT" xml:id="komet72.2.3.t16">,</pc><c> </c>
+            <w ana="mte:Ncfsn" msd="UposTag=NOUN|Case=Nom|Gender=Fem|Number=Sing" lemma="princesa" xml:id="komet72.2.3.t17">princesa</w><c> </c>
+            <w ana="mte:Npfsn" msd="UposTag=PROPN|Case=Nom|Gender=Fem|Number=Sing" lemma="Caroline" xml:id="komet72.2.3.t18">Caroline</w><c> </c>
+            <w ana="mte:Cc" msd="UposTag=CCONJ" lemma="pa" xml:id="komet72.2.3.t19">pa</w><c> </c>
+            <w ana="mte:Va-r3s-n" msd="UposTag=AUX|Mood=Ind|Number=Sing|Person=3|Polarity=Pos|Tense=Pres|VerbForm=Fin" lemma="biti" xml:id="komet72.2.3.t20">je</w><c> </c>
+            <seg type="metaphor" subtype="frame" ana="#met.fire">
+               <seg type="metaphor" subtype="MRWi">
+                  <w ana="mte:Vmpp-sf" msd="UposTag=VERB|Aspect=Imp|Gender=Fem|Number=Sing|VerbForm=Part" lemma="žareti" xml:id="komet72.2.3.t21">žarela</w>
+               </seg>
+            </seg><c> </c>
+            <w ana="mte:Cs" msd="UposTag=SCONJ" lemma="kot" xml:id="komet72.2.3.t22">kot</w><c> </c>
+            <w ana="mte:Q" msd="UposTag=PART" lemma="že" xml:id="komet72.2.3.t23">že</w><c> </c>
+            <w ana="mte:Rgp" msd="UposTag=ADV|Degree=Pos" lemma="dolgo" xml:id="komet72.2.3.t24">dolgo</w><c> </c>
+            <w ana="mte:Q" msd="UposTag=PART" lemma="ne" xml:id="komet72.2.3.t25">ne</w>
+            <pc ana="mte:Z" msd="UposTag=PUNCT" xml:id="komet72.2.3.t26">,</pc><c> </c>
+            <w ana="mte:Cc" msd="UposTag=CCONJ" lemma="saj" xml:id="komet72.2.3.t27">saj</w><c> </c>
+            <w ana="mte:Va-r3p-n" msd="UposTag=AUX|Mood=Ind|Number=Plur|Person=3|Polarity=Pos|Tense=Pres|VerbForm=Fin" lemma="biti" xml:id="komet72.2.3.t28">so</w><c> </c>
+            <w ana="mte:Pg-mpn" msd="UposTag=DET|Case=Nom|Gender=Masc|Number=Plur|PronType=Tot" lemma="ves" xml:id="komet72.2.3.t29">vsi</w><c> </c>
+            <w ana="mte:Ps3mpnsf" msd="UposTag=DET|Case=Nom|Gender=Masc|Gender[psor]=Fem|Number=Plur|Number[psor]=Sing|Person=3|Poss=Yes|PronType=Prs" lemma="njen" xml:id="komet72.2.3.t30">njeni</w><c> </c>
+            <w ana="mte:Ncmpn" msd="UposTag=NOUN|Case=Nom|Gender=Masc|Number=Plur" lemma="otrok" xml:id="komet72.2.3.t31">otroci</w><c> </c>
+            <w ana="mte:Rgp" msd="UposTag=ADV|Degree=Pos" lemma="srečno" xml:id="komet72.2.3.t32">srečno</w><c> </c>
+            <w ana="mte:Appmpn" msd="UposTag=ADJ|Case=Nom|Degree=Pos|Gender=Masc|Number=Plur|VerbForm=Part" lemma="zaljubljen" xml:id="komet72.2.3.t33">zaljubljeni</w>
+            <pc ana="mte:Z" msd="UposTag=PUNCT" xml:id="komet72.2.3.t34">.</pc>
+            <linkGrp corresp="#komet72.2.3" targFunc="head argument" type="UD-SYN">
+               <link ana="ud-syn:cc" target="#komet72.2.3.t13 #komet72.2.3.t1"/>
+               <link ana="ud-syn:advmod" target="#komet72.2.3.t13 #komet72.2.3.t2"/>
+               <link ana="ud-syn:aux" target="#komet72.2.3.t13 #komet72.2.3.t3"/>
+               <link ana="ud-syn:amod" target="#komet72.2.3.t5 #komet72.2.3.t4"/>
+               <link ana="ud-syn:nsubj" target="#komet72.2.3.t13 #komet72.2.3.t5"/>
+               <link ana="ud-syn:punct" target="#komet72.2.3.t8 #komet72.2.3.t6"/>
+               <link ana="ud-syn:advmod" target="#komet72.2.3.t8 #komet72.2.3.t7"/>
+               <link ana="ud-syn:amod" target="#komet72.2.3.t5 #komet72.2.3.t8"/>
+               <link ana="ud-syn:case" target="#komet72.2.3.t11 #komet72.2.3.t9"/>
+               <link ana="ud-syn:nummod" target="#komet72.2.3.t11 #komet72.2.3.t10"/>
+               <link ana="ud-syn:obl" target="#komet72.2.3.t8 #komet72.2.3.t11"/>
+               <link ana="ud-syn:punct" target="#komet72.2.3.t8 #komet72.2.3.t12"/>
+               <link ana="ud-syn:root" target="#komet72.2.3 #komet72.2.3.t13"/>
+               <link ana="ud-syn:obj" target="#komet72.2.3.t13 #komet72.2.3.t14"/>
+               <link ana="ud-syn:nmod" target="#komet72.2.3.t14 #komet72.2.3.t15"/>
+               <link ana="ud-syn:punct" target="#komet72.2.3.t21 #komet72.2.3.t16"/>
+               <link ana="ud-syn:nsubj" target="#komet72.2.3.t21 #komet72.2.3.t17"/>
+               <link ana="ud-syn:nmod" target="#komet72.2.3.t17 #komet72.2.3.t18"/>
+               <link ana="ud-syn:advmod" target="#komet72.2.3.t21 #komet72.2.3.t19"/>
+               <link ana="ud-syn:aux" target="#komet72.2.3.t21 #komet72.2.3.t20"/>
+               <link ana="ud-syn:parataxis" target="#komet72.2.3.t13 #komet72.2.3.t21"/>
+               <link ana="ud-syn:case" target="#komet72.2.3.t24 #komet72.2.3.t22"/>
+               <link ana="ud-syn:advmod" target="#komet72.2.3.t21 #komet72.2.3.t23"/>
+               <link ana="ud-syn:advmod" target="#komet72.2.3.t21 #komet72.2.3.t24"/>
+               <link ana="ud-syn:advmod" target="#komet72.2.3.t21 #komet72.2.3.t25"/>
+               <link ana="ud-syn:punct" target="#komet72.2.3.t21 #komet72.2.3.t26"/>
+               <link ana="ud-syn:cc" target="#komet72.2.3.t33 #komet72.2.3.t27"/>
+               <link ana="ud-syn:cop" target="#komet72.2.3.t33 #komet72.2.3.t28"/>
+               <link ana="ud-syn:det" target="#komet72.2.3.t31 #komet72.2.3.t29"/>
+               <link ana="ud-syn:det" target="#komet72.2.3.t31 #komet72.2.3.t30"/>
+               <link ana="ud-syn:nsubj" target="#komet72.2.3.t33 #komet72.2.3.t31"/>
+               <link ana="ud-syn:advmod" target="#komet72.2.3.t33 #komet72.2.3.t32"/>
+               <link ana="ud-syn:conj" target="#komet72.2.3.t21 #komet72.2.3.t33"/>
+               <link ana="ud-syn:punct" target="#komet72.2.3.t13 #komet72.2.3.t34"/>
+            </linkGrp>
+         </s><c> </c>
+         <s xml:id="komet72.2.4">
+            <w ana="mte:Ncfsn" msd="UposTag=NOUN|Case=Nom|Gender=Fem|Number=Sing" lemma="Princesa" xml:id="komet72.2.4.t1">Princesa</w><c> </c>
+            <w ana="mte:Npfsn" msd="UposTag=PROPN|Case=Nom|Gender=Fem|Number=Sing" lemma="Charlotte" xml:id="komet72.2.4.t2">Charlotte</w><c> </c>
+            <w ana="mte:Va-r3s-n" msd="UposTag=AUX|Mood=Ind|Number=Sing|Person=3|Polarity=Pos|Tense=Pres|VerbForm=Fin" lemma="biti" xml:id="komet72.2.4.t3">je</w><c> </c>
+            <seg type="metaphor" subtype="frame" ana="#met.spatial_orientation">
+               <seg type="metaphor" subtype="MRWi">
+                  <w ana="mte:Sl" msd="UposTag=ADP|Case=Loc" lemma="na" xml:id="komet72.2.4.t4">na</w>
+               </seg>
+            </seg><c> </c>
+            <w ana="mte:Agpmsl" msd="UposTag=ADJ|Case=Loc|Degree=Pos|Gender=Masc|Number=Sing" lemma="slavnosten" xml:id="komet72.2.4.t5">slavnostnem</w><c> </c>
+            <w ana="mte:Ncmsl" msd="UposTag=NOUN|Case=Loc|Gender=Masc|Number=Sing" lemma="dogodek" xml:id="komet72.2.4.t6">dogodku</w><c> </c>
+            <w ana="mte:Rgp" msd="UposTag=ADV|Degree=Pos" lemma="prvič" xml:id="komet72.2.4.t7">prvič</w><c> </c>
+            <w ana="mte:Rgp" msd="UposTag=ADV|Degree=Pos" lemma="uradno" xml:id="komet72.2.4.t8">uradno</w><c> </c>
+            <w ana="mte:Vmep-sf" msd="UposTag=VERB|Aspect=Perf|Gender=Fem|Number=Sing|VerbForm=Part" lemma="predstaviti" xml:id="komet72.2.4.t9">predstavila</w><c> </c>
+            <w ana="mte:Px-msa" msd="UposTag=DET|Case=Acc|Gender=Masc|Number=Sing|Poss=Yes|PronType=Prs|Reflex=Yes" lemma="svoj" xml:id="komet72.2.4.t10">svojega</w><c> </c>
+            <w ana="mte:Agpmsa" msd="UposTag=ADJ|Case=Acc|Degree=Pos|Gender=Masc|Number=Sing" lemma="nov" xml:id="komet72.2.4.t11">novega</w><c> </c>
+            <w ana="mte:Ncmsay" msd="UposTag=NOUN|Animacy=Anim|Case=Acc|Gender=Masc|Number=Sing" lemma="izbranec" xml:id="komet72.2.4.t12">izbranca</w>
+            <pc ana="mte:Z" msd="UposTag=PUNCT" xml:id="komet72.2.4.t13">,</pc><c> </c>
+            <w ana="mte:Ncmsay" msd="UposTag=NOUN|Animacy=Anim|Case=Acc|Gender=Masc|Number=Sing" lemma="producent" xml:id="komet72.2.4.t14">producenta</w><c> </c>
+            <w ana="mte:Npmsay" msd="UposTag=PROPN|Animacy=Anim|Case=Acc|Gender=Masc|Number=Sing" lemma="Dimitrij" xml:id="komet72.2.4.t15">Dimitrija</w><c> </c>
+            <w ana="mte:Npmsay" msd="UposTag=PROPN|Animacy=Anim|Case=Acc|Gender=Masc|Number=Sing" lemma="Rassam" xml:id="komet72.2.4.t16">Rassama</w>
+            <pc ana="mte:Z" msd="UposTag=PUNCT" xml:id="komet72.2.4.t17">,</pc><c> </c>
+            <w ana="mte:Ncmsn" msd="UposTag=NOUN|Case=Nom|Gender=Masc|Number=Sing" lemma="sin" xml:id="komet72.2.4.t18">sin</w><c> </c>
+            <w ana="mte:Npmsn" msd="UposTag=PROPN|Case=Nom|Gender=Masc|Number=Sing" lemma="Pierre" xml:id="komet72.2.4.t19">Pierre</w><c> </c>
+            <w ana="mte:Va-r3s-n" msd="UposTag=AUX|Mood=Ind|Number=Sing|Person=3|Polarity=Pos|Tense=Pres|VerbForm=Fin" lemma="biti" xml:id="komet72.2.4.t20">je</w><c> </c>
+            <w ana="mte:Vmep-sm" msd="UposTag=VERB|Aspect=Perf|Gender=Masc|Number=Sing|VerbForm=Part" lemma="naznaniti" xml:id="komet72.2.4.t21">naznanil</w>
+            <pc ana="mte:Z" msd="UposTag=PUNCT" xml:id="komet72.2.4.t22">,</pc><c> </c>
+            <w ana="mte:Cs" msd="UposTag=SCONJ" lemma="da" xml:id="komet72.2.4.t23">da</w><c> </c>
+            <seg type="metaphor" subtype="frame" ana="#met.means_of_action">
+               <seg type="metaphor" subtype="MRWi">
+                  <w ana="mte:Si" msd="UposTag=ADP|Case=Ins" lemma="z" xml:id="komet72.2.4.t24">z</w>
+               </seg>
+            </seg><c> </c>
+            <w ana="mte:Ncfsi" msd="UposTag=NOUN|Case=Ins|Gender=Fem|Number=Sing" lemma="žena" xml:id="komet72.2.4.t25">ženo</w><c> </c>
+            <w ana="mte:Npfsn" msd="UposTag=PROPN|Case=Nom|Gender=Fem|Number=Sing" lemma="Beatrice" xml:id="komet72.2.4.t26">Beatrice</w><c> </c>
+            <w ana="mte:Vmpr3d" msd="UposTag=VERB|Aspect=Imp|Mood=Ind|Number=Dual|Person=3|Tense=Pres|VerbForm=Fin" lemma="pričakovati" xml:id="komet72.2.4.t27">pričakujeta</w><c> </c>
+            <w ana="mte:Mlpmsa" msd="UposTag=ADJ|Case=Acc|Gender=Masc|Number=Sing" lemma="drug" xml:id="komet72.2.4.t28">drugega</w><c> </c>
+            <w ana="mte:Ncmsay" msd="UposTag=NOUN|Animacy=Anim|Case=Acc|Gender=Masc|Number=Sing" lemma="otrok" xml:id="komet72.2.4.t29">otroka</w>
+            <pc ana="mte:Z" msd="UposTag=PUNCT" xml:id="komet72.2.4.t30">,</pc><c> </c>
+            <seg type="metaphor" subtype="frame" ana="#met.human_process">
+               <seg type="metaphor" subtype="WIDLI">
+                  <w ana="mte:Rgp" msd="UposTag=ADV|Degree=Pos" lemma="noro" xml:id="komet72.2.4.t31">noro</w>
+               </seg>
+            </seg><c> </c>
+            <w ana="mte:Appfsn" msd="UposTag=ADJ|Case=Nom|Degree=Pos|Gender=Fem|Number=Sing|VerbForm=Part" lemma="zaljubljen" xml:id="komet72.2.4.t32">zaljubljena</w><c> </c>
+            <w ana="mte:Cc" msd="UposTag=CCONJ" lemma="pa" xml:id="komet72.2.4.t33">pa</w><c> </c>
+            <w ana="mte:Va-r3s-n" msd="UposTag=AUX|Mood=Ind|Number=Sing|Person=3|Polarity=Pos|Tense=Pres|VerbForm=Fin" lemma="biti" xml:id="komet72.2.4.t34">je</w><c> </c>
+            <w ana="mte:Q" msd="UposTag=PART" lemma="menda" xml:id="komet72.2.4.t35">menda</w><c> </c>
+            <w ana="mte:Q" msd="UposTag=PART" lemma="tudi" xml:id="komet72.2.4.t36">tudi</w><c> </c>
+            <w ana="mte:Ncfsn" msd="UposTag=NOUN|Case=Nom|Gender=Fem|Number=Sing" lemma="najstnica" xml:id="komet72.2.4.t37">najstnica</w><c> </c>
+            <w ana="mte:Ncfsg" msd="UposTag=NOUN|Case=Gen|Gender=Fem|Number=Sing" lemma="družina" xml:id="komet72.2.4.t38">družine</w>
+            <pc ana="mte:Z" msd="UposTag=PUNCT" xml:id="komet72.2.4.t39">,</pc><c> </c>
+            <w ana="mte:Mdc" msd="UposTag=NUM|NumForm=Digit|NumType=Card" lemma="18" xml:id="komet72.2.4.t40">18</w>
+            <pc ana="mte:Z" msd="UposTag=PUNCT" xml:id="komet72.2.4.t41">-</pc>
+            <w ana="mte:Agpfsn" msd="UposTag=ADJ|Case=Nom|Degree=Pos|Gender=Fem|Number=Sing" lemma="leten" xml:id="komet72.2.4.t42">letna</w><c> </c>
+            <w ana="mte:Ncfsn" msd="UposTag=NOUN|Case=Nom|Gender=Fem|Number=Sing" lemma="princesa" xml:id="komet72.2.4.t43">princesa</w><c> </c>
+            <w ana="mte:Npfsn" msd="UposTag=PROPN|Case=Nom|Gender=Fem|Number=Sing" lemma="Alexandra" xml:id="komet72.2.4.t44">Alexandra</w>
+            <pc ana="mte:Z" msd="UposTag=PUNCT" xml:id="komet72.2.4.t45">,</pc><c> </c>
+            <w ana="mte:Cs" msd="UposTag=SCONJ" lemma="ki" xml:id="komet72.2.4.t46">ki</w><c> </c>
+            <w ana="mte:Va-r3s-n" msd="UposTag=AUX|Mood=Ind|Number=Sing|Person=3|Polarity=Pos|Tense=Pres|VerbForm=Fin" lemma="biti" xml:id="komet72.2.4.t47">je</w><c> </c>
+            <seg type="metaphor" subtype="frame" ana="#met.means_of_action">
+               <seg type="metaphor" subtype="MRWi">
+                  <w ana="mte:Si" msd="UposTag=ADP|Case=Ins" lemma="z" xml:id="komet72.2.4.t48">s</w>
+               </seg>
+            </seg><c> </c>
+            <w ana="mte:Px---i" msd="UposTag=PRON|Case=Ins|PronType=Prs|Reflex=Yes" lemma="se" xml:id="komet72.2.4.t49">seboj</w><c> </c>
+            <seg type="metaphor" subtype="frame" ana="#met.motion">
+               <seg type="metaphor" subtype="MRWi">
+                  <w ana="mte:Vmep-sf" msd="UposTag=VERB|Aspect=Perf|Gender=Fem|Number=Sing|VerbForm=Part" lemma="pripeljati" xml:id="komet72.2.4.t50">pripeljala</w>
+               </seg>
+            </seg><c> </c>
+            <seg type="metaphor" subtype="frame" ana="#met.metonymy">
+               <seg type="metaphor" subtype="WIDLI">
+                  <w ana="mte:Ncmsay" msd="UposTag=NOUN|Animacy=Anim|Case=Acc|Gender=Masc|Number=Sing" lemma="fant" xml:id="komet72.2.4.t51">fanta</w>
+               </seg>
+            </seg><c> </c>
+            <w ana="mte:Npmsay" msd="UposTag=PROPN|Animacy=Anim|Case=Acc|Gender=Masc|Number=Sing" lemma="Ben" xml:id="komet72.2.4.t52">Bena</w>
+            <pc ana="mte:Z" msd="UposTag=PUNCT" xml:id="komet72.2.4.t53">.</pc>
+            <linkGrp corresp="#komet72.2.4" targFunc="head argument" type="UD-SYN">
+               <link ana="ud-syn:nsubj" target="#komet72.2.4.t9 #komet72.2.4.t1"/>
+               <link ana="ud-syn:nmod" target="#komet72.2.4.t1 #komet72.2.4.t2"/>
+               <link ana="ud-syn:aux" target="#komet72.2.4.t9 #komet72.2.4.t3"/>
+               <link ana="ud-syn:case" target="#komet72.2.4.t6 #komet72.2.4.t4"/>
+               <link ana="ud-syn:amod" target="#komet72.2.4.t6 #komet72.2.4.t5"/>
+               <link ana="ud-syn:obl" target="#komet72.2.4.t9 #komet72.2.4.t6"/>
+               <link ana="ud-syn:advmod" target="#komet72.2.4.t9 #komet72.2.4.t7"/>
+               <link ana="ud-syn:advmod" target="#komet72.2.4.t9 #komet72.2.4.t8"/>
+               <link ana="ud-syn:root" target="#komet72.2.4 #komet72.2.4.t9"/>
+               <link ana="ud-syn:det" target="#komet72.2.4.t12 #komet72.2.4.t10"/>
+               <link ana="ud-syn:amod" target="#komet72.2.4.t12 #komet72.2.4.t11"/>
+               <link ana="ud-syn:obj" target="#komet72.2.4.t9 #komet72.2.4.t12"/>
+               <link ana="ud-syn:punct" target="#komet72.2.4.t14 #komet72.2.4.t13"/>
+               <link ana="ud-syn:appos" target="#komet72.2.4.t12 #komet72.2.4.t14"/>
+               <link ana="ud-syn:nmod" target="#komet72.2.4.t14 #komet72.2.4.t15"/>
+               <link ana="ud-syn:flat_name" target="#komet72.2.4.t15 #komet72.2.4.t16"/>
+               <link ana="ud-syn:punct" target="#komet72.2.4.t21 #komet72.2.4.t17"/>
+               <link ana="ud-syn:nsubj" target="#komet72.2.4.t21 #komet72.2.4.t18"/>
+               <link ana="ud-syn:nmod" target="#komet72.2.4.t18 #komet72.2.4.t19"/>
+               <link ana="ud-syn:aux" target="#komet72.2.4.t21 #komet72.2.4.t20"/>
+               <link ana="ud-syn:parataxis" target="#komet72.2.4.t9 #komet72.2.4.t21"/>
+               <link ana="ud-syn:punct" target="#komet72.2.4.t27 #komet72.2.4.t22"/>
+               <link ana="ud-syn:mark" target="#komet72.2.4.t27 #komet72.2.4.t23"/>
+               <link ana="ud-syn:case" target="#komet72.2.4.t25 #komet72.2.4.t24"/>
+               <link ana="ud-syn:obl" target="#komet72.2.4.t27 #komet72.2.4.t25"/>
+               <link ana="ud-syn:nmod" target="#komet72.2.4.t25 #komet72.2.4.t26"/>
+               <link ana="ud-syn:ccomp" target="#komet72.2.4.t21 #komet72.2.4.t27"/>
+               <link ana="ud-syn:amod" target="#komet72.2.4.t29 #komet72.2.4.t28"/>
+               <link ana="ud-syn:obj" target="#komet72.2.4.t27 #komet72.2.4.t29"/>
+               <link ana="ud-syn:punct" target="#komet72.2.4.t27 #komet72.2.4.t30"/>
+               <link ana="ud-syn:advmod" target="#komet72.2.4.t32 #komet72.2.4.t31"/>
+               <link ana="ud-syn:parataxis" target="#komet72.2.4.t9 #komet72.2.4.t32"/>
+               <link ana="ud-syn:advmod" target="#komet72.2.4.t32 #komet72.2.4.t33"/>
+               <link ana="ud-syn:cop" target="#komet72.2.4.t32 #komet72.2.4.t34"/>
+               <link ana="ud-syn:advmod" target="#komet72.2.4.t32 #komet72.2.4.t35"/>
+               <link ana="ud-syn:advmod" target="#komet72.2.4.t32 #komet72.2.4.t36"/>
+               <link ana="ud-syn:nsubj" target="#komet72.2.4.t32 #komet72.2.4.t37"/>
+               <link ana="ud-syn:nmod" target="#komet72.2.4.t37 #komet72.2.4.t38"/>
+               <link ana="ud-syn:punct" target="#komet72.2.4.t43 #komet72.2.4.t39"/>
+               <link ana="ud-syn:nummod" target="#komet72.2.4.t42 #komet72.2.4.t40"/>
+               <link ana="ud-syn:punct" target="#komet72.2.4.t42 #komet72.2.4.t41"/>
+               <link ana="ud-syn:amod" target="#komet72.2.4.t43 #komet72.2.4.t42"/>
+               <link ana="ud-syn:appos" target="#komet72.2.4.t37 #komet72.2.4.t43"/>
+               <link ana="ud-syn:nmod" target="#komet72.2.4.t43 #komet72.2.4.t44"/>
+               <link ana="ud-syn:punct" target="#komet72.2.4.t50 #komet72.2.4.t45"/>
+               <link ana="ud-syn:mark" target="#komet72.2.4.t50 #komet72.2.4.t46"/>
+               <link ana="ud-syn:aux" target="#komet72.2.4.t50 #komet72.2.4.t47"/>
+               <link ana="ud-syn:case" target="#komet72.2.4.t49 #komet72.2.4.t48"/>
+               <link ana="ud-syn:obl" target="#komet72.2.4.t50 #komet72.2.4.t49"/>
+               <link ana="ud-syn:acl" target="#komet72.2.4.t43 #komet72.2.4.t50"/>
+               <link ana="ud-syn:obj" target="#komet72.2.4.t50 #komet72.2.4.t51"/>
+               <link ana="ud-syn:nmod" target="#komet72.2.4.t51 #komet72.2.4.t52"/>
+               <link ana="ud-syn:punct" target="#komet72.2.4.t9 #komet72.2.4.t53"/>
+            </linkGrp>
+         </s><c> </c>
+         <s xml:id="komet72.2.5">
+            <w ana="mte:Vmpp-sm" msd="UposTag=VERB|Aspect=Imp|Gender=Masc|Number=Sing|VerbForm=Part" lemma="manjkati" xml:id="komet72.2.5.t1">Manjkal</w><c> </c>
+            <w ana="mte:Va-r3s-n" msd="UposTag=AUX|Mood=Ind|Number=Sing|Person=3|Polarity=Pos|Tense=Pres|VerbForm=Fin" lemma="biti" xml:id="komet72.2.5.t2">je</w><c> </c>
+            <w ana="mte:Q" msd="UposTag=PART" lemma="le" xml:id="komet72.2.5.t3">le</w><c> </c>
+            <w ana="mte:Agsmsny" msd="UposTag=ADJ|Case=Nom|Definite=Def|Degree=Sup|Gender=Masc|Number=Sing" lemma="star" xml:id="komet72.2.5.t4">najstarejši</w><c> </c>
+            <w ana="mte:Aspmsnn" msd="UposTag=ADJ|Case=Nom|Definite=Ind|Degree=Pos|Gender=Masc|Number=Sing|Poss=Yes" lemma="Carolinin" xml:id="komet72.2.5.t5">Carolinin</w><c> </c>
+            <w ana="mte:Ncmsn" msd="UposTag=NOUN|Case=Nom|Gender=Masc|Number=Sing" lemma="sin" xml:id="komet72.2.5.t6">sin</w><c> </c>
+            <w ana="mte:Npmsn" msd="UposTag=PROPN|Case=Nom|Gender=Masc|Number=Sing" lemma="Andrea" xml:id="komet72.2.5.t7">Andrea</w>
+            <pc ana="mte:Z" msd="UposTag=PUNCT" xml:id="komet72.2.5.t8">,</pc><c> </c>
+            <w ana="mte:Cc" msd="UposTag=CCONJ" lemma="a" xml:id="komet72.2.5.t9">a</w><c> </c>
+            <seg type="metaphor" subtype="frame" ana="#met.means_of_action">
+               <seg type="metaphor" subtype="MRWi">
+                  <w ana="mte:Si" msd="UposTag=ADP|Case=Ins" lemma="z" xml:id="komet72.2.5.t10">z</w>
+               </seg>
+            </seg><c> </c>
+            <w ana="mte:Ncmsi" msd="UposTag=NOUN|Case=Ins|Gender=Masc|Number=Sing" lemma="razlog" xml:id="komet72.2.5.t11">razlogom</w>
+            <pc ana="mte:Z" msd="UposTag=PUNCT" xml:id="komet72.2.5.t12">:</pc><c> </c>
+            <seg type="metaphor" subtype="frame" ana="#met.means_of_action">
+               <seg type="metaphor" subtype="MRWi">
+                  <w ana="mte:Si" msd="UposTag=ADP|Case=Ins" lemma="z" xml:id="komet72.2.5.t13">z</w>
+               </seg>
+            </seg><c> </c>
+            <w ana="mte:Ncfsi" msd="UposTag=NOUN|Case=Ins|Gender=Fem|Number=Sing" lemma="žena" xml:id="komet72.2.5.t14">ženo</w><c> </c>
+            <w ana="mte:Npfsn" msd="UposTag=PROPN|Case=Nom|Gender=Masc|Number=Sing" lemma="Tatiana" xml:id="komet72.2.5.t15">Tatiano</w><c> </c>
+            <w ana="mte:Va-r3s-n" msd="UposTag=AUX|Mood=Ind|Number=Sing|Person=3|Polarity=Pos|Tense=Pres|VerbForm=Fin" lemma="biti" xml:id="komet72.2.5.t16">je</w><c> </c>
+            <w ana="mte:Vmep-sm" msd="UposTag=VERB|Aspect=Perf|Gender=Masc|Number=Sing|VerbForm=Part" lemma="ostati" xml:id="komet72.2.5.t17">ostal</w><c> </c>
+            <w ana="mte:Sl" msd="UposTag=ADP|Case=Loc" lemma="v" xml:id="komet72.2.5.t18">v</w><c> </c>
+            <w ana="mte:Npmsl" msd="UposTag=PROPN|Case=Loc|Gender=Masc|Number=Sing" lemma="London" xml:id="komet72.2.5.t19">Londonu</w>
+            <pc ana="mte:Z" msd="UposTag=PUNCT" xml:id="komet72.2.5.t20">,</pc><c> </c>
+            <w ana="mte:Cc" msd="UposTag=CCONJ" lemma="saj" xml:id="komet72.2.5.t21">saj</w><c> </c>
+            <w ana="mte:Pg-msa" msd="UposTag=DET|Case=Acc|Gender=Masc|Number=Sing|PronType=Tot" lemma="vsak" xml:id="komet72.2.5.t22">vsak</w><c> </c>
+            <w ana="mte:Ncmsan" msd="UposTag=NOUN|Animacy=Inan|Case=Acc|Gender=Masc|Number=Sing" lemma="hip" xml:id="komet72.2.5.t23">hip</w><c> </c>
+            <w ana="mte:Vmpr3d" msd="UposTag=VERB|Aspect=Imp|Mood=Ind|Number=Dual|Person=3|Tense=Pres|VerbForm=Fin" lemma="pričakovati" xml:id="komet72.2.5.t24">pričakujeta</w><c> </c>
+            <w ana="mte:Mlomsa" msd="UposTag=ADJ|Case=Acc|Gender=Masc|NumType=Ord|Number=Sing" lemma="tretji" xml:id="komet72.2.5.t25">tretjega</w><c> </c>
+            <w ana="mte:Ncmsay" msd="UposTag=NOUN|Animacy=Anim|Case=Acc|Gender=Masc|Number=Sing" lemma="otrok" xml:id="komet72.2.5.t26">otroka</w>
+            <pc ana="mte:Z" msd="UposTag=PUNCT" xml:id="komet72.2.5.t27">.</pc>
+            <linkGrp corresp="#komet72.2.5" targFunc="head argument" type="UD-SYN">
+               <link ana="ud-syn:root" target="#komet72.2.5 #komet72.2.5.t1"/>
+               <link ana="ud-syn:aux" target="#komet72.2.5.t1 #komet72.2.5.t2"/>
+               <link ana="ud-syn:advmod" target="#komet72.2.5.t1 #komet72.2.5.t3"/>
+               <link ana="ud-syn:amod" target="#komet72.2.5.t6 #komet72.2.5.t4"/>
+               <link ana="ud-syn:amod" target="#komet72.2.5.t6 #komet72.2.5.t5"/>
+               <link ana="ud-syn:nsubj" target="#komet72.2.5.t1 #komet72.2.5.t6"/>
+               <link ana="ud-syn:nmod" target="#komet72.2.5.t6 #komet72.2.5.t7"/>
+               <link ana="ud-syn:punct" target="#komet72.2.5.t11 #komet72.2.5.t8"/>
+               <link ana="ud-syn:cc" target="#komet72.2.5.t11 #komet72.2.5.t9"/>
+               <link ana="ud-syn:case" target="#komet72.2.5.t11 #komet72.2.5.t10"/>
+               <link ana="ud-syn:obl" target="#komet72.2.5.t17 #komet72.2.5.t11"/>
+               <link ana="ud-syn:punct" target="#komet72.2.5.t17 #komet72.2.5.t12"/>
+               <link ana="ud-syn:case" target="#komet72.2.5.t14 #komet72.2.5.t13"/>
+               <link ana="ud-syn:obl" target="#komet72.2.5.t17 #komet72.2.5.t14"/>
+               <link ana="ud-syn:nmod" target="#komet72.2.5.t14 #komet72.2.5.t15"/>
+               <link ana="ud-syn:aux" target="#komet72.2.5.t17 #komet72.2.5.t16"/>
+               <link ana="ud-syn:parataxis" target="#komet72.2.5.t1 #komet72.2.5.t17"/>
+               <link ana="ud-syn:case" target="#komet72.2.5.t19 #komet72.2.5.t18"/>
+               <link ana="ud-syn:obl" target="#komet72.2.5.t17 #komet72.2.5.t19"/>
+               <link ana="ud-syn:punct" target="#komet72.2.5.t17 #komet72.2.5.t20"/>
+               <link ana="ud-syn:cc" target="#komet72.2.5.t24 #komet72.2.5.t21"/>
+               <link ana="ud-syn:det" target="#komet72.2.5.t23 #komet72.2.5.t22"/>
+               <link ana="ud-syn:obl" target="#komet72.2.5.t24 #komet72.2.5.t23"/>
+               <link ana="ud-syn:conj" target="#komet72.2.5.t17 #komet72.2.5.t24"/>
+               <link ana="ud-syn:amod" target="#komet72.2.5.t26 #komet72.2.5.t25"/>
+               <link ana="ud-syn:obj" target="#komet72.2.5.t24 #komet72.2.5.t26"/>
+               <link ana="ud-syn:punct" target="#komet72.2.5.t1 #komet72.2.5.t27"/>
+            </linkGrp>
+         </s><c> </c>
+         <s xml:id="komet72.2.6">
+            <w ana="mte:Cs" msd="UposTag=SCONJ" lemma="kot" xml:id="komet72.2.6.t1">Kot</w><c> </c>
+            <w ana="mte:Vmpr3s" msd="UposTag=VERB|Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin" lemma="kazati" xml:id="komet72.2.6.t2">kaže</w>
+            <pc ana="mte:Z" msd="UposTag=PUNCT" xml:id="komet72.2.6.t3">,</pc><c> </c>
+            <w ana="mte:Va-r3d-n" msd="UposTag=AUX|Mood=Ind|Number=Dual|Person=3|Polarity=Pos|Tense=Pres|VerbForm=Fin" lemma="biti" xml:id="komet72.2.6.t4">sta</w><c> </c>
+            <seg type="metaphor" subtype="MRWi">
+               <w ana="mte:Px------y" msd="UposTag=PRON|PronType=Prs|Reflex=Yes|Variant=Short" lemma="se" xml:id="komet72.2.6.t5">se</w>
+            </seg><c> </c>
+            <seg type="metaphor" subtype="frame" ana="#met.personification">
+               <seg type="metaphor" subtype="WIDLI">
+                  <w ana="mte:Ncfsn" msd="UposTag=NOUN|Case=Nom|Gender=Fem|Number=Sing" lemma="sreča" xml:id="komet72.2.6.t6">sreča</w>
+               </seg>
+            </seg><c> </c>
+            <w ana="mte:Cc" msd="UposTag=CCONJ" lemma="in" xml:id="komet72.2.6.t7">in</w><c> </c>
+            <seg type="metaphor" subtype="frame" ana="#met.personification">
+               <seg type="metaphor" subtype="WIDLI">
+                  <w ana="mte:Ncfsn" msd="UposTag=NOUN|Case=Nom|Gender=Fem|Number=Sing" lemma="ljubezen" xml:id="komet72.2.6.t8">ljubezen</w>
+               </seg>
+            </seg><c> </c>
+            <seg type="metaphor" subtype="frame" ana="#met.guided_motion">
+               <seg type="metaphor" subtype="MRWi">
+                  <w ana="mte:Vmep-dm" msd="UposTag=VERB|Aspect=Perf|Gender=Masc|Number=Dual|VerbForm=Part" lemma="vrniti" xml:id="komet72.2.6.t9">vrnila</w>
+               </seg>
+            </seg><c> </c>
+            <w ana="mte:Sa" msd="UposTag=ADP|Case=Acc" lemma="v" xml:id="komet72.2.6.t10">v</w><c> </c>
+            <w ana="mte:Npfsan" msd="UposTag=PROPN|Case=Acc|Gender=Fem|Number=Sing" lemma="Monako" xml:id="komet72.2.6.t11">Monako</w>
+            <pc ana="mte:Z" msd="UposTag=PUNCT" xml:id="komet72.2.6.t12">!</pc>
+            <linkGrp corresp="#komet72.2.6" targFunc="head argument" type="UD-SYN">
+               <link ana="ud-syn:mark" target="#komet72.2.6.t2 #komet72.2.6.t1"/>
+               <link ana="ud-syn:advcl" target="#komet72.2.6.t9 #komet72.2.6.t2"/>
+               <link ana="ud-syn:punct" target="#komet72.2.6.t2 #komet72.2.6.t3"/>
+               <link ana="ud-syn:aux" target="#komet72.2.6.t9 #komet72.2.6.t4"/>
+               <link ana="ud-syn:expl" target="#komet72.2.6.t9 #komet72.2.6.t5"/>
+               <link ana="ud-syn:nsubj" target="#komet72.2.6.t9 #komet72.2.6.t6"/>
+               <link ana="ud-syn:cc" target="#komet72.2.6.t8 #komet72.2.6.t7"/>
+               <link ana="ud-syn:conj" target="#komet72.2.6.t6 #komet72.2.6.t8"/>
+               <link ana="ud-syn:root" target="#komet72.2.6 #komet72.2.6.t9"/>
+               <link ana="ud-syn:case" target="#komet72.2.6.t11 #komet72.2.6.t10"/>
+               <link ana="ud-syn:obl" target="#komet72.2.6.t9 #komet72.2.6.t11"/>
+               <link ana="ud-syn:punct" target="#komet72.2.6.t9 #komet72.2.6.t12"/>
+            </linkGrp>
+         </s><c> </c>
+      </p>
+      <p xml:id="komet72.3">
+         <s xml:id="komet72.3.1">
+            <w ana="mte:I" msd="UposTag=INTJ" lemma="PSST" xml:id="komet72.3.1.t1">PSST</w>
+            <pc ana="mte:Z" msd="UposTag=PUNCT" xml:id="komet72.3.1.t2">!</pc>
+            <linkGrp corresp="#komet72.3.1" targFunc="head argument" type="UD-SYN">
+               <link ana="ud-syn:root" target="#komet72.3.1 #komet72.3.1.t1"/>
+               <link ana="ud-syn:punct" target="#komet72.3.1.t1 #komet72.3.1.t2"/>
+            </linkGrp>
+         </s><c> </c>
+         <s xml:id="komet72.3.2">
+            <w ana="mte:Ncfsn" msd="UposTag=NOUN|Case=Nom|Gender=Fem|Number=Sing" lemma="princesa" xml:id="komet72.3.2.t1">Princesa</w><c> </c>
+            <w ana="mte:Npfsn" msd="UposTag=PROPN|Case=Nom|Gender=Fem|Number=Sing" lemma="Carolina" xml:id="komet72.3.2.t2">Caroline</w><c> </c>
+            <w ana="mte:Vmpr3s" msd="UposTag=VERB|Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin" lemma="živeti" xml:id="komet72.3.2.t3">živi</w><c> </c>
+            <seg type="metaphor" subtype="frame" ana="#met.element_coherence">
+               <seg type="metaphor" subtype="MRWi">
+                  <w ana="mte:Appnsn" msd="UposTag=ADJ|Case=Nom|Degree=Pos|Gender=Neut|Number=Sing|VerbForm=Part" lemma="ločeno" xml:id="komet72.3.2.t4">ločeno</w>
+               </seg>
+            </seg><c> </c>
+            <seg type="metaphor" subtype="frame" ana="#met.spatial_orientation">
+               <seg type="metaphor" subtype="MRWi">
+                  <w ana="mte:Sg" msd="UposTag=ADP|Case=Gen" lemma="od" xml:id="komet72.3.2.t5">od</w>
+               </seg>
+            </seg><c> </c>
+            <w ana="mte:Ncmsg" msd="UposTag=NOUN|Case=Gen|Gender=Masc|Number=Sing" lemma="mož" xml:id="komet72.3.2.t6">moža</w>
+            <pc ana="mte:Z" msd="UposTag=PUNCT" xml:id="komet72.3.2.t7">,</pc><c> </c>
+            <w ana="mte:Agpmsg" msd="UposTag=ADJ|Case=Gen|Degree=Pos|Gender=Masc|Number=Sing" lemma="hannovrski" xml:id="komet72.3.2.t8">hannovrskega</w><c> </c>
+            <w ana="mte:Ncmsg" msd="UposTag=NOUN|Case=Gen|Gender=Masc|Number=Sing" lemma="princ" xml:id="komet72.3.2.t9">princa</w><c> </c>
+            <w ana="mte:Npmsg" msd="UposTag=PROPN|Case=Gen|Gender=Masc|Number=Sing" lemma="Ernst" xml:id="komet72.3.2.t10">Ernsta</w><c> </c>
+            <w ana="mte:Npmsg" msd="UposTag=PROPN|Case=Gen|Gender=Masc|Number=Sing" lemma="Augusto" xml:id="komet72.3.2.t11">Augusta</w>
+            <pc ana="mte:Z" msd="UposTag=PUNCT" xml:id="komet72.3.2.t12">,</pc><c> </c>
+            <w ana="mte:Cs" msd="UposTag=SCONJ" lemma="ki" xml:id="komet72.3.2.t13">ki</w><c> </c>
+            <w ana="mte:Q" msd="UposTag=PART|Polarity=Neg" lemma="ne" xml:id="komet72.3.2.t14">ne</w><c> </c>
+            <seg type="metaphor" subtype="frame" ana="#met.handwork">
+               <seg type="metaphor" subtype="MRWi">
+                  <w ana="mte:Vmer3s" msd="UposTag=VERB|Aspect=Perf|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin" lemma="izpustiti" xml:id="komet72.3.2.t15">izpusti</w>
+               </seg>
+            </seg><c> </c>
+            <w ana="mte:Pz-fsg" msd="UposTag=DET|Case=Gen|Gender=Fem|Number=Sing|PronType=Neg" lemma="noben" xml:id="komet72.3.2.t16">nobene</w><c> </c>
+            <w ana="mte:Ncfsg" msd="UposTag=NOUN|Case=Gen|Gender=Fem|Number=Sing" lemma="priložnost" xml:id="komet72.3.2.t17">priložnosti</w><c> </c>
+            <seg type="metaphor" subtype="frame" ana="#met.spatial_orientation">
+               <seg type="metaphor" subtype="MRWi">
+                  <w ana="mte:Sa" msd="UposTag=ADP|Case=Acc" lemma="za" xml:id="komet72.3.2.t18">za</w>
+               </seg>
+            </seg><c> </c>
+            <w ana="mte:Ncmsan" msd="UposTag=NOUN|Animacy=Inan|Case=Acc|Gender=Masc|Number=Sing" lemma="škandal" xml:id="komet72.3.2.t19">škandal</w><c> </c>
+            <w ana="mte:Cc" msd="UposTag=CCONJ" lemma="in" xml:id="komet72.3.2.t20">in</w><c> </c>
+            <w ana="mte:Va-r3s-n" msd="UposTag=AUX|Mood=Ind|Number=Sing|Person=3|Polarity=Pos|Tense=Pres|VerbForm=Fin" lemma="biti" xml:id="komet72.3.2.t21">je</w><c> </c>
+            <w ana="mte:Rgp" msd="UposTag=ADV|Degree=Pos" lemma="tako" xml:id="komet72.3.2.t22">tako</w><c> </c>
+            <w ana="mte:Rgp" msd="UposTag=ADV|Degree=Pos" lemma="nedavno" xml:id="komet72.3.2.t23">nedavno</w><c> </c>
+            <seg type="metaphor" subtype="frame" ana="#met.spatial_orientation">
+               <seg type="metaphor" subtype="MRWi">
+                  <w ana="mte:Sl" msd="UposTag=ADP|Case=Loc" lemma="po" xml:id="komet72.3.2.t24">po</w>
+               </seg>
+            </seg><c> </c>
+            <seg type="metaphor" subtype="frame" ana="#met.feature">
+               <seg type="metaphor" subtype="MRWi">
+                  <w ana="mte:Agpnsl" msd="UposTag=ADJ|Case=Loc|Degree=Pos|Gender=Neut|Number=Sing" lemma="izdaten" xml:id="komet72.3.2.t25">izdatnem</w>
+               </seg>
+            </seg><c> </c>
+            <w ana="mte:Ncnsl" msd="UposTag=NOUN|Case=Loc|Gender=Neut|Number=Sing" lemma="pijančevanje" xml:id="komet72.3.2.t26">pijančevanju</w><c> </c>
+            <w ana="mte:Rgp" msd="UposTag=ADV|Degree=Pos" lemma="znova" xml:id="komet72.3.2.t27">znova</w><c> </c>
+            <seg type="metaphor" subtype="frame" ana="#met.watercraft">
+               <seg type="metaphor" subtype="MRWi">
+                  <w ana="mte:Vmep-sm" msd="UposTag=VERB|Aspect=Perf|Gender=Masc|Number=Sing|VerbForm=Part" lemma="pristati" xml:id="komet72.3.2.t28">pristal</w>
+               </seg>
+            </seg><c> </c>
+            <w ana="mte:Sl" msd="UposTag=ADP|Case=Loc" lemma="v" xml:id="komet72.3.2.t29">v</w><c> </c>
+            <w ana="mte:Ncfsl" msd="UposTag=NOUN|Case=Loc|Gender=Fem|Number=Sing" lemma="bolnišnica" xml:id="komet72.3.2.t30">bolnišnici</w>
+            <pc ana="mte:Z" msd="UposTag=PUNCT" xml:id="komet72.3.2.t31">.</pc>
+            <linkGrp corresp="#komet72.3.2" targFunc="head argument" type="UD-SYN">
+               <link ana="ud-syn:nsubj" target="#komet72.3.2.t3 #komet72.3.2.t1"/>
+               <link ana="ud-syn:nmod" target="#komet72.3.2.t1 #komet72.3.2.t2"/>
+               <link ana="ud-syn:root" target="#komet72.3.2 #komet72.3.2.t3"/>
+               <link ana="ud-syn:advcl" target="#komet72.3.2.t3 #komet72.3.2.t4"/>
+               <link ana="ud-syn:case" target="#komet72.3.2.t6 #komet72.3.2.t5"/>
+               <link ana="ud-syn:obl" target="#komet72.3.2.t3 #komet72.3.2.t6"/>
+               <link ana="ud-syn:punct" target="#komet72.3.2.t9 #komet72.3.2.t7"/>
+               <link ana="ud-syn:amod" target="#komet72.3.2.t9 #komet72.3.2.t8"/>
+               <link ana="ud-syn:appos" target="#komet72.3.2.t6 #komet72.3.2.t9"/>
+               <link ana="ud-syn:nmod" target="#komet72.3.2.t9 #komet72.3.2.t10"/>
+               <link ana="ud-syn:flat_name" target="#komet72.3.2.t10 #komet72.3.2.t11"/>
+               <link ana="ud-syn:punct" target="#komet72.3.2.t15 #komet72.3.2.t12"/>
+               <link ana="ud-syn:mark" target="#komet72.3.2.t15 #komet72.3.2.t13"/>
+               <link ana="ud-syn:advmod" target="#komet72.3.2.t15 #komet72.3.2.t14"/>
+               <link ana="ud-syn:acl" target="#komet72.3.2.t9 #komet72.3.2.t15"/>
+               <link ana="ud-syn:det" target="#komet72.3.2.t17 #komet72.3.2.t16"/>
+               <link ana="ud-syn:obj" target="#komet72.3.2.t15 #komet72.3.2.t17"/>
+               <link ana="ud-syn:case" target="#komet72.3.2.t19 #komet72.3.2.t18"/>
+               <link ana="ud-syn:nmod" target="#komet72.3.2.t17 #komet72.3.2.t19"/>
+               <link ana="ud-syn:cc" target="#komet72.3.2.t28 #komet72.3.2.t20"/>
+               <link ana="ud-syn:aux" target="#komet72.3.2.t28 #komet72.3.2.t21"/>
+               <link ana="ud-syn:advmod" target="#komet72.3.2.t28 #komet72.3.2.t22"/>
+               <link ana="ud-syn:advmod" target="#komet72.3.2.t28 #komet72.3.2.t23"/>
+               <link ana="ud-syn:case" target="#komet72.3.2.t26 #komet72.3.2.t24"/>
+               <link ana="ud-syn:amod" target="#komet72.3.2.t26 #komet72.3.2.t25"/>
+               <link ana="ud-syn:obl" target="#komet72.3.2.t28 #komet72.3.2.t26"/>
+               <link ana="ud-syn:advmod" target="#komet72.3.2.t28 #komet72.3.2.t27"/>
+               <link ana="ud-syn:conj" target="#komet72.3.2.t15 #komet72.3.2.t28"/>
+               <link ana="ud-syn:case" target="#komet72.3.2.t30 #komet72.3.2.t29"/>
+               <link ana="ud-syn:obl" target="#komet72.3.2.t28 #komet72.3.2.t30"/>
+               <link ana="ud-syn:punct" target="#komet72.3.2.t3 #komet72.3.2.t31"/>
+            </linkGrp>
+         </s><c> </c>
+         <s xml:id="komet72.3.3">
+            <w ana="mte:Cc" msd="UposTag=CCONJ" lemma="zato" xml:id="komet72.3.3.t1">Zato</w><c> </c>
+            <w ana="mte:Va-r3s-n" msd="UposTag=AUX|Mood=Ind|Number=Sing|Person=3|Polarity=Pos|Tense=Pres|VerbForm=Fin" lemma="biti" xml:id="komet72.3.3.t2">je</w><c> </c>
+            <w ana="mte:Ncfsa" msd="UposTag=NOUN|Case=Acc|Gender=Fem|Number=Sing" lemma="lepotica" xml:id="komet72.3.3.t3">lepotico</w><c> </c>
+            <seg type="metaphor" subtype="frame" ana="#met.spatial_orientation">
+               <seg type="metaphor" subtype="MRWi">
+                  <w ana="mte:Sl" msd="UposTag=ADP|Case=Loc" lemma="na" xml:id="komet72.3.3.t4">na</w>
+               </seg>
+            </seg><c> </c>
+            <w ana="mte:Ncmsl" msd="UposTag=NOUN|Case=Loc|Gender=Masc|Number=Sing" lemma="ples" xml:id="komet72.3.3.t5">plesu</w><c> </c>
+            <w ana="mte:Vmpp-sm" msd="UposTag=VERB|Aspect=Imp|Gender=Masc|Number=Sing|VerbForm=Part" lemma="spremljati" xml:id="komet72.3.3.t6">spremljal</w><c> </c>
+            <seg type="metaphor" subtype="frame" ana="#met.market">
+               <seg type="metaphor" subtype="MRWi">
+                  <w ana="mte:Agpmsny" msd="UposTag=ADJ|Case=Nom|Definite=Def|Degree=Pos|Gender=Masc|Number=Sing" lemma="drag" xml:id="komet72.3.3.t7">dragi</w>
+               </seg>
+            </seg><c> </c>
+            <w ana="mte:Agpmsny" msd="UposTag=ADJ|Case=Nom|Definite=Def|Degree=Pos|Gender=Masc|Number=Sing" lemma="družinski" xml:id="komet72.3.3.t8">družinski</w><c> </c>
+            <w ana="mte:Ncmsn" msd="UposTag=NOUN|Case=Nom|Gender=Masc|Number=Sing" lemma="prijatelj" xml:id="komet72.3.3.t9">prijatelj</w>
+            <pc ana="mte:Z" msd="UposTag=PUNCT" xml:id="komet72.3.3.t10">,</pc><c> </c>
+            <w ana="mte:Agpmsny" msd="UposTag=ADJ|Case=Nom|Definite=Def|Degree=Pos|Gender=Masc|Number=Sing" lemma="moden" xml:id="komet72.3.3.t11">modni</w><c> </c>
+            <w ana="mte:Ncmsn" msd="UposTag=NOUN|Case=Nom|Gender=Masc|Number=Sing" lemma="oblikovalec" xml:id="komet72.3.3.t12">oblikovalec</w><c> </c>
+            <w ana="mte:Npmsn" msd="UposTag=PROPN|Case=Nom|Gender=Masc|Number=Sing" lemma="Karl" xml:id="komet72.3.3.t13">Karl</w><c> </c>
+            <w ana="mte:Npmsn" msd="UposTag=PROPN|Case=Nom|Gender=Masc|Number=Sing" lemma="Lagerfeld" xml:id="komet72.3.3.t14">Lagerfeld</w>
+            <pc ana="mte:Z" msd="UposTag=PUNCT" xml:id="komet72.3.3.t15">,</pc><c> </c>
+            <w ana="mte:Cs" msd="UposTag=SCONJ" lemma="ki" xml:id="komet72.3.3.t16">ki</w><c> </c>
+            <w ana="mte:Px------y" msd="UposTag=PRON|PronType=Prs|Reflex=Yes|Variant=Short" lemma="se" xml:id="komet72.3.3.t17">se</w><c> </c>
+            <w ana="mte:Va-r3s-n" msd="UposTag=AUX|Mood=Ind|Number=Sing|Person=3|Polarity=Pos|Tense=Pres|VerbForm=Fin" lemma="biti" xml:id="komet72.3.3.t18">je</w><c> </c>
+            <seg type="metaphor" subtype="frame" ana="#met.spatial_orientation">
+               <seg type="metaphor" subtype="MRWi">
+                  <w ana="mte:Si" msd="UposTag=ADP|Case=Ins" lemma="pod" xml:id="komet72.3.3.t19">pod</w>
+               </seg>
+            </seg><c> </c>
+            <w ana="mte:Ncmsi" msd="UposTag=NOUN|Case=Ins|Gender=Masc|Number=Sing" lemma="slogan" xml:id="komet72.3.3.t20">sloganom</w><c> </c>
+            <w ana="mte:Npmsn" msd="UposTag=PROPN|Case=Nom|Gender=Masc|Number=Sing" lemma="Manhattan" xml:id="komet72.3.3.t21">Manhattan</w><c> </c>
+            <w ana="mte:Rgp" msd="UposTag=ADV|Degree=Pos" lemma="ponovno" xml:id="komet72.3.3.t22">ponovno</w><c> </c>
+            <w ana="mte:Vmep-sm" msd="UposTag=VERB|Aspect=Perf|Gender=Masc|Number=Sing|VerbForm=Part" lemma="izkazati" xml:id="komet72.3.3.t23">izkazal</w><c> </c>
+            <w ana="mte:Cs" msd="UposTag=SCONJ" lemma="kot" xml:id="komet72.3.3.t24">kot</w><c> </c>
+            <w ana="mte:Agpmsnn" msd="UposTag=ADJ|Case=Nom|Definite=Ind|Degree=Pos|Gender=Masc|Number=Sing" lemma="odličen" xml:id="komet72.3.3.t25">odličen</w><c> </c>
+            <w ana="mte:Ncmsn" msd="UposTag=NOUN|Case=Nom|Gender=Masc|Number=Sing" lemma="dekorater" xml:id="komet72.3.3.t26">dekorater</w><c> </c>
+            <w ana="mte:Ncfsg" msd="UposTag=NOUN|Case=Gen|Gender=Fem|Number=Sing" lemma="dvorana" xml:id="komet72.3.3.t27">dvorane</w>
+            <pc ana="mte:Z" msd="UposTag=PUNCT" xml:id="komet72.3.3.t28">.</pc>
+            <linkGrp corresp="#komet72.3.3" targFunc="head argument" type="UD-SYN">
+               <link ana="ud-syn:cc" target="#komet72.3.3.t6 #komet72.3.3.t1"/>
+               <link ana="ud-syn:aux" target="#komet72.3.3.t6 #komet72.3.3.t2"/>
+               <link ana="ud-syn:obj" target="#komet72.3.3.t6 #komet72.3.3.t3"/>
+               <link ana="ud-syn:case" target="#komet72.3.3.t5 #komet72.3.3.t4"/>
+               <link ana="ud-syn:nmod" target="#komet72.3.3.t3 #komet72.3.3.t5"/>
+               <link ana="ud-syn:root" target="#komet72.3.3 #komet72.3.3.t6"/>
+               <link ana="ud-syn:amod" target="#komet72.3.3.t9 #komet72.3.3.t7"/>
+               <link ana="ud-syn:amod" target="#komet72.3.3.t9 #komet72.3.3.t8"/>
+               <link ana="ud-syn:nsubj" target="#komet72.3.3.t6 #komet72.3.3.t9"/>
+               <link ana="ud-syn:punct" target="#komet72.3.3.t12 #komet72.3.3.t10"/>
+               <link ana="ud-syn:amod" target="#komet72.3.3.t12 #komet72.3.3.t11"/>
+               <link ana="ud-syn:appos" target="#komet72.3.3.t9 #komet72.3.3.t12"/>
+               <link ana="ud-syn:nmod" target="#komet72.3.3.t12 #komet72.3.3.t13"/>
+               <link ana="ud-syn:flat_name" target="#komet72.3.3.t13 #komet72.3.3.t14"/>
+               <link ana="ud-syn:punct" target="#komet72.3.3.t23 #komet72.3.3.t15"/>
+               <link ana="ud-syn:mark" target="#komet72.3.3.t23 #komet72.3.3.t16"/>
+               <link ana="ud-syn:expl" target="#komet72.3.3.t23 #komet72.3.3.t17"/>
+               <link ana="ud-syn:aux" target="#komet72.3.3.t23 #komet72.3.3.t18"/>
+               <link ana="ud-syn:case" target="#komet72.3.3.t20 #komet72.3.3.t19"/>
+               <link ana="ud-syn:obl" target="#komet72.3.3.t23 #komet72.3.3.t20"/>
+               <link ana="ud-syn:nmod" target="#komet72.3.3.t20 #komet72.3.3.t21"/>
+               <link ana="ud-syn:advmod" target="#komet72.3.3.t23 #komet72.3.3.t22"/>
+               <link ana="ud-syn:acl" target="#komet72.3.3.t12 #komet72.3.3.t23"/>
+               <link ana="ud-syn:case" target="#komet72.3.3.t26 #komet72.3.3.t24"/>
+               <link ana="ud-syn:amod" target="#komet72.3.3.t26 #komet72.3.3.t25"/>
+               <link ana="ud-syn:obl" target="#komet72.3.3.t23 #komet72.3.3.t26"/>
+               <link ana="ud-syn:nmod" target="#komet72.3.3.t26 #komet72.3.3.t27"/>
+               <link ana="ud-syn:punct" target="#komet72.3.3.t6 #komet72.3.3.t28"/>
+            </linkGrp>
+         </s><c> </c>
+      </p>
+      <p xml:id="komet72.4">
+         <s xml:id="komet72.4.1">
+            <w ana="mte:Ncmsn" msd="UposTag=NOUN|Case=Nom|Gender=Masc|Number=Sing" lemma="foto" xml:id="komet72.4.1.t1">Foto</w>
+            <pc ana="mte:Z" msd="UposTag=PUNCT" xml:id="komet72.4.1.t2">:</pc><c> </c>
+            <w ana="mte:Ncfsn" msd="UposTag=NOUN|Case=Nom|Gender=Fem|Number=Sing" lemma="PROFIMEDIA" xml:id="komet72.4.1.t3">PROFIMEDIA</w>
+            <linkGrp corresp="#komet72.4.1" targFunc="head argument" type="UD-SYN">
+               <link ana="ud-syn:parataxis" target="#komet72.4.1.t3 #komet72.4.1.t1"/>
+               <link ana="ud-syn:punct" target="#komet72.4.1.t1 #komet72.4.1.t2"/>
+               <link ana="ud-syn:root" target="#komet72.4.1 #komet72.4.1.t3"/>
+            </linkGrp>
+         </s>
+      </p>
+      <p xml:id="komet72.5">
+         <s xml:id="komet72.5.1">
+            <seg type="metaphor" subtype="frame" ana="#met.spatial_orientation">
+               <seg type="metaphor" subtype="MRWi">
+                  <w ana="mte:Sd" msd="UposTag=ADP|Case=Dat" lemma="k" xml:id="komet72.5.1.t1">K</w>
+               </seg>
+            </seg><c> </c>
+            <w ana="mte:Ncmpd" msd="UposTag=NOUN|Case=Dat|Gender=Masc|Number=Plur" lemma="posnetek" xml:id="komet72.5.1.t2">posnetkom</w>
+            <pc ana="mte:Z" msd="UposTag=PUNCT" xml:id="komet72.5.1.t3">:</pc>
+            <linkGrp corresp="#komet72.5.1" targFunc="head argument" type="UD-SYN">
+               <link ana="ud-syn:case" target="#komet72.5.1.t2 #komet72.5.1.t1"/>
+               <link ana="ud-syn:root" target="#komet72.5.1 #komet72.5.1.t2"/>
+               <link ana="ud-syn:punct" target="#komet72.5.1.t2 #komet72.5.1.t3"/>
+            </linkGrp>
+         </s><c> </c>
+      </p>
+      <p xml:id="komet72.6">
+         <s xml:id="komet72.6.1">
+            <w ana="mte:Ncfsn" msd="UposTag=NOUN|Case=Nom|Gender=Fem|Number=Sing" lemma="profimedia" xml:id="komet72.6.1.t1">profimedia</w>
+            <pc ana="mte:Z" msd="UposTag=PUNCT" xml:id="komet72.6.1.t2">-</pc>
+            <w ana="mte:Mdc" msd="UposTag=NUM|NumForm=Digit|NumType=Card" lemma="0366876153" xml:id="komet72.6.1.t3">0366876153</w>
+            <linkGrp corresp="#komet72.6.1" targFunc="head argument" type="UD-SYN">
+               <link ana="ud-syn:root" target="#komet72.6.1 #komet72.6.1.t1"/>
+               <link ana="ud-syn:punct" target="#komet72.6.1.t3 #komet72.6.1.t2"/>
+               <link ana="ud-syn:nummod" target="#komet72.6.1.t1 #komet72.6.1.t3"/>
+            </linkGrp>
+         </s><c> </c>
+      </p>
+      <p xml:id="komet72.7">
+         <s xml:id="komet72.7.1">
+            <w ana="mte:Ncfsa" msd="UposTag=NOUN|Case=Acc|Gender=Fem|Number=Sing" lemma="princesa" xml:id="komet72.7.1.t1">Princeso</w><c> </c>
+            <w ana="mte:Npfsa" msd="UposTag=PROPN|Case=Nom|Gender=Fem|Number=Sing" lemma="Carolina" xml:id="komet72.7.1.t2">Caroline</w><c> </c>
+            <pc ana="mte:Z" msd="UposTag=PUNCT" xml:id="komet72.7.1.t3">(</pc>
+            <w ana="mte:Cs" msd="UposTag=SCONJ" lemma="ki" xml:id="komet72.7.1.t4">ki</w><c> </c>
+            <w ana="mte:Va-r3s-n" msd="UposTag=AUX|Mood=Ind|Number=Sing|Person=3|Polarity=Pos|Tense=Pres|VerbForm=Fin" lemma="biti" xml:id="komet72.7.1.t5">je</w><c> </c>
+            <w ana="mte:Q" msd="UposTag=PART" lemma="seveda" xml:id="komet72.7.1.t6">seveda</w><c> </c>
+            <w ana="mte:Vmpp-sf" msd="UposTag=VERB|Aspect=Imp|Gender=Fem|Number=Sing|VerbForm=Part" lemma="blesteti" xml:id="komet72.7.1.t7">blestela</w><c> </c>
+            <seg type="metaphor" subtype="frame" ana="#met.spatial_orientation">
+               <seg type="metaphor" subtype="MRWi">
+                  <w ana="mte:Sl" msd="UposTag=ADP|Case=Loc" lemma="v" xml:id="komet72.7.1.t8">v</w>
+               </seg>
+            </seg><c> </c>
+            <seg type="metaphor" subtype="frame" ana="#met.metonymy">
+               <seg type="metaphor" subtype="WIDLI">
+                  <w ana="mte:Npmsl" msd="UposTag=PROPN|Case=Loc|Gender=Masc|Number=Sing" lemma="Chanel" xml:id="komet72.7.1.t9">Chanelu</w>
+               </seg>
+            </seg>
+            <pc ana="mte:Z" msd="UposTag=PUNCT" xml:id="komet72.7.1.t10">)</pc><c> </c>
+            <w ana="mte:Va-r3s-n" msd="UposTag=AUX|Mood=Ind|Number=Sing|Person=3|Polarity=Pos|Tense=Pres|VerbForm=Fin" lemma="biti" xml:id="komet72.7.1.t11">je</w><c> </c>
+            <w ana="mte:Vmpp-sm" msd="UposTag=VERB|Aspect=Imp|Gender=Masc|Number=Sing|VerbForm=Part" lemma="spremljati" xml:id="komet72.7.1.t12">spremljal</w><c> </c>
+            <w ana="mte:Agpmsny" msd="UposTag=ADJ|Case=Nom|Definite=Def|Degree=Pos|Gender=Masc|Number=Sing" lemma="družinski" xml:id="komet72.7.1.t13">družinski</w><c> </c>
+            <w ana="mte:Ncmsn" msd="UposTag=NOUN|Case=Nom|Gender=Masc|Number=Sing" lemma="prijatelj" xml:id="komet72.7.1.t14">prijatelj</w>
+            <pc ana="mte:Z" msd="UposTag=PUNCT" xml:id="komet72.7.1.t15">,</pc><c> </c>
+            <w ana="mte:Agpmsny" msd="UposTag=ADJ|Case=Nom|Definite=Def|Degree=Pos|Gender=Masc|Number=Sing" lemma="moden" xml:id="komet72.7.1.t16">modni</w><c> </c>
+            <w ana="mte:Ncmsn" msd="UposTag=NOUN|Case=Nom|Gender=Masc|Number=Sing" lemma="oblikovalec" xml:id="komet72.7.1.t17">oblikovalec</w><c> </c>
+            <w ana="mte:Npmsn" msd="UposTag=PROPN|Case=Nom|Gender=Masc|Number=Sing" lemma="Karl" xml:id="komet72.7.1.t18">Karl</w><c> </c>
+            <w ana="mte:Npmsn" msd="UposTag=PROPN|Case=Nom|Gender=Masc|Number=Sing" lemma="Lagerfeld" xml:id="komet72.7.1.t19">Lagerfeld</w>
+            <pc ana="mte:Z" msd="UposTag=PUNCT" xml:id="komet72.7.1.t20">,</pc><c> </c>
+            <w ana="mte:Q" msd="UposTag=PART" lemma="tudi" xml:id="komet72.7.1.t21">tudi</w><c> </c>
+            <w ana="mte:Agpmsny" msd="UposTag=ADJ|Case=Nom|Definite=Def|Degree=Pos|Gender=Masc|Number=Sing" lemma="umetniški" xml:id="komet72.7.1.t22">umetniški</w><c> </c>
+            <w ana="mte:Ncmsn" msd="UposTag=NOUN|Case=Nom|Gender=Masc|Number=Sing" lemma="vodja" xml:id="komet72.7.1.t23">vodja</w><c> </c>
+            <w ana="mte:Ncmsg" msd="UposTag=NOUN|Case=Gen|Gender=Masc|Number=Sing" lemma="ples" xml:id="komet72.7.1.t24">plesa</w>
+            <pc ana="mte:Z" msd="UposTag=PUNCT" xml:id="komet72.7.1.t25">.</pc>
+            <linkGrp corresp="#komet72.7.1" targFunc="head argument" type="UD-SYN">
+               <link ana="ud-syn:obj" target="#komet72.7.1.t12 #komet72.7.1.t1"/>
+               <link ana="ud-syn:nmod" target="#komet72.7.1.t1 #komet72.7.1.t2"/>
+               <link ana="ud-syn:punct" target="#komet72.7.1.t7 #komet72.7.1.t3"/>
+               <link ana="ud-syn:mark" target="#komet72.7.1.t7 #komet72.7.1.t4"/>
+               <link ana="ud-syn:aux" target="#komet72.7.1.t7 #komet72.7.1.t5"/>
+               <link ana="ud-syn:advmod" target="#komet72.7.1.t7 #komet72.7.1.t6"/>
+               <link ana="ud-syn:acl" target="#komet72.7.1.t1 #komet72.7.1.t7"/>
+               <link ana="ud-syn:case" target="#komet72.7.1.t9 #komet72.7.1.t8"/>
+               <link ana="ud-syn:obl" target="#komet72.7.1.t7 #komet72.7.1.t9"/>
+               <link ana="ud-syn:punct" target="#komet72.7.1.t7 #komet72.7.1.t10"/>
+               <link ana="ud-syn:aux" target="#komet72.7.1.t12 #komet72.7.1.t11"/>
+               <link ana="ud-syn:root" target="#komet72.7.1 #komet72.7.1.t12"/>
+               <link ana="ud-syn:amod" target="#komet72.7.1.t14 #komet72.7.1.t13"/>
+               <link ana="ud-syn:nsubj" target="#komet72.7.1.t12 #komet72.7.1.t14"/>
+               <link ana="ud-syn:punct" target="#komet72.7.1.t17 #komet72.7.1.t15"/>
+               <link ana="ud-syn:amod" target="#komet72.7.1.t17 #komet72.7.1.t16"/>
+               <link ana="ud-syn:appos" target="#komet72.7.1.t14 #komet72.7.1.t17"/>
+               <link ana="ud-syn:nmod" target="#komet72.7.1.t17 #komet72.7.1.t18"/>
+               <link ana="ud-syn:flat_name" target="#komet72.7.1.t18 #komet72.7.1.t19"/>
+               <link ana="ud-syn:punct" target="#komet72.7.1.t23 #komet72.7.1.t20"/>
+               <link ana="ud-syn:advmod" target="#komet72.7.1.t23 #komet72.7.1.t21"/>
+               <link ana="ud-syn:amod" target="#komet72.7.1.t23 #komet72.7.1.t22"/>
+               <link ana="ud-syn:conj" target="#komet72.7.1.t14 #komet72.7.1.t23"/>
+               <link ana="ud-syn:nmod" target="#komet72.7.1.t23 #komet72.7.1.t24"/>
+               <link ana="ud-syn:punct" target="#komet72.7.1.t12 #komet72.7.1.t25"/>
+            </linkGrp>
+         </s><c> </c>
+      </p>
+      <p xml:id="komet72.8">
+         <s xml:id="komet72.8.1">
+            <w ana="mte:Ncfsn" msd="UposTag=NOUN|Case=Nom|Gender=Fem|Number=Sing" lemma="profimedia" xml:id="komet72.8.1.t1">profimedia</w>
+            <pc ana="mte:Z" msd="UposTag=PUNCT" xml:id="komet72.8.1.t2">-</pc>
+            <w ana="mte:Mdc" msd="UposTag=NUM|NumForm=Digit|NumType=Card" lemma="0366886799" xml:id="komet72.8.1.t3">0366886799</w>
+            <linkGrp corresp="#komet72.8.1" targFunc="head argument" type="UD-SYN">
+               <link ana="ud-syn:root" target="#komet72.8.1 #komet72.8.1.t1"/>
+               <link ana="ud-syn:punct" target="#komet72.8.1.t3 #komet72.8.1.t2"/>
+               <link ana="ud-syn:nummod" target="#komet72.8.1.t1 #komet72.8.1.t3"/>
+            </linkGrp>
+         </s><c> </c>
+      </p>
+      <p xml:id="komet72.9">
+         <s xml:id="komet72.9.1">
+            <w ana="mte:Mlomsn" msd="UposTag=ADJ|Case=Nom|Gender=Masc|NumType=Ord|Number=Sing" lemma="prvi" xml:id="komet72.9.1.t1">Prvi</w><c> </c>
+            <w ana="mte:Agpmsny" msd="UposTag=ADJ|Case=Nom|Definite=Def|Degree=Pos|Gender=Masc|Number=Sing" lemma="uraden" xml:id="komet72.9.1.t2">uradni</w><c> </c>
+            <w ana="mte:Ncmsn" msd="UposTag=NOUN|Case=Nom|Gender=Masc|Number=Sing" lemma="nastop" xml:id="komet72.9.1.t3">nastop</w><c> </c>
+            <w ana="mte:Npfsn" msd="UposTag=PROPN|Case=Nom|Gender=Fem|Number=Sing" lemma="Charlotte" xml:id="komet72.9.1.t4">Charlotte</w><c> </c>
+            <w ana="mte:Npmsn" msd="UposTag=PROPN|Case=Nom|Gender=Masc|Number=Sing" lemma="Casiraghi" xml:id="komet72.9.1.t5">Casiraghi</w><c> </c>
+            <pc ana="mte:Z" msd="UposTag=PUNCT" xml:id="komet72.9.1.t6">(</pc>
+            <seg type="metaphor" subtype="frame" ana="#met.spatial_orientation">
+               <seg type="metaphor" subtype="MRWi">
+                  <w ana="mte:Sl" msd="UposTag=ADP|Case=Loc" lemma="v" xml:id="komet72.9.1.t7">v</w>
+               </seg>
+            </seg><c> </c>
+            <w ana="mte:Ncfsl" msd="UposTag=NOUN|Case=Loc|Gender=Fem|Number=Sing" lemma="kreacija" xml:id="komet72.9.1.t8">kreaciji</w><c> </c>
+            <w ana="mte:Npmsg" msd="UposTag=PROPN|Case=Gen|Gender=Masc|Number=Sing" lemma="Yves" xml:id="komet72.9.1.t9">Yvesa</w><c> </c>
+            <w ana="mte:Npmsn" msd="UposTag=PROPN|Case=Nom|Gender=Masc|Number=Sing" lemma="Saint" xml:id="komet72.9.1.t10">Saint</w><c> </c>
+            <w ana="mte:Npmsg" msd="UposTag=PROPN|Case=Gen|Gender=Masc|Number=Sing" lemma="Laurent" xml:id="komet72.9.1.t11">Laurenta</w>
+            <pc ana="mte:Z" msd="UposTag=PUNCT" xml:id="komet72.9.1.t12">)</pc><c> </c>
+            <w ana="mte:Cc" msd="UposTag=CCONJ" lemma="in" xml:id="komet72.9.1.t13">in</w><c> </c>
+            <w ana="mte:Ps3msgsf" msd="UposTag=DET|Case=Gen|Gender=Masc|Gender[psor]=Fem|Number=Sing|Number[psor]=Sing|Person=3|Poss=Yes|PronType=Prs" lemma="njen" xml:id="komet72.9.1.t14">njenega</w><c> </c>
+            <w ana="mte:Npmsg" msd="UposTag=PROPN|Case=Gen|Gender=Masc|Number=Sing" lemma="Dimitrij" xml:id="komet72.9.1.t15">Dimitrija</w><c> </c>
+            <w ana="mte:Npmsg" msd="UposTag=PROPN|Case=Gen|Gender=Masc|Number=Sing" lemma="Rassam" xml:id="komet72.9.1.t16">Rassama</w><c> </c>
+            <pc ana="mte:Z" msd="UposTag=PUNCT" xml:id="komet72.9.1.t17">–</pc><c> </c>
+            <w ana="mte:Appmsny" msd="UposTag=ADJ|Case=Nom|Definite=Def|Degree=Pos|Gender=Masc|Number=Sing|VerbForm=Part" lemma="svetlikajoč" xml:id="komet72.9.1.t18">svetlikajoči</w><c> </c>
+            <w ana="mte:Px------y" msd="UposTag=PRON|PronType=Prs|Reflex=Yes|Variant=Short" lemma="se" xml:id="komet72.9.1.t19">se</w><c> </c>
+            <seg type="metaphor" subtype="frame" ana="#met.personification">
+               <seg type="metaphor" subtype="WIDLI">
+                  <w ana="mte:Ncmsn" msd="UposTag=NOUN|Case=Nom|Gender=Masc|Number=Sing" lemma="prstan" xml:id="komet72.9.1.t20">prstan</w>
+               </seg>
+            </seg><c> </c>
+            <w ana="mte:Sl" msd="UposTag=ADP|Case=Loc" lemma="na" xml:id="komet72.9.1.t21">na</w><c> </c>
+            <w ana="mte:Ncfsl" msd="UposTag=NOUN|Case=Loc|Gender=Fem|Number=Sing" lemma="princesin" xml:id="komet72.9.1.t22">princesini</w><c> </c>
+            <w ana="mte:Ncfsl" msd="UposTag=NOUN|Case=Loc|Gender=Fem|Number=Sing" lemma="roka" xml:id="komet72.9.1.t23">roki</w><c> </c>
+            <w ana="mte:Va-r3s-n" msd="UposTag=AUX|Mood=Ind|Number=Sing|Person=3|Polarity=Pos|Tense=Pres|VerbForm=Fin" lemma="biti" xml:id="komet72.9.1.t24">je</w><c> </c>
+            <seg type="metaphor" subtype="frame" ana="#met.cause_visual_change">
+               <seg type="metaphor" subtype="MRWi">
+                  <w ana="mte:Vmep-sm" msd="UposTag=VERB|Aspect=Perf|Gender=Masc|Number=Sing|VerbForm=Part" lemma="razkriti" xml:id="komet72.9.1.t25">razkril</w>
+               </seg>
+            </seg>
+            <pc ana="mte:Z" msd="UposTag=PUNCT" xml:id="komet72.9.1.t26">,</pc><c> </c>
+            <w ana="mte:Cs" msd="UposTag=SCONJ" lemma="da" xml:id="komet72.9.1.t27">da</w><c> </c>
+            <w ana="mte:Va-r3s-n" msd="UposTag=AUX|Mood=Ind|Number=Sing|Person=3|Polarity=Pos|Tense=Pres|VerbForm=Fin" lemma="biti" xml:id="komet72.9.1.t28">je</w><c> </c>
+            <w ana="mte:Ncmsan" msd="UposTag=NOUN|Animacy=Inan|Case=Acc|Gender=Masc|Number=Sing" lemma="par" xml:id="komet72.9.1.t29">par</w><c> </c>
+            <w ana="mte:Appmsnn" msd="UposTag=ADJ|Case=Nom|Definite=Ind|Degree=Pos|Gender=Masc|Number=Sing|VerbForm=Part" lemma="zaročen" xml:id="komet72.9.1.t30">zaročen</w>
+            <pc ana="mte:Z" msd="UposTag=PUNCT" xml:id="komet72.9.1.t31">!</pc>
+            <linkGrp corresp="#komet72.9.1" targFunc="head argument" type="UD-SYN">
+               <link ana="ud-syn:amod" target="#komet72.9.1.t3 #komet72.9.1.t1"/>
+               <link ana="ud-syn:amod" target="#komet72.9.1.t3 #komet72.9.1.t2"/>
+               <link ana="ud-syn:nsubj" target="#komet72.9.1.t25 #komet72.9.1.t3"/>
+               <link ana="ud-syn:nmod" target="#komet72.9.1.t3 #komet72.9.1.t4"/>
+               <link ana="ud-syn:flat_name" target="#komet72.9.1.t4 #komet72.9.1.t5"/>
+               <link ana="ud-syn:punct" target="#komet72.9.1.t8 #komet72.9.1.t6"/>
+               <link ana="ud-syn:case" target="#komet72.9.1.t8 #komet72.9.1.t7"/>
+               <link ana="ud-syn:appos" target="#komet72.9.1.t3 #komet72.9.1.t8"/>
+               <link ana="ud-syn:nmod" target="#komet72.9.1.t8 #komet72.9.1.t9"/>
+               <link ana="ud-syn:flat_name" target="#komet72.9.1.t9 #komet72.9.1.t10"/>
+               <link ana="ud-syn:flat_name" target="#komet72.9.1.t9 #komet72.9.1.t11"/>
+               <link ana="ud-syn:punct" target="#komet72.9.1.t8 #komet72.9.1.t12"/>
+               <link ana="ud-syn:cc" target="#komet72.9.1.t15 #komet72.9.1.t13"/>
+               <link ana="ud-syn:det" target="#komet72.9.1.t15 #komet72.9.1.t14"/>
+               <link ana="ud-syn:conj" target="#komet72.9.1.t8 #komet72.9.1.t15"/>
+               <link ana="ud-syn:flat_name" target="#komet72.9.1.t15 #komet72.9.1.t16"/>
+               <link ana="ud-syn:punct" target="#komet72.9.1.t8 #komet72.9.1.t17"/>
+               <link ana="ud-syn:amod" target="#komet72.9.1.t20 #komet72.9.1.t18"/>
+               <link ana="ud-syn:expl" target="#komet72.9.1.t25 #komet72.9.1.t19"/>
+               <link ana="ud-syn:nsubj" target="#komet72.9.1.t25 #komet72.9.1.t20"/>
+               <link ana="ud-syn:case" target="#komet72.9.1.t22 #komet72.9.1.t21"/>
+               <link ana="ud-syn:nmod" target="#komet72.9.1.t20 #komet72.9.1.t22"/>
+               <link ana="ud-syn:nmod" target="#komet72.9.1.t22 #komet72.9.1.t23"/>
+               <link ana="ud-syn:aux" target="#komet72.9.1.t25 #komet72.9.1.t24"/>
+               <link ana="ud-syn:root" target="#komet72.9.1 #komet72.9.1.t25"/>
+               <link ana="ud-syn:punct" target="#komet72.9.1.t30 #komet72.9.1.t26"/>
+               <link ana="ud-syn:mark" target="#komet72.9.1.t30 #komet72.9.1.t27"/>
+               <link ana="ud-syn:cop" target="#komet72.9.1.t30 #komet72.9.1.t28"/>
+               <link ana="ud-syn:obj" target="#komet72.9.1.t30 #komet72.9.1.t29"/>
+               <link ana="ud-syn:ccomp" target="#komet72.9.1.t25 #komet72.9.1.t30"/>
+               <link ana="ud-syn:punct" target="#komet72.9.1.t25 #komet72.9.1.t31"/>
+            </linkGrp>
+         </s>
+      </p>
+      <p xml:id="komet72.10">
+         <s xml:id="komet72.10.1">
+            <w ana="mte:Ncfsn" msd="UposTag=NOUN|Case=Nom|Gender=Fem|Number=Sing" lemma="profimedia" xml:id="komet72.10.1.t1">profimedia</w>
+            <pc ana="mte:Z" msd="UposTag=PUNCT" xml:id="komet72.10.1.t2">-</pc>
+            <w ana="mte:Mdc" msd="UposTag=NUM|NumForm=Digit|NumType=Card" lemma="0366886617" xml:id="komet72.10.1.t3">0366886617</w>
+            <linkGrp corresp="#komet72.10.1" targFunc="head argument" type="UD-SYN">
+               <link ana="ud-syn:root" target="#komet72.10.1 #komet72.10.1.t1"/>
+               <link ana="ud-syn:punct" target="#komet72.10.1.t3 #komet72.10.1.t2"/>
+               <link ana="ud-syn:nummod" target="#komet72.10.1.t1 #komet72.10.1.t3"/>
+            </linkGrp>
+         </s><c> </c>
+      </p>
+      <p xml:id="komet72.11">
+         <s xml:id="komet72.11.1">
+            <w ana="mte:Agpfsn" msd="UposTag=ADJ|Case=Nom|Degree=Pos|Gender=Fem|Number=Sing" lemma="vesel" xml:id="komet72.11.1.t1">Vesela</w><c> </c>
+            <w ana="mte:Ncfsn" msd="UposTag=NOUN|Case=Nom|Gender=Fem|Number=Sing" lemma="novica" xml:id="komet72.11.1.t2">novica</w>
+            <pc ana="mte:Z" msd="UposTag=PUNCT" xml:id="komet72.11.1.t3">:</pc><c> </c>
+            <w ana="mte:Npmsn" msd="UposTag=PROPN|Case=Nom|Gender=Masc|Number=Sing" lemma="Pierre" xml:id="komet72.11.1.t4">Pierre</w><c> </c>
+            <w ana="mte:Npmsn" msd="UposTag=PROPN|Case=Nom|Gender=Masc|Number=Sing" lemma="Casiraghi" xml:id="komet72.11.1.t5">Casiraghi</w><c> </c>
+            <w ana="mte:Cc" msd="UposTag=CCONJ" lemma="in" xml:id="komet72.11.1.t6">in</w><c> </c>
+            <w ana="mte:Npfsn" msd="UposTag=PROPN|Case=Nom|Gender=Fem|Number=Sing" lemma="Beatrice" xml:id="komet72.11.1.t7">Beatrice</w><c> </c>
+            <w ana="mte:Npfsn" msd="UposTag=PROPN|Case=Nom|Gender=Fem|Number=Sing" lemma="Borromeo" xml:id="komet72.11.1.t8">Borromeo</w>
+            <pc ana="mte:Z" msd="UposTag=PUNCT" xml:id="komet72.11.1.t9">-</pc>
+            <w ana="mte:Npmsn" msd="UposTag=PROPN|Case=Nom|Gender=Masc|Number=Sing" lemma="Casiraghi" xml:id="komet72.11.1.t10">Casiraghi</w><c> </c>
+            <w ana="mte:Vmpr3d" msd="UposTag=VERB|Aspect=Imp|Mood=Ind|Number=Dual|Person=3|Tense=Pres|VerbForm=Fin" lemma="pričakovati" xml:id="komet72.11.1.t11">pričakujeta</w><c> </c>
+            <w ana="mte:Mlpmsa" msd="UposTag=ADJ|Case=Acc|Gender=Masc|Number=Sing" lemma="drug" xml:id="komet72.11.1.t12">drugega</w><c> </c>
+            <w ana="mte:Ncmsay" msd="UposTag=NOUN|Animacy=Anim|Case=Acc|Gender=Masc|Number=Sing" lemma="otrok" xml:id="komet72.11.1.t13">otroka</w>
+            <pc ana="mte:Z" msd="UposTag=PUNCT" xml:id="komet72.11.1.t14">,</pc><c> </c>
+            <w ana="mte:Pr-nsn" msd="UposTag=PRON|Case=Nom|Gender=Neut|Number=Sing|PronType=Rel" lemma="kar" xml:id="komet72.11.1.t15">kar</w><c> </c>
+            <w ana="mte:Vmpr3s" msd="UposTag=VERB|Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin" lemma="dokazovati" xml:id="komet72.11.1.t16">dokazuje</w><c> </c>
+            <w ana="mte:Appmsan" msd="UposTag=ADJ|Case=Acc|Definite=Ind|Degree=Pos|Gender=Masc|Number=Sing|VerbForm=Part" lemma="zaobljen" xml:id="komet72.11.1.t17">zaobljen</w><c> </c>
+            <w ana="mte:Ncmsan" msd="UposTag=NOUN|Animacy=Inan|Case=Acc|Gender=Masc|Number=Sing" lemma="trebušček" xml:id="komet72.11.1.t18">trebušček</w><c> </c>
+            <w ana="mte:Si" msd="UposTag=ADP|Case=Ins" lemma="pod" xml:id="komet72.11.1.t19">pod</w><c> </c>
+            <w ana="mte:Ncfsi" msd="UposTag=NOUN|Case=Ins|Gender=Fem|Number=Sing" lemma="toaleta" xml:id="komet72.11.1.t20">toaleto</w><c> </c>
+            <w ana="mte:Npmsn" msd="UposTag=PROPN|Case=Nom|Gender=Masc|Number=Sing" lemma="Alberta" xml:id="komet72.11.1.t21">Alberte</w><c> </c>
+            <w ana="mte:Npmsn" msd="UposTag=PROPN|Case=Nom|Gender=Masc|Number=Sing" lemma="Ferretti" xml:id="komet72.11.1.t22">Ferretti</w>
+            <linkGrp corresp="#komet72.11.1" targFunc="head argument" type="UD-SYN">
+               <link ana="ud-syn:amod" target="#komet72.11.1.t2 #komet72.11.1.t1"/>
+               <link ana="ud-syn:parataxis" target="#komet72.11.1.t11 #komet72.11.1.t2"/>
+               <link ana="ud-syn:punct" target="#komet72.11.1.t2 #komet72.11.1.t3"/>
+               <link ana="ud-syn:nsubj" target="#komet72.11.1.t11 #komet72.11.1.t4"/>
+               <link ana="ud-syn:flat_name" target="#komet72.11.1.t4 #komet72.11.1.t5"/>
+               <link ana="ud-syn:cc" target="#komet72.11.1.t7 #komet72.11.1.t6"/>
+               <link ana="ud-syn:conj" target="#komet72.11.1.t4 #komet72.11.1.t7"/>
+               <link ana="ud-syn:flat_name" target="#komet72.11.1.t7 #komet72.11.1.t8"/>
+               <link ana="ud-syn:punct" target="#komet72.11.1.t10 #komet72.11.1.t9"/>
+               <link ana="ud-syn:conj" target="#komet72.11.1.t8 #komet72.11.1.t10"/>
+               <link ana="ud-syn:root" target="#komet72.11.1 #komet72.11.1.t11"/>
+               <link ana="ud-syn:amod" target="#komet72.11.1.t13 #komet72.11.1.t12"/>
+               <link ana="ud-syn:obj" target="#komet72.11.1.t11 #komet72.11.1.t13"/>
+               <link ana="ud-syn:punct" target="#komet72.11.1.t16 #komet72.11.1.t14"/>
+               <link ana="ud-syn:nsubj" target="#komet72.11.1.t16 #komet72.11.1.t15"/>
+               <link ana="ud-syn:parataxis" target="#komet72.11.1.t11 #komet72.11.1.t16"/>
+               <link ana="ud-syn:amod" target="#komet72.11.1.t18 #komet72.11.1.t17"/>
+               <link ana="ud-syn:obj" target="#komet72.11.1.t16 #komet72.11.1.t18"/>
+               <link ana="ud-syn:case" target="#komet72.11.1.t20 #komet72.11.1.t19"/>
+               <link ana="ud-syn:obl" target="#komet72.11.1.t16 #komet72.11.1.t20"/>
+               <link ana="ud-syn:nmod" target="#komet72.11.1.t20 #komet72.11.1.t21"/>
+               <link ana="ud-syn:nmod" target="#komet72.11.1.t21 #komet72.11.1.t22"/>
+            </linkGrp>
+         </s><c> </c>
+      </p>
+      <p xml:id="komet72.12">
+         <s xml:id="komet72.12.1">
+            <w ana="mte:Ncfsn" msd="UposTag=NOUN|Case=Nom|Gender=Fem|Number=Sing" lemma="profimedia" xml:id="komet72.12.1.t1">profimedia</w>
+            <pc ana="mte:Z" msd="UposTag=PUNCT" xml:id="komet72.12.1.t2">-</pc>
+            <w ana="mte:Mdc" msd="UposTag=NUM|NumForm=Digit|NumType=Card" lemma="0366869922" xml:id="komet72.12.1.t3">0366869922</w>
+            <linkGrp corresp="#komet72.12.1" targFunc="head argument" type="UD-SYN">
+               <link ana="ud-syn:root" target="#komet72.12.1 #komet72.12.1.t1"/>
+               <link ana="ud-syn:punct" target="#komet72.12.1.t3 #komet72.12.1.t2"/>
+               <link ana="ud-syn:nummod" target="#komet72.12.1.t1 #komet72.12.1.t3"/>
+            </linkGrp>
+         </s><c> </c>
+      </p>
+      <p xml:id="komet72.13">
+         <s xml:id="komet72.13.1">
+            <seg type="metaphor" subtype="frame" ana="#met.idiom">
+               <w ana="mte:Appmdn" msd="UposTag=ADJ|Case=Nom|Degree=Pos|Gender=Masc|Number=Dual|VerbForm=Part" lemma="zaljubljen" xml:id="komet72.13.1.t1">Zaljubljena</w><c> </c>
+               <seg type="metaphor" subtype="frame" ana="#met.spatial_orientation">
+                  <seg type="metaphor" subtype="MRWi">
+                     <w ana="mte:Sg" msd="UposTag=ADP|Case=Gen" lemma="do" xml:id="komet72.13.1.t2">do</w>
+                  </seg>
+               </seg><c> </c>
+               <seg type="metaphor" subtype="frame" ana="#met.body">
+                  <seg type="metaphor" subtype="MRWi">
+                     <w ana="mte:Ncnpg" msd="UposTag=NOUN|Case=Gen|Gender=Neut|Number=Plur" lemma="uho" xml:id="komet72.13.1.t3">ušes</w>
+                  </seg>
+               </seg>
+            </seg>
+            <pc ana="mte:Z" msd="UposTag=PUNCT" xml:id="komet72.13.1.t4">:</pc><c> </c>
+            <w ana="mte:Ncfsn" msd="UposTag=NOUN|Case=Nom|Gender=Fem|Number=Sing" lemma="princesa" xml:id="komet72.13.1.t5">princesa</w><c> </c>
+            <w ana="mte:Npfsn" msd="UposTag=PROPN|Case=Nom|Gender=Fem|Number=Sing" lemma="Alexandra" xml:id="komet72.13.1.t6">Alexandra</w><c> </c>
+            <w ana="mte:Cc" msd="UposTag=CCONJ" lemma="in" xml:id="komet72.13.1.t7">in</w><c> </c>
+            <w ana="mte:Ps3msnsf" msd="UposTag=DET|Case=Nom|Gender=Masc|Gender[psor]=Fem|Number=Sing|Number[psor]=Sing|Person=3|Poss=Yes|PronType=Prs" lemma="njen" xml:id="komet72.13.1.t8">njen</w><c> </c>
+            <w ana="mte:Ncmsn" msd="UposTag=NOUN|Case=Nom|Gender=Masc|Number=Sing" lemma="fant" xml:id="komet72.13.1.t9">fant</w><c> </c>
+            <w ana="mte:Npmsn" msd="UposTag=PROPN|Case=Nom|Gender=Masc|Number=Sing" lemma="Ben" xml:id="komet72.13.1.t10">Ben</w>
+            <pc ana="mte:Z" msd="UposTag=PUNCT" xml:id="komet72.13.1.t11">-</pc>
+            <w ana="mte:Npmsn" msd="UposTag=PROPN|Case=Nom|Gender=Masc|Number=Sing" lemma="Sylvester" xml:id="komet72.13.1.t12">Sylvester</w><c> </c>
+            <w ana="mte:Npmsn" msd="UposTag=PROPN|Case=Nom|Gender=Masc|Number=Sing" lemma="Strautmann" xml:id="komet72.13.1.t13">Strautmann</w>
+            <pc ana="mte:Z" msd="UposTag=PUNCT" xml:id="komet72.13.1.t14">,</pc><c> </c>
+            <w ana="mte:Cs" msd="UposTag=SCONJ" lemma="ki" xml:id="komet72.13.1.t15">ki</w><c> </c>
+            <w ana="mte:Vmpr3s-n" msd="UposTag=VERB|Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Polarity=Pos|Tense=Pres|VerbForm=Fin" lemma="imeti" xml:id="komet72.13.1.t16">ima</w><c> </c>
+            <w ana="mte:Agpfpa" msd="UposTag=ADJ|Case=Acc|Degree=Pos|Gender=Fem|Number=Plur" lemma="nemški" xml:id="komet72.13.1.t17">nemške</w><c> </c>
+            <seg type="metaphor" subtype="frame" ana="#met.vegetation">
+               <seg type="metaphor" subtype="MRWi">
+                  <w ana="mte:Ncfpa" msd="UposTag=NOUN|Case=Acc|Gender=Fem|Number=Plur" lemma="korenina" xml:id="komet72.13.1.t18">korenine</w>
+               </seg>
+            </seg>
+            <pc ana="mte:Z" msd="UposTag=PUNCT" xml:id="komet72.13.1.t19">.</pc>
+            <linkGrp corresp="#komet72.13.1" targFunc="head argument" type="UD-SYN">
+               <link ana="ud-syn:root" target="#komet72.13.1 #komet72.13.1.t1"/>
+               <link ana="ud-syn:case" target="#komet72.13.1.t3 #komet72.13.1.t2"/>
+               <link ana="ud-syn:obl" target="#komet72.13.1.t1 #komet72.13.1.t3"/>
+               <link ana="ud-syn:punct" target="#komet72.13.1.t1 #komet72.13.1.t4"/>
+               <link ana="ud-syn:nsubj" target="#komet72.13.1.t1 #komet72.13.1.t5"/>
+               <link ana="ud-syn:nmod" target="#komet72.13.1.t5 #komet72.13.1.t6"/>
+               <link ana="ud-syn:cc" target="#komet72.13.1.t9 #komet72.13.1.t7"/>
+               <link ana="ud-syn:det" target="#komet72.13.1.t9 #komet72.13.1.t8"/>
+               <link ana="ud-syn:conj" target="#komet72.13.1.t5 #komet72.13.1.t9"/>
+               <link ana="ud-syn:nmod" target="#komet72.13.1.t9 #komet72.13.1.t10"/>
+               <link ana="ud-syn:punct" target="#komet72.13.1.t12 #komet72.13.1.t11"/>
+               <link ana="ud-syn:conj" target="#komet72.13.1.t10 #komet72.13.1.t12"/>
+               <link ana="ud-syn:flat_name" target="#komet72.13.1.t12 #komet72.13.1.t13"/>
+               <link ana="ud-syn:punct" target="#komet72.13.1.t16 #komet72.13.1.t14"/>
+               <link ana="ud-syn:mark" target="#komet72.13.1.t16 #komet72.13.1.t15"/>
+               <link ana="ud-syn:acl" target="#komet72.13.1.t9 #komet72.13.1.t16"/>
+               <link ana="ud-syn:amod" target="#komet72.13.1.t18 #komet72.13.1.t17"/>
+               <link ana="ud-syn:obj" target="#komet72.13.1.t16 #komet72.13.1.t18"/>
+               <link ana="ud-syn:punct" target="#komet72.13.1.t1 #komet72.13.1.t19"/>
+            </linkGrp>
+         </s>
+      </p>
+   </div>

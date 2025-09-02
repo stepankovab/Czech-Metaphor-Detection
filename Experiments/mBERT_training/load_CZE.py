@@ -27,3 +27,19 @@ def load_czech(czech_path) -> pd.DataFrame:
 
     return pd.DataFrame({'word': new_words, 'metaphor': new_labels})
 
+train = list(load_czech('Data\CZECH_Dalibor\pokus_train_data.csv')['word'])
+test = list(load_czech('Data\CZECH_Dalibor\pokus_data.csv')['word'])
+
+
+
+
+
+print(' '.join(train))
+
+print()
+print()
+print()
+print()
+
+print(' '.join(test))
+

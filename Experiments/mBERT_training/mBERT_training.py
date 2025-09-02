@@ -63,6 +63,44 @@ def load_vuamc_words(vuamc_xml_path: str, elements=-1) -> pd.DataFrame:
     df = pd.DataFrame({'word': tokens[:elements], 'metaphor': labels[:elements]})
     return df
 
+
+
+from lxml import etree
+
+def load_komet_words(vuamc_xml_path: str, elements=-1) -> pd.DataFrame:
+    """
+    Parse KOMET TEI XML with XInclude and return a DataFrame:
+    columns: ['word', 'metaphor'] where 'metaphor' is bool.
+    Includes punctuation and preserves the original token order.
+    """
+    ns = {'tei': 'http://www.tei-c.org/ns/1.0'}
+    
+    parser = etree.XMLParser(remove_blank_text=True)
+    tree = etree.parse(vuamc_xml_path, parser)
+    tree.xinclude()  # resolve <xi:include>
+    root = tree.getroot()
+
+    tokens = []
+    labels = []
+
+    # Iterate over all sentences
+    for s in root.xpath('.//tei:s', namespaces=ns):
+        for child in s:
+            tag = etree.QName(child.tag).localname
+            token_text = (child.text or '').strip() if child.text else ''
+            if tag == 'w' and token_text:
+                # check if the word is inside a metaphor segment
+                is_metaphor = bool(child.xpath('ancestor::tei:seg[@type="metaphor"]', namespaces=ns))
+                tokens.append(token_text)
+                labels.append(is_metaphor)
+            elif tag in ('c', 'pc') and token_text:
+                # punctuation or whitespace
+                tokens.append(token_text)
+                labels.append(False)
+
+    df = pd.DataFrame({'word': tokens[:elements], 'metaphor': labels[:elements]})
+    return df
+
 # ------------- 2) Czech loader stub (user-provided) -------------
 # You said you already have a function `load_czech()` returning DataFrame with columns: word (str), metaphor (bool).
 # Here we only assume it exists.
@@ -194,7 +232,7 @@ def run_training(
 ):
     set_seed(seed)
     # 1) Load data
-    train_df = load_vuamc_words(vua_xml_path, vua_size)
+    train_df = load_komet_words(vua_xml_path, vua_size)
     train_cz_df = load_czech(czech_train_path)
     
     test_df = load_czech(czech_path)  # <- you provide this
@@ -316,9 +354,10 @@ def run_training(
             if len(tokens) > 30:
                 print("... truncated print ...")
 
-    # # Example usage:
-    # inspect_dataset(train_tokenized, tokenizer, batch_size=4, n_samples=2)
-    # inspect_dataset(test_tokenized, tokenizer, batch_size=4, n_samples=2)
+    # Example usage:
+    inspect_dataset(train_tokenized, tokenizer, batch_size=4, n_samples=2)
+    inspect_dataset(test_tokenized, tokenizer, batch_size=4, n_samples=2)
+    inspect_dataset(test_tokenized, tokenizer, batch_size=4, n_samples=2)
 
 
 
@@ -387,7 +426,8 @@ def run_training(
 
 # ------------------ Run ------------------
 # Example:
-metrics = run_training(vua_xml_path="Data/VUA/VUAMC.xml",
+metrics = run_training(vua_xml_path="Data\Komet_Slovenian\komet.tei\komet.xml",
+                    #    vua_xml_path="Data/VUA/VUAMC.xml",
                        czech_path="Data\CZECH_Dalibor\pokus_data.csv",
                        czech_train_path="Data\CZECH_Dalibor\pokus_train_data.csv",
                        output_dir="./mb2-metaphor",

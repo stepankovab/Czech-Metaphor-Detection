@@ -6,6 +6,7 @@ from collections import defaultdict
 
 def read_dicts(data_dir, start_num, end_num, name):
     outputs = []
+    train_percentage = None
 
     for file_path in Path(data_dir).iterdir():
         file_path = str(file_path)
@@ -26,15 +27,14 @@ def read_dicts(data_dir, start_num, end_num, name):
         else:
             raise Exception()
 
-        results_idx = 10 + len(args.train_languages)
-        if content[3].startswith("Total train percentage"):
-            results_idx += 1
+        if content[1 + len(args.train_languages)].startswith("Total train percentage"):
+            train_percentage = round(1 - float(content[1 + len(args.train_languages)][len("Total train percentage of metaphor "):]), 3)
 
-        results_dict = ast.literal_eval(content[results_idx].strip())
+        results_dict = ast.literal_eval(content[-5].strip())
 
         outputs.append((args, results_dict))
 
-    return outputs
+    return outputs, train_percentage
 
 
 def extract_metrics(outputs, relevant_args: list):
@@ -91,18 +91,21 @@ def generate_language_count_header(args):
 
 
 
-data_dir = "/storage/brno2/home/stepanb2/Czech-Metaphor-Detection/out"
+data_dir = "/storage/brno2/home/stepanb2/Czech-Metaphor-Detection/out_imbalance_weight"
 
 start_num = 12767212
 end_num   = 12799999
 
-name = "EN10000CSc-CS"
+name = "SL5000EN5000CSc-CS"
 
 relevant_args = ["imbalance_weight"]
 
-outputs = read_dicts(data_dir, start_num, end_num, name)
+outputs, train_percentage = read_dicts(data_dir, start_num, end_num, name)
 tabulated_dict = extract_metrics(outputs, relevant_args)
 markdown_table = generate_markdown_table(tabulated_dict, relevant_args)
 
 print(generate_language_count_header(args=outputs[0][0]))
+print()
+print(f"Train imbalance = `{train_percentage}`")
+print()
 print(markdown_table)

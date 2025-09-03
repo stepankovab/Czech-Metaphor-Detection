@@ -13,7 +13,6 @@ from transformers import (
 from datasets import Dataset
 from sklearn.metrics import precision_recall_fscore_support, accuracy_score
 import torch
-# from torch.nn import CrossEntropyLoss
 
 from load_VUE import load_vuamc
 from load_SLO import load_komet
@@ -21,10 +20,10 @@ from load_CZE import load_czech
 
 
 parser = argparse.ArgumentParser()
-parser.add_argument("--train_languages", nargs="+", help="Languages to train on")
-parser.add_argument("--train_counts", nargs="+", help="Number of words for each train language")
-parser.add_argument("--test_language", default="", type=str, help="Test language.")
-parser.add_argument("--test_count", default=0, type=int, help="Number of test words.")
+parser.add_argument("--train_languages", nargs="+", default=["en", "cs"], help="Languages to train on")
+parser.add_argument("--train_counts", nargs="+", default=[1000, 700], help="Number of words for each train language")
+parser.add_argument("--test_language", default="cs", type=str, help="Test language.")
+parser.add_argument("--test_count", default=1400, type=int, help="Number of test words.")
 parser.add_argument("--output_dir", default="./", type=str, help="Output directory path.")
 parser.add_argument("--source_dir", default="./", type=str, help="Source directory path.")
 

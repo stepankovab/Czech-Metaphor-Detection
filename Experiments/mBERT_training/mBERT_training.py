@@ -185,7 +185,7 @@ def prepare_data(train_languages, train_counts, test_language, test_count, sourc
 
         aligned_labels = align_labels_single_word(encodings=enc, labels=batch["labels"])
 
-        enc["sentences"] = aligned_labels
+        enc["labels"] = aligned_labels
         return enc
 
 
@@ -219,11 +219,11 @@ def main(args):
     )
     model = AutoModelForTokenClassification.from_pretrained(args.model_name, config=config)
 
-    args = TrainingArguments(
+    training_args = TrainingArguments(
         output_dir=args.output_dir,
         num_train_epochs=args.epochs,
         per_device_train_batch_size=args.train_batch_size,
-        per_device_eval_batch_size=args.eval_batch_size,
+        per_device_eval_batch_size=args.test_batch_size,
         learning_rate=args.learning_rate,
         weight_decay=args.weight_decay,
         warmup_ratio=args.warmup_ratio,
@@ -238,7 +238,7 @@ def main(args):
 
     trainer = WeightedTokenTrainer(
         model=model,
-        args=args,
+        args=training_args,
         train_dataset=train_tokenized,
         eval_dataset=test_tokenized,
         tokenizer=tokenizer,
@@ -256,6 +256,5 @@ def main(args):
 
 if __name__ == "__main__":
     main_args = parser.parse_args([] if "__file__" not in globals() else None)
-    print(main_args)
     main(main_args)
 

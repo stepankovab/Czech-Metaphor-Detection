@@ -1,0 +1,18 @@
+Namespace(train_languages=['en', 'cs'], train_counts=['10000', '700'], test_language='cs', test_count=1400, output_dir='/storage/brno2/home/stepanb2/Czech-Metaphor-Detection/out', source_dir='/storage/brno2/home/stepanb2/Czech-Metaphor-Detection', model_name='bert-base-multilingual-cased', seed=42, imbalance_weight=0.7, epochs=3, train_batch_size=32, test_batch_size=32, learning_rate=3e-05, weight_decay=0.01, warmup_ratio=0.06)
+train en 10000 0.1292
+train cs 700 0.11390532544378698
+Total train percentage of metaphor 0.12823154739602846
+test cs 1400 0.09900990099009901
+Dataset({
+    features: ['labels', 'input_ids', 'token_type_ids', 'attention_mask'],
+    num_rows: 435
+}) Dataset({
+    features: ['labels', 'input_ids', 'token_type_ids', 'attention_mask'],
+    num_rows: 75
+})
+{'train_runtime': 689.5546, 'train_samples_per_second': 1.893, 'train_steps_per_second': 0.061, 'train_loss': 0.4121671858287993, 'epoch': 3.0}
+{'eval_loss': 0.38496318459510803, 'eval_accuracy': 0.8684582743988685, 'eval_precision': 0.3614457831325301, 'eval_recall': 0.42857142857142855, 'eval_f1': 0.39215686274509803, 'eval_runtime': 13.0402, 'eval_samples_per_second': 5.751, 'eval_steps_per_second': 0.23, 'epoch': 3.0}
+
+**********************************************************************************************************
+
+The SCRATCHes have been SUCCESSFULLY cleaned...

@@ -149,7 +149,7 @@ def prepare_data(train_languages, train_counts, test_language, test_count, sourc
         elif purpose == "test" and language == "cs":
             data_df = load_czech(source_dir + "/Data/CZECH_Dalibor/pokus_data.csv")
 
-        print(purpose, language, count)
+        print(purpose, language, count, data_df['labels'].sum()/len(data_df))
 
         data_df = data_df[data_df['words'].astype(str).str.strip() != ""].reset_index(drop=True)
         data_df['words'] = data_df['words'].astype(str)
@@ -167,6 +167,8 @@ def prepare_data(train_languages, train_counts, test_language, test_count, sourc
 
         train_sentences.extend(temp_df["sentences"])
         train_labels.extend(temp_df["labels"])
+
+    print("Total train percentage of metaphor", sum([sum(l) for l in train_labels])/sum([len(l) for l in train_labels]))
     
     train_ds = Dataset.from_dict({"sentences": train_sentences,
                                   "labels": train_labels})
@@ -243,7 +245,7 @@ def main(args):
         eval_dataset=test_tokenized,
         tokenizer=tokenizer,
         compute_metrics=compute_metrics,
-        class_weights=torch.tensor([args.imbalance_weight, 1 - args.imbalance_weight], dtype=torch.float),
+        class_weights=torch.tensor([1 / (2 * args.imbalance_weight), 1 / (2 * (1 - args.imbalance_weight))], dtype=torch.float),
     )
 
     trainer.train()

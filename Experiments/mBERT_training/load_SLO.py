@@ -1,7 +1,7 @@
 from lxml import etree
 import pandas as pd
 
-def load_komet_words(vuamc_xml_path: str, elements=-1) -> pd.DataFrame:
+def load_komet(vuamc_xml_path: str, start, end) -> pd.DataFrame:
     """
     Parse KOMET TEI XML with XInclude and return a DataFrame:
     columns: ['word', 'metaphor'] where 'metaphor' is bool.
@@ -32,9 +32,9 @@ def load_komet_words(vuamc_xml_path: str, elements=-1) -> pd.DataFrame:
                 tokens.append(token_text)
                 labels.append(False)
 
-    df = pd.DataFrame({'word': tokens[:elements], 'metaphor': labels[:elements]})
+    df = pd.DataFrame({'words': tokens[start:end], 'labels': labels[start:end]})
     return df
 
 
-df = load_komet_words("Data\Komet_Slovenian\komet.tei\komet.xml")
+# df = load_komet_words("Data\Komet_Slovenian\komet.tei\komet.xml")
 

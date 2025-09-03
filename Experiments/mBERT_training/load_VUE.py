@@ -1,7 +1,7 @@
 import xml.etree.ElementTree as ET
 import pandas as pd
 
-def load_vuamc_words(vuamc_xml_path: str, elements=-1) -> pd.DataFrame:
+def load_vuamc(vuamc_xml_path: str, start, end) -> pd.DataFrame:
     """
     Parse VU Amsterdam Metaphor Corpus (TEI P5) and return a DataFrame with:
     columns: ['word', 'metaphor'] where 'metaphor' is bool.
@@ -35,5 +35,5 @@ def load_vuamc_words(vuamc_xml_path: str, elements=-1) -> pd.DataFrame:
                     tokens.append(token_text)
                     labels.append(False)
 
-    df = pd.DataFrame({'word': tokens[:elements], 'metaphor': labels[:elements]})
+    df = pd.DataFrame({'words': tokens[start:end], 'labels': labels[start:end]})
     return df

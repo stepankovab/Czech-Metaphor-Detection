@@ -1,0 +1,6 @@
+Evaluation on VUAMC: {'eval_loss': 0.6958795785903931, 'eval_model_preparation_time': 0.0045, 'eval_accuracy': 0.3975, 'eval_precision': 0.1384850803366488, 'eval_recall': 0.6961538461538461, 'eval_f1': 0.23101467772814294, 'eval_runtime': 13.1034, 'eval_samples_per_second': 5.266, 'eval_steps_per_second': 0.229}
+{'eval_loss': 0.6958795785903931, 'eval_model_preparation_time': 0.0045, 'eval_accuracy': 0.3975, 'eval_precision': 0.1384850803366488, 'eval_recall': 0.6961538461538461, 'eval_f1': 0.23101467772814294, 'eval_runtime': 13.1034, 'eval_samples_per_second': 5.266, 'eval_steps_per_second': 0.229}
+
+**********************************************************************************************************
+
+The SCRATCHes have been SUCCESSFULLY cleaned...

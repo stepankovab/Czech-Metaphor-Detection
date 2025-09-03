@@ -256,5 +256,6 @@ def main(args):
 
 if __name__ == "__main__":
     main_args = parser.parse_args([] if "__file__" not in globals() else None)
+    print(main_args)
     main(main_args)
 

@@ -44,7 +44,7 @@ def load_vuamc(vuamc_xml_path: str, start, end) -> pd.DataFrame:
                 if token_text:
                     tokens.append(token_text)
                     labels.append(False)
-                    labels.append(tag)
+                    pos.append(tag)
 
     df = pd.DataFrame({'words': tokens[start:end], 'labels': labels[start:end], 'pos': pos[start:end]})
     return df

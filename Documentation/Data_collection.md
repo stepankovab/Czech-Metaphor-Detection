@@ -93,6 +93,8 @@ The dataset is difficult to use from a machine-learning perspective, because it 
 
 - big spanish MIPVU anotated dataset
 
+With regard to the POS, we decided to label only semantically significant classes: nouns, verbs, adjectives and adverbs, since most metaphors belong to one of these types.
+
 
 ### CZECH DATA
 

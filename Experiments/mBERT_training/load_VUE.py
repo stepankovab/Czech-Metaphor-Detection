@@ -13,6 +13,7 @@ def load_vuamc(vuamc_xml_path: str, start, end) -> pd.DataFrame:
 
     tokens = []
     labels = []
+    pos = []
 
     # Iterate over all sentences
     for s in root.findall('.//tei:s', ns):
@@ -21,19 +22,29 @@ def load_vuamc(vuamc_xml_path: str, start, end) -> pd.DataFrame:
                 token_text = (child.text or '').strip()
                 is_met = False
                 seg = child.find('tei:seg', ns)
+                tag = child.get("type", "")
+
                 if seg is not None and (seg.get('type') == 'met' or seg.get('function') == 'mrw'):
                     inner_text = (seg.text or '').strip()
                     if inner_text:
                         token_text = inner_text
                     is_met = True
+
                 if token_text:
                     tokens.append(token_text)
                     labels.append(is_met)
+                    pos.append(tag)
+
+                    
+
             elif child.tag == f"{{{ns['tei']}}}c":  # punctuation element
                 token_text = (child.text or '').strip()
+                tag = child.get("type", "")
+
                 if token_text:
                     tokens.append(token_text)
                     labels.append(False)
+                    labels.append(tag)
 
-    df = pd.DataFrame({'words': tokens[start:end], 'labels': labels[start:end]})
+    df = pd.DataFrame({'words': tokens[start:end], 'labels': labels[start:end], 'pos': pos[start:end]})
     return df

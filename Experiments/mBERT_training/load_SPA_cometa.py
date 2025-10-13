@@ -13,7 +13,12 @@ def load_cometa_words(cometa_tsv_path: str, start=0, end=None) -> pd.DataFrame:
     headers = ["words", "labels", "pos"]
     df = pd.read_csv(cometa_tsv_path, sep='\t', header=None, names=headers)
     df["labels"] = df["labels"].apply(lambda l: False if l == 'O' else True)
-    return df
+
+    return pd.DataFrame({
+        'words': df["words"][start:end],
+        'labels': df["labels"][start:end],
+        'pos': df["pos"][start:end]
+    })
 
 
 # FILE_PATH = 'Data\cometa_dataset_v1\cometa_pos_train.tsv'

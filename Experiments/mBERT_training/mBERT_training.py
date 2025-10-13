@@ -17,6 +17,7 @@ import torch
 from load_VUE import load_vuamc
 from load_SLO import load_komet
 from load_CZE import load_czech
+from load_SPA_cometa import load_cometa_words
 
 
 parser = argparse.ArgumentParser()
@@ -140,6 +141,8 @@ def prepare_data(train_languages, train_counts, test_language, test_count, sourc
             data_df = load_komet(source_dir + "/Data/Komet_Slovenian/komet.tei/komet.xml", None, count)
         elif purpose == "train" and language == "cs":
             data_df = load_czech(source_dir + "/Data/CZECH_Dalibor/group_3_merged.csv")
+        elif purpose == "train" and language == "es":
+            data_df = load_cometa_words(source_dir + "/Data/cometa_dataset_v1/cometa_pos_train.tsv", None, count)
 
         elif purpose == "test" and language == "en":
             data_df = load_vuamc(source_dir + "/Data/VUA/VUAMC.xml", -count, None)
@@ -147,6 +150,8 @@ def prepare_data(train_languages, train_counts, test_language, test_count, sourc
             data_df = load_komet(source_dir + "/Data/Komet_Slovenian/komet.tei/komet.xml", -count, None)
         elif purpose == "test" and language == "cs":
             data_df = load_czech(source_dir + "/Data/CZECH_Dalibor/pokus_data.csv")
+        elif purpose == "test" and language == "es":
+            data_df = load_cometa_words(source_dir + "/Data/cometa_dataset_v1/cometa_pos_test.tsv", None, count)
 
         print(purpose, language, count, data_df['labels'].sum()/len(data_df))
 

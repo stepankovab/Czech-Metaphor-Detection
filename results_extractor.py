@@ -94,9 +94,9 @@ def generate_language_count_header(args):
 data_dir = "/storage/brno2/home/stepanb2/Czech-Metaphor-Detection/out_imbalance_weight"
 
 start_num = 12767212
-end_num   = 12799999
+end_num   = 13699999
 
-name = "SL5000EN5000CSc-CS"
+name = "ES10000-ES"
 
 relevant_args = ["imbalance_weight"]
 

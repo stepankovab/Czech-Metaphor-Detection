@@ -1,6 +1,5 @@
-import pandas as pd
-import numpy as np
 import argparse
+import torch
 
 from transformers import (
     AutoTokenizer,
@@ -11,9 +10,8 @@ from transformers import (
     set_seed,
 )
 from datasets import Dataset
-from sklearn.metrics import precision_recall_fscore_support, accuracy_score
-import torch
 
+from evaluation_scripts import evaluate_metrics, compute_POS_percentages
 from load_VUE import load_vuamc
 from load_SLO import load_komet
 from load_CZE import load_czech
@@ -21,12 +19,12 @@ from load_SPA_cometa import load_cometa_words
 
 
 parser = argparse.ArgumentParser()
-parser.add_argument("--train_languages", nargs="+", default=["en", "cs"], help="Languages to train on")
-parser.add_argument("--train_counts", nargs="+", default=[1000, 700], help="Number of words for each train language")
-parser.add_argument("--test_language", default="cs", type=str, help="Test language.")
-parser.add_argument("--test_count", default=1400, type=int, help="Number of test words.")
-parser.add_argument("--output_dir", default="./", type=str, help="Output directory path.")
-parser.add_argument("--source_dir", default="./", type=str, help="Source directory path.")
+parser.add_argument("--train_languages", nargs="+", default=["es"], help="Languages to train on")
+parser.add_argument("--train_counts", nargs="+", default=[1000], help="Number of words for each train language")
+parser.add_argument("--test_language", default="es", type=str, help="Test language.")
+parser.add_argument("--test_count", default=1000, type=int, help="Number of test words.")
+parser.add_argument("--output_dir", default="./Czech-Metaphor-Detection", type=str, help="Output directory path.")
+parser.add_argument("--source_dir", default="./Czech-Metaphor-Detection", type=str, help="Source directory path.")
 
 parser.add_argument("--model_name", default="bert-base-multilingual-cased", type=str, help="Model name in Huggingface Transformers.")
 parser.add_argument("--seed", default=42, type=int, help="Seed.")
@@ -56,23 +54,6 @@ class WeightedTokenTrainer(Trainer):
         )
         loss = loss_fct(logits.view(-1, self.model.config.num_labels), labels.view(-1))
         return (loss, outputs) if return_outputs else loss
-
-def compute_metrics(eval_pred):
-    logits, labels = eval_pred
-    preds = np.argmax(logits, axis=-1)
-
-    # Keep only positions where labels != -100
-    true_labels = []
-    true_preds = []
-    for p_row, l_row in zip(preds, labels):
-        mask = l_row != -100
-        if mask.any():
-            true_labels.extend(l_row[mask])
-            true_preds.extend(p_row[mask])
-
-    precision, recall, f1, _ = precision_recall_fscore_support(true_labels, true_preds, average="binary", zero_division=0)
-    acc = accuracy_score(true_labels, true_preds)
-    return {"accuracy": acc, "precision": precision, "recall": recall, "f1": f1}
 
 
 def prepare_data(train_languages, train_counts, test_language, test_count, source_dir, tokenizer):
@@ -111,27 +92,36 @@ def prepare_data(train_languages, train_counts, test_language, test_count, sourc
     def group_into_sentences(dataset):
         sentences = []
         labels = []
+        poss = []
 
         current_sentence = []
         current_labels = []
+        current_pos = []
 
-        for word, label in zip(dataset["words"], dataset["labels"]):
+        if "pos" not in dataset.keys():
+            dataset["pos"] = [None for _ in range(len(dataset))]
+
+        for word, label, pos in zip(dataset["words"], dataset["labels"], dataset["pos"]):
             current_sentence.append(word)
             current_labels.append(label)
+            current_pos.append(pos)
 
             # Check if word ends with a dot
             if word[-1] == ".":
                 sentences.append(current_sentence)
                 labels.append(current_labels)
+                poss.append(current_pos)
                 current_sentence = []
                 current_labels = []
+                current_pos = []
 
         # Add any leftover words as last sentence
         if current_sentence:
             sentences.append(current_sentence)
             labels.append(current_labels)
+            poss.append(current_pos)
 
-        return {"sentences": sentences, "labels": labels}
+        return {"sentences": sentences, "labels": labels, "pos": poss}
     
 
     def load_dataset(language, count, purpose):
@@ -198,7 +188,7 @@ def prepare_data(train_languages, train_counts, test_language, test_count, sourc
     train_tokenized = train_ds.map(tokenize_batch, batched=True, remove_columns=train_ds.column_names)
     test_tokenized  = test_ds.map(tokenize_batch,  batched=True, remove_columns=test_ds.column_names)
 
-    return train_tokenized, test_tokenized
+    return train_tokenized, test_tokenized, load_dataset(test_language, test_count, "test")
 
 
 def main(args):
@@ -208,7 +198,7 @@ def main(args):
     set_seed(args.seed)
     tokenizer = AutoTokenizer.from_pretrained(args.model_name)
 
-    train_tokenized, test_tokenized = prepare_data(args.train_languages, 
+    train_tokenized, test_tokenized, test_raw = prepare_data(args.train_languages, 
                                                     args.train_counts,
                                                     args.test_language,
                                                     args.test_count,
@@ -248,15 +238,16 @@ def main(args):
         train_dataset=train_tokenized,
         eval_dataset=test_tokenized,
         tokenizer=tokenizer,
-        compute_metrics=compute_metrics,
+        compute_metrics=evaluate_metrics,
         class_weights=torch.tensor([1 / (2 * args.imbalance_weight), 1 / (2 * (1 - args.imbalance_weight))], dtype=torch.float),
     )
 
     trainer.train()
-    eval_metrics = trainer.evaluate()
-    print(eval_metrics)
+    preds, labels, metrics = trainer.predict(test_tokenized)
+    print(metrics)
 
-
+    pos_percentages = compute_POS_percentages(test_raw, preds, labels)
+    print(pos_percentages)
     
 
 

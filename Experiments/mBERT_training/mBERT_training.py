@@ -20,8 +20,8 @@ parser.add_argument("--train_languages", nargs="+", default=["cs"], help="Langua
 parser.add_argument("--train_counts", nargs="+", default=[100], help="Number of sentences for each train language")
 parser.add_argument("--test_language", default="cs", type=str, help="Test language.")
 parser.add_argument("--test_count", default=100, type=int, help="Number of test sentences.")
-parser.add_argument("--train_only_pos", nargs="+", default=['VERB'], help="Which pos metaphors to train on.")
-parser.add_argument("--test_only_pos", nargs="+", default=['VERB'], help="Which pos metaphors to test on.")
+parser.add_argument("--train_only_pos", nargs="+", default=[], help="Which pos metaphors to train on.")
+parser.add_argument("--test_only_pos", nargs="+", default=[], help="Which pos metaphors to test on.")
 parser.add_argument("--output_dir", default=".", type=str, help="Output directory path.")
 parser.add_argument("--source_dir", default=".", type=str, help="Source directory path.")
 

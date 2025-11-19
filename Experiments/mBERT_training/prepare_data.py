@@ -82,7 +82,7 @@ def prepare_data(train_languages, train_counts, test_language, test_count, train
                                purpose="train",
                                source_dir=source_dir)
         
-        if train_only_pos is not None:
+        if len(train_only_pos) > 0:
             temp_train_df = filter_labels_by_pos(df=temp_train_df, pos_to_keep=train_only_pos)
             print("Keeping only metaphors in", train_only_pos, language, count, sum([sum(l) for l in temp_train_df['labels']])/sum([len(l) for l in temp_train_df['labels']]))
 
@@ -97,7 +97,7 @@ def prepare_data(train_languages, train_counts, test_language, test_count, train
     
     temp_test_df = load_dataset(test_language, test_count, "test", source_dir=source_dir)
 
-    if test_only_pos is not None:
+    if len(test_only_pos) > 0:
         temp_test_df = filter_labels_by_pos(df=temp_test_df, pos_to_keep=test_only_pos)
         print("Keeping only metaphors in", test_only_pos, test_language, test_count, sum([sum(l) for l in temp_test_df['labels']])/sum([len(l) for l in temp_test_df['labels']]))
 

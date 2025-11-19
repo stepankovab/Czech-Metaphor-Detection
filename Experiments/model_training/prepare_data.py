@@ -2,30 +2,17 @@ import pandas as pd
 from datasets import Dataset
 
 def load_dataset(language, count, purpose, source_dir):
-    if purpose == "train" and language == "en":
-        with open(source_dir + "/Data/VUA/VUA_sentences.json", 'r', encoding='utf-8') as f:
+    if language == "en":
+        with open(source_dir + f"/Data/VUA/VUA_{purpose}_sentences.json", 'r', encoding='utf-8') as f:
             data_df = pd.read_json(f)[:count]
-    elif purpose == "train" and language == "sl":
-        with open(source_dir + "/Data/Komet_Slovenian/komet_sentences.json", 'r', encoding='utf-8') as f:
+    elif language == "sl":
+        with open(source_dir + f"/Data/Komet_Slovenian/komet_{purpose}_sentences.json", 'r', encoding='utf-8') as f:
             data_df = pd.read_json(f)[:count]
-    elif purpose == "train" and language == "cs":
-        with open(source_dir + "/Data/CZECH_Dalibor/czech_metaphors_sentences.json", 'r', encoding='utf-8') as f:
+    elif language == "cs":
+        with open(source_dir + f"/Data/CZECH_Dalibor/czech_metaphors_{purpose}_sentences.json", 'r', encoding='utf-8') as f:
             data_df = pd.read_json(f)[:count]
-    elif purpose == "train" and language == "es":
-        with open(source_dir + "/Data/cometa_dataset_v1/cometa_train_sentences.json", 'r', encoding='utf-8') as f:
-            data_df = pd.read_json(f)[:count]
-
-    if purpose == "test" and language == "en":
-        with open(source_dir + "/Data/VUA/VUA_sentences.json", 'r', encoding='utf-8') as f:
-            data_df = pd.read_json(f)[-count:]
-    elif purpose == "test" and language == "sl":
-        with open(source_dir + "/Data/Komet_Slovenian/komet_sentences.json", 'r', encoding='utf-8') as f:
-            data_df = pd.read_json(f)[-count:]
-    elif purpose == "test" and language == "cs":
-        with open(source_dir + "/Data/CZECH_Dalibor/czech_metaphors_sentences.json", 'r', encoding='utf-8') as f:
-            data_df = pd.read_json(f)[-count:]
-    elif purpose == "test" and language == "es":
-        with open(source_dir + "/Data/cometa_dataset_v1/cometa_test_sentences.json", 'r', encoding='utf-8') as f:
+    elif language == "es":
+        with open(source_dir + f"/Data/cometa_dataset_v1/cometa_{purpose}_sentences.json", 'r', encoding='utf-8') as f:
             data_df = pd.read_json(f)[:count]
 
     print(purpose, language, count, sum([sum(l) for l in data_df['labels']])/sum([len(l) for l in data_df['labels']]))

@@ -1,5 +1,6 @@
 import argparse
 import torch
+import uuid
 
 from transformers import (
     AutoTokenizer,
@@ -12,7 +13,7 @@ from transformers import (
 
 import torch.nn.functional as F
 from prepare_data import prepare_data
-from evaluation_scripts import evaluate_metrics, compute_POS_percentages
+from evaluation_scripts import evaluate_metrics, compute_POS_percentages, dump_results_to_json
 
 
 parser = argparse.ArgumentParser()
@@ -67,7 +68,7 @@ class FocalTokenTrainer(Trainer):
         self.gamma = gamma
         self.alpha = alpha
 
-    def compute_loss(self, model, inputs, return_outputs=False):
+    def compute_loss(self, model, inputs, return_outputs=False, **kwargs):
         labels = inputs.get("labels")
         outputs = model(**{k: v for k, v in inputs.items() if k != "labels"})
         logits = outputs.logits  # shape: [batch, seq_len, num_labels]
@@ -168,6 +169,8 @@ def main(args):
     trainer.train()
     preds, labels, metrics = trainer.predict(test_tokenized)
     print(metrics)
+
+    dump_results_to_json(test_raw, preds, labels, args.output_dir, str(uuid.uuid4()))
 
     pos_percentages = compute_POS_percentages(test_raw, preds, labels)
     print(pos_percentages)

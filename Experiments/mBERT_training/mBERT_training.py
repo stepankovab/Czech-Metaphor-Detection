@@ -36,6 +36,8 @@ parser.add_argument("--learning_rate", default=3e-5, type=float, help="Learning 
 parser.add_argument("--weight_decay", default=0.01, type=float, help="Weight decay.")
 parser.add_argument("--warmup_ratio", default=0.06, type=float, help="Warmup ratio.")
 
+parser.add_argument("--loss", default='focal', type=str, help="focal, weighted")
+
 
 class WeightedTokenTrainer(Trainer):
     def __init__(self, *args, class_weights=None, **kwargs):
@@ -52,6 +54,44 @@ class WeightedTokenTrainer(Trainer):
             ignore_index=-100
         )
         loss = loss_fct(logits.view(-1, self.model.config.num_labels), labels.view(-1))
+        return (loss, outputs) if return_outputs else loss
+
+
+class FocalTokenTrainer(Trainer):
+    def __init__(self, *args, gamma=2.0, alpha=None, **kwargs):
+        """
+        gamma: focusing parameter (>0)
+        alpha: weight for classes, tensor of shape [num_labels] or None
+        """
+        super().__init__(*args, **kwargs)
+        self.gamma = gamma
+        self.alpha = alpha
+
+    def compute_loss(self, model, inputs, return_outputs=False):
+        labels = inputs.get("labels")
+        outputs = model(**{k: v for k, v in inputs.items() if k != "labels"})
+        logits = outputs.logits  # shape: [batch, seq_len, num_labels]
+
+        # Flatten for token-level
+        logits_flat = logits.view(-1, logits.size(-1))
+        labels_flat = labels.view(-1)
+
+        # Compute standard CE loss
+        ce_loss = F.cross_entropy(
+            logits_flat,
+            labels_flat,
+            reduction="none",
+            ignore_index=-100
+        )
+
+        pt = torch.exp(-ce_loss)  # pt = probability of the true class
+        focal_loss = ((1 - pt) ** self.gamma) * ce_loss
+
+        if self.alpha is not None:
+            alpha_factor = self.alpha[labels_flat].to(logits.device)
+            focal_loss = alpha_factor * focal_loss
+
+        loss = focal_loss.mean()
         return (loss, outputs) if return_outputs else loss
 
 
@@ -101,15 +141,29 @@ def main(args):
         save_strategy="no",
     )
 
-    trainer = WeightedTokenTrainer(
-        model=model,
-        args=training_args,
-        train_dataset=train_tokenized,
-        eval_dataset=test_tokenized,
-        tokenizer=tokenizer,
-        compute_metrics=evaluate_metrics,
-        class_weights=torch.tensor([1 / (2 * args.imbalance_weight), 1 / (2 * (1 - args.imbalance_weight))], dtype=torch.float),
-    )
+    
+    if args.loss == 'weighted':
+        trainer = WeightedTokenTrainer(
+            model=model,
+            args=training_args,
+            train_dataset=train_tokenized,
+            eval_dataset=test_tokenized,
+            tokenizer=tokenizer,
+            compute_metrics=evaluate_metrics,
+            class_weights=torch.tensor([1 / (2 * args.imbalance_weight), 1 / (2 * (1 - args.imbalance_weight))], dtype=torch.float),
+        )
+
+    
+    elif args.loss == 'focal':
+        trainer = FocalTokenTrainer(
+            model=model,
+            args=training_args,
+            train_dataset=train_tokenized,
+            eval_dataset=test_tokenized,
+            tokenizer=tokenizer,
+            compute_metrics=evaluate_metrics,
+            gamma=2.0
+        )
 
     trainer.train()
     preds, labels, metrics = trainer.predict(test_tokenized)

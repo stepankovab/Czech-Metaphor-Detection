@@ -9,22 +9,21 @@ from transformers import (
     Trainer,
     set_seed,
 )
-from datasets import Dataset
 
+import torch.nn.functional as F
+from prepare_data import prepare_data
 from evaluation_scripts import evaluate_metrics, compute_POS_percentages
-from load_VUE import load_vuamc
-from load_SLO import load_komet
-from load_CZE import load_czech
-from load_SPA_cometa import load_cometa_words
 
 
 parser = argparse.ArgumentParser()
-parser.add_argument("--train_languages", nargs="+", default=["es"], help="Languages to train on")
-parser.add_argument("--train_counts", nargs="+", default=[1000], help="Number of words for each train language")
-parser.add_argument("--test_language", default="es", type=str, help="Test language.")
-parser.add_argument("--test_count", default=1000, type=int, help="Number of test words.")
-parser.add_argument("--output_dir", default="./Czech-Metaphor-Detection", type=str, help="Output directory path.")
-parser.add_argument("--source_dir", default="./Czech-Metaphor-Detection", type=str, help="Source directory path.")
+parser.add_argument("--train_languages", nargs="+", default=["cs"], help="Languages to train on")
+parser.add_argument("--train_counts", nargs="+", default=[100], help="Number of sentences for each train language")
+parser.add_argument("--test_language", default="cs", type=str, help="Test language.")
+parser.add_argument("--test_count", default=100, type=int, help="Number of test sentences.")
+parser.add_argument("--train_only_pos", nargs="+", default=['VERB'], help="Which pos metaphors to train on.")
+parser.add_argument("--test_only_pos", nargs="+", default=['VERB'], help="Which pos metaphors to test on.")
+parser.add_argument("--output_dir", default=".", type=str, help="Output directory path.")
+parser.add_argument("--source_dir", default=".", type=str, help="Source directory path.")
 
 parser.add_argument("--model_name", default="bert-base-multilingual-cased", type=str, help="Model name in Huggingface Transformers.")
 parser.add_argument("--seed", default=42, type=int, help="Seed.")
@@ -56,141 +55,6 @@ class WeightedTokenTrainer(Trainer):
         return (loss, outputs) if return_outputs else loss
 
 
-def prepare_data(train_languages, train_counts, test_language, test_count, source_dir, tokenizer):
-
-    def align_labels_single_word(encodings, labels):
-        """
-        Align word-level labels to token-level labels for a batch of sentences.
-        
-        encodings: Hugging Face BatchEncoding from tokenizer(batch, is_split_into_words=True)
-        labels: list of lists, each inner list contains word-level labels for one sentence
-        """
-        aligned_labels = []
-
-        for i in range(len(encodings["input_ids"])):  # iterate over batch
-            word_ids = encodings.word_ids(batch_index=i)  # maps each token to its word
-            label_ids = []
-            previous_word_idx = None
-
-            for word_idx in word_ids:
-                if word_idx is None:
-                    # special tokens like [CLS] or [SEP]
-                    label_ids.append(-100)
-                elif word_idx != previous_word_idx:
-                    # first token of a word → take word label
-                    label_ids.append(labels[i][word_idx])
-                else:
-                    # subsequent subwords → ignore
-                    label_ids.append(-100)
-                previous_word_idx = word_idx
-
-            aligned_labels.append(label_ids)
-
-        return aligned_labels
-    
-    
-    def group_into_sentences(dataset):
-        sentences = []
-        labels = []
-        poss = []
-
-        current_sentence = []
-        current_labels = []
-        current_pos = []
-
-        if "pos" not in dataset.keys():
-            dataset["pos"] = [None for _ in range(len(dataset))]
-
-        for word, label, pos in zip(dataset["words"], dataset["labels"], dataset["pos"]):
-            current_sentence.append(word)
-            current_labels.append(label)
-            current_pos.append(pos)
-
-            # Check if word ends with a dot
-            if word[-1] == ".":
-                sentences.append(current_sentence)
-                labels.append(current_labels)
-                poss.append(current_pos)
-                current_sentence = []
-                current_labels = []
-                current_pos = []
-
-        # Add any leftover words as last sentence
-        if current_sentence:
-            sentences.append(current_sentence)
-            labels.append(current_labels)
-            poss.append(current_pos)
-
-        return {"sentences": sentences, "labels": labels, "pos": poss}
-    
-
-    def load_dataset(language, count, purpose):
-        if purpose == "train" and language == "en":
-            data_df = load_vuamc(source_dir + "/Data/VUA/VUAMC.xml", None, count)   
-        elif purpose == "train" and language == "sl":
-            data_df = load_komet(source_dir + "/Data/Komet_Slovenian/komet.tei/komet.xml", None, count)
-        elif purpose == "train" and language == "cs":
-            data_df = load_czech(source_dir + "/Data/CZECH_Dalibor/group_3_merged.csv")
-        elif purpose == "train" and language == "es":
-            data_df = load_cometa_words(source_dir + "/Data/cometa_dataset_v1/cometa_pos_train.tsv", None, count)
-
-        elif purpose == "test" and language == "en":
-            data_df = load_vuamc(source_dir + "/Data/VUA/VUAMC.xml", -count, None)
-        elif purpose == "test" and language == "sl":
-            data_df = load_komet(source_dir + "/Data/Komet_Slovenian/komet.tei/komet.xml", -count, None)
-        elif purpose == "test" and language == "cs":
-            data_df = load_czech(source_dir + "/Data/CZECH_Dalibor/pokus_data.csv")
-        elif purpose == "test" and language == "es":
-            data_df = load_cometa_words(source_dir + "/Data/cometa_dataset_v1/cometa_pos_test.tsv", None, count)
-
-        print(purpose, language, count, data_df['labels'].sum()/len(data_df))
-
-        data_df = data_df[data_df['words'].astype(str).str.strip() != ""].reset_index(drop=True)
-        data_df['words'] = data_df['words'].astype(str)
-        data_df['labels'] = data_df['labels'].astype(int)
-
-        return group_into_sentences(data_df)
-
-
-    train_sentences = []
-    train_labels = []
-    for language, count in zip(train_languages, train_counts):
-        temp_df = load_dataset(language=language,
-                               count=int(count),
-                               purpose="train")
-
-        train_sentences.extend(temp_df["sentences"])
-        train_labels.extend(temp_df["labels"])
-
-    print("Total train percentage of metaphor", sum([sum(l) for l in train_labels])/sum([len(l) for l in train_labels]))
-    
-    train_ds = Dataset.from_dict({"sentences": train_sentences,
-                                  "labels": train_labels})
-    
-    test_ds = Dataset.from_dict(load_dataset(test_language, test_count, "test"))
-
-    def tokenize_batch(batch):
-        enc = tokenizer(
-            batch["sentences"],
-            truncation=True,
-            is_split_into_words=True,
-            padding = "longest"
-            # padding="max_length",
-            # max_length=256
-        )
-
-        aligned_labels = align_labels_single_word(encodings=enc, labels=batch["labels"])
-
-        enc["labels"] = aligned_labels
-        return enc
-
-
-    train_tokenized = train_ds.map(tokenize_batch, batched=True, remove_columns=train_ds.column_names)
-    test_tokenized  = test_ds.map(tokenize_batch,  batched=True, remove_columns=test_ds.column_names)
-
-    return train_tokenized, test_tokenized, load_dataset(test_language, test_count, "test")
-
-
 def main(args):
 
     print(args)
@@ -202,11 +66,14 @@ def main(args):
                                                     args.train_counts,
                                                     args.test_language,
                                                     args.test_count,
+                                                    args.train_only_pos,
+                                                    args.test_only_pos,
                                                     args.source_dir,
                                                     tokenizer)
 
     print(train_tokenized, test_tokenized)
 
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     config = AutoConfig.from_pretrained(
         args.model_name,
         num_labels=2,
@@ -214,6 +81,8 @@ def main(args):
         label2id={"NON-MET": 0, "MET": 1},
     )
     model = AutoModelForTokenClassification.from_pretrained(args.model_name, config=config)
+    model.to(device)
+
 
     training_args = TrainingArguments(
         output_dir=args.output_dir,

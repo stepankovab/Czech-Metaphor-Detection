@@ -136,7 +136,7 @@ most common POS in dataset:
 
 
 
-LANG = 'Czech'
+LANG = 'Spanish'
 
 if LANG == 'Slovenian':
     with open('Data/Komet_Slovenian/komet_sentences.json', 'r', encoding='utf-8') as f:

@@ -73,7 +73,7 @@ most common POS in dataset:
 
 
 
-## Spanish
+## Spanish WHOLE
 
 `0.01832854602653536%` of metaphors
 
@@ -105,8 +105,79 @@ most common metaphorical POS:
 most common POS in dataset:
 - [('NOUN', 21425), ('ADP', 17043), ('DET', 15863), ('PUNCT', 12729), ('VERB', 9487), ('ADJ', 9409), ('PROPN', 6803), ('SCONJ', 4664), ('PRON', 4372), ('ADV', 4083)]
 
-![POS Spanish](graphs/POS_Spanish.png)
+![POS Spanish](graphs/POS_Spanish_all.png)
 
+
+## Spanish TEST
+
+`0.018187188792303147%` of metaphors
+
+23698 words, 431 metaphors
+
+- 726 sentences:
+    - shortest sentence: 2
+    - longest sentence: 229
+    - mean length: 32.641873278236915
+    - median length: 30.0
+
+- sentences with metaphor: 251
+
+- most common sentence structure:
+    - [(('NOUN', 'PUNCT'), 3), (('PRON', 'NOUN', 'PUNCT'), 3), (('ADJ', 'NOUN', 'PUNCT'), 2), (('ADP', 'DET', 'NOUN', 'PUNCT'), 2), (('INTJ', 'PUNCT'), 2)]
+
+- 431 metaphors in the dataset:
+    - min metaphors in sentence: 0
+    - max metaphors in sentence: 11
+    - mean metaphors in sentence: 0.59366391184573
+    - median metaphors in sentence: 0.0
+
+most common metaphorical words:
+- [('marco', 8), ('ola', 6), ('escenario', 5), ('estabilidad', 5), ('caída', 4), ('abrir', 4), ('crecimiento', 4), ('paso', 4), ('camino', 
+4), ('avanzado', 4)]
+
+most common metaphorical POS:
+- [('NOUN', 181), ('VERB', 139), ('ADJ', 101), ('_', 4), ('ADV', 4), ('ADP', 2)]
+
+most common POS in dataset:
+- [('NOUN', 4450), ('ADP', 3408), ('DET', 3182), ('PUNCT', 2640), ('VERB', 1867), ('ADJ', 1853), ('PROPN', 1401), ('SCONJ', 929), ('PRON', 
+872), ('ADV', 785)]
+
+![POS Spanish](graphs/POS_Spanish_test.png)
+
+
+## Spanish TRAIN
+
+`0.018364458929222324%` of metaphors
+
+93278 words, 1713 metaphors
+
+- 2905 sentences:
+    - shortest sentence: 1
+    - longest sentence: 202
+    - mean length: 32.10946643717728
+    - median length: 29.0
+
+- sentences with metaphor: 1015
+
+- most common sentence structure:
+    - [(('ADV', 'PUNCT'), 8), (('NOUN', 'ADP', 'PROPN', 'ADP', 'NOUN', 'PUNCT'), 4), (('PRON', 'NOUN', 'PUNCT'), 4), (('INTJ', 'PUNCT'), 4), (('NOUN', 'PUNCT'), 4)]
+
+- 1713 metaphors in the dataset:
+    - min metaphors in sentence: 0
+    - max metaphors in sentence: 11
+    - mean metaphors in sentence: 0.5896729776247849
+    - median metaphors in sentence: 0.0
+
+most common metaphorical words:
+- [('marco', 21), ('fuerzas', 16), ('grandes', 16), ('ola', 15), ('crecimiento', 13), ('desescalada', 12), ('camino', 11), ('claro', 9), ('frenar', 8), ('lucha', 8)]
+
+most common metaphorical POS:
+- [('NOUN', 663), ('VERB', 573), ('ADJ', 410), ('_', 39), ('ADV', 21), ('ADP', 5), ('AUX', 2)]
+
+most common POS in dataset:
+- [('NOUN', 16975), ('ADP', 13635), ('DET', 12681), ('PUNCT', 10089), ('VERB', 7620), ('ADJ', 7556), ('PROPN', 5402), ('SCONJ', 3735), ('PRON', 3500), ('ADV', 3298)]
+
+![POS Spanish](graphs/POS_Spanish_train.png)
 
 
 

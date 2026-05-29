@@ -1,7 +1,7 @@
 
 ## Slovenian
 
-`0.062240025242322444%` of metaphors
+`6.2240025242322444%` of metaphors
 
 259881 words, 16175 metaphors
 
@@ -38,7 +38,7 @@ most common POS in dataset:
 
 ## English
 
-`0.10911412999953635%` of metaphors
+`10.911412999953635%` of metaphors
 
 237247 words, 25887 metaphors
 
@@ -75,7 +75,7 @@ most common POS in dataset:
 
 ## Spanish WHOLE
 
-`0.01832854602653536%` of metaphors
+`1.832854602653536%` of metaphors
 
 116976 words, 2144 metaphors
 
@@ -110,7 +110,7 @@ most common POS in dataset:
 
 ## Spanish TEST
 
-`0.018187188792303147%` of metaphors
+`1.8187188792303147%` of metaphors
 
 23698 words, 431 metaphors
 
@@ -147,7 +147,7 @@ most common POS in dataset:
 
 ## Spanish TRAIN
 
-`0.018364458929222324%` of metaphors
+`1.8364458929222324%` of metaphors
 
 93278 words, 1713 metaphors
 
@@ -184,7 +184,7 @@ most common POS in dataset:
 
 ## Czech
 
-`0.10538742219360378%` of metaphors
+`10.538742219360378%` of metaphors
 
 4659 words, 491 metaphors
 

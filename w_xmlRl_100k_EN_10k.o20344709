@@ -1,0 +1,59 @@
+Namespace(train_languages=['en'], train_counts=['100000'], test_language='en', test_count=10000, train_only_pos=[], test_only_pos=[], output_dir='/storage/brno2/home/stepanb2/Czech-Metaphor-Detection/out', source_dir='/storage/brno2/home/stepanb2/Czech-Metaphor-Detection', model_name='xlm-roberta-large', seed=42, imbalance_weight=0.5, epochs=3, train_batch_size=32, test_batch_size=32, learning_rate=3e-05, weight_decay=0.01, warmup_ratio=0.06, loss='weighted')
+train en 100000 0.10964371045238533
+Total train percentage of metaphor 0.10964371045238533
+test en 10000 0.10695975390925404
+Dataset({
+    features: ['labels', 'input_ids', 'attention_mask'],
+    num_rows: 12962
+}) Dataset({
+    features: ['labels', 'input_ids', 'attention_mask'],
+    num_rows: 3240
+})
+{'loss': 0.5175, 'grad_norm': 30.009563446044922, 'learning_rate': 1.783783783783784e-05, 'epoch': 0.12}
+{'loss': 0.3016, 'grad_norm': 5.589696884155273, 'learning_rate': 2.9501748251748255e-05, 'epoch': 0.25}
+{'loss': 0.2148, 'grad_norm': 3.0959270000457764, 'learning_rate': 2.8190559440559443e-05, 'epoch': 0.37}
+{'loss': 0.1942, 'grad_norm': 3.2942607402801514, 'learning_rate': 2.693181818181818e-05, 'epoch': 0.49}
+{'loss': 0.1677, 'grad_norm': 4.488515853881836, 'learning_rate': 2.5620629370629372e-05, 'epoch': 0.62}
+{'loss': 0.1659, 'grad_norm': 4.142343044281006, 'learning_rate': 2.430944055944056e-05, 'epoch': 0.74}
+{'loss': 0.1504, 'grad_norm': 3.311382532119751, 'learning_rate': 2.2998251748251747e-05, 'epoch': 0.86}
+{'loss': 0.1434, 'grad_norm': 9.803661346435547, 'learning_rate': 2.1687062937062938e-05, 'epoch': 0.99}
+{'loss': 0.1265, 'grad_norm': 1.896116852760315, 'learning_rate': 2.0375874125874125e-05, 'epoch': 1.11}
+{'loss': 0.12, 'grad_norm': 2.702428102493286, 'learning_rate': 1.9064685314685316e-05, 'epoch': 1.23}
+{'loss': 0.1202, 'grad_norm': 1.5717170238494873, 'learning_rate': 1.7753496503496504e-05, 'epoch': 1.35}
+{'loss': 0.1142, 'grad_norm': 3.167468786239624, 'learning_rate': 1.6442307692307695e-05, 'epoch': 1.48}
+{'loss': 0.106, 'grad_norm': 2.8751182556152344, 'learning_rate': 1.5131118881118882e-05, 'epoch': 1.6}
+{'loss': 0.1057, 'grad_norm': 1.749651312828064, 'learning_rate': 1.3819930069930071e-05, 'epoch': 1.72}
+{'loss': 0.1107, 'grad_norm': 1.8761305809020996, 'learning_rate': 1.250874125874126e-05, 'epoch': 1.85}
+{'loss': 0.1055, 'grad_norm': 2.16213321685791, 'learning_rate': 1.1197552447552448e-05, 'epoch': 1.97}
+{'loss': 0.0837, 'grad_norm': 1.5301144123077393, 'learning_rate': 9.886363636363637e-06, 'epoch': 2.09}
+{'loss': 0.0764, 'grad_norm': 1.5233620405197144, 'learning_rate': 8.575174825174826e-06, 'epoch': 2.22}
+{'loss': 0.0711, 'grad_norm': 3.0570878982543945, 'learning_rate': 7.263986013986014e-06, 'epoch': 2.34}
+{'loss': 0.0747, 'grad_norm': 2.026158571243286, 'learning_rate': 5.9527972027972035e-06, 'epoch': 2.46}
+{'loss': 0.0716, 'grad_norm': 2.1532390117645264, 'learning_rate': 4.641608391608392e-06, 'epoch': 2.59}
+{'loss': 0.073, 'grad_norm': 2.1557610034942627, 'learning_rate': 3.3304195804195805e-06, 'epoch': 2.71}
+{'loss': 0.0748, 'grad_norm': 1.4822883605957031, 'learning_rate': 2.0192307692307692e-06, 'epoch': 2.83}
+{'loss': 0.0764, 'grad_norm': 2.5497193336486816, 'learning_rate': 7.08041958041958e-07, 'epoch': 2.96}
+{'train_runtime': 98.1293, 'train_samples_per_second': 396.273, 'train_steps_per_second': 12.412, 'train_loss': 0.13918598855070294, 'epoch': 3.0}
+{'test_loss': 0.12348800152540207, 'test_accuracy': 0.9585362727505767, 'test_precision': 0.8319618882633174, 'test_recall': 0.7673257439584582, 'test_f1': 0.7983376623376623, 'test_runtime': 3.9022, 'test_samples_per_second': 830.305, 'test_steps_per_second': 26.139}
+results dupm at: 0107fe46-1a48-41df-b933-1d70557fae53
+      pos  preds  labels  total
+0     ADJ    393     501   2988
+1     ADP   1333    1362   2990
+2     ADV    271     297   2781
+3     AUX     64      67   2316
+4   CCONJ      0       0   1360
+5     DET    375     357   5118
+6    INTJ      0       0    534
+7    NOUN    948    1057   7729
+8     NUM     13      11    775
+9    PART      1       1    881
+10   PRON      1      27   4356
+11  PROPN      0       6   1445
+12  PUNCT      1       0   6404
+13  SCONJ     18      17    805
+14   VERB   1152    1253   4469
+15      X     48      51   1861
+
+**********************************************************************************************************
+
+The SCRATCHes have been SUCCESSFULLY cleaned...

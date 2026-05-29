@@ -6,6 +6,7 @@ from transformers import (
     AutoTokenizer,
     AutoConfig,
     AutoModelForTokenClassification,
+    DataCollatorForTokenClassification,
     TrainingArguments,
     Trainer,
     set_seed,
@@ -17,14 +18,14 @@ from evaluation_scripts import evaluate_metrics, compute_POS_percentages, dump_r
 
 
 parser = argparse.ArgumentParser()
-parser.add_argument("--train_languages", nargs="+", default=["cs"], help="Languages to train on")
+parser.add_argument("--train_languages", nargs="+", default=["en"], help="Languages to train on")
 parser.add_argument("--train_counts", nargs="+", default=[100], help="Number of sentences for each train language")
-parser.add_argument("--test_language", default="cs", type=str, help="Test language.")
+parser.add_argument("--test_language", default="en", type=str, help="Test language.")
 parser.add_argument("--test_count", default=100, type=int, help="Number of test sentences.")
 parser.add_argument("--train_only_pos", nargs="+", default=[], help="Which pos metaphors to train on.")
 parser.add_argument("--test_only_pos", nargs="+", default=[], help="Which pos metaphors to test on.")
-parser.add_argument("--output_dir", default=".", type=str, help="Output directory path.")
-parser.add_argument("--source_dir", default=".", type=str, help="Source directory path.")
+parser.add_argument("--output_dir", default="Czech-Metaphor-Detection", type=str, help="Output directory path.")
+parser.add_argument("--source_dir", default="Czech-Metaphor-Detection", type=str, help="Source directory path.")
 
 parser.add_argument("--model_name", default="bert-base-multilingual-cased", type=str, help="Model name in Huggingface Transformers.")
 parser.add_argument("--seed", default=42, type=int, help="Seed.")
@@ -142,6 +143,8 @@ def main(args):
         save_strategy="no",
     )
 
+    data_collator = DataCollatorForTokenClassification(tokenizer)
+
     
     if args.loss == 'weighted':
         trainer = WeightedTokenTrainer(
@@ -150,6 +153,7 @@ def main(args):
             train_dataset=train_tokenized,
             eval_dataset=test_tokenized,
             tokenizer=tokenizer,
+            data_collator=data_collator,
             compute_metrics=evaluate_metrics,
             class_weights=torch.tensor([1 / (2 * args.imbalance_weight), 1 / (2 * (1 - args.imbalance_weight))], dtype=torch.float),
         )
@@ -162,6 +166,7 @@ def main(args):
             train_dataset=train_tokenized,
             eval_dataset=test_tokenized,
             tokenizer=tokenizer,
+            data_collator=data_collator,
             compute_metrics=evaluate_metrics,
             gamma=2.0
         )

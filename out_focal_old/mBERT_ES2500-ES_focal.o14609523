@@ -1,0 +1,15 @@
+Namespace(train_languages=['es'], train_counts=['2500'], test_language='es', test_count=726, train_only_pos=[], test_only_pos=[], output_dir='/storage/brno2/home/stepanb2/Czech-Metaphor-Detection/out', source_dir='/storage/brno2/home/stepanb2/Czech-Metaphor-Detection', model_name='bert-base-multilingual-cased', seed=42, imbalance_weight=0.5, epochs=3, train_batch_size=32, test_batch_size=32, learning_rate=3e-05, weight_decay=0.01, warmup_ratio=0.06, loss='focal')
+train es 2500 0.018685335481073043
+Total train percentage of metaphor 0.018685335481073043
+test es 726 0.018187188792303147
+Dataset({
+    features: ['labels', 'input_ids', 'token_type_ids', 'attention_mask'],
+    num_rows: 2500
+}) Dataset({
+    features: ['labels', 'input_ids', 'token_type_ids', 'attention_mask'],
+    num_rows: 726
+})
+
+**********************************************************************************************************
+
+The SCRATCHes have been SUCCESSFULLY cleaned...

@@ -91,14 +91,21 @@ def prepare_data(train_languages, train_counts, test_language, test_count, train
     test_ds = Dataset.from_pandas(temp_test_df)
 
     def tokenize_batch(batch):
-        enc = tokenizer(
-            batch["sentences"],
-            truncation=True,
-            is_split_into_words=True,
-            padding = "longest"
-            # padding="max_length",
-            # max_length=256
-        )
+        try:
+            enc = tokenizer(
+                batch["sentences"],
+                truncation=True,
+                is_split_into_words=True,
+                # padding = "longest"
+                # padding="max_length",
+                # max_length=256
+            )
+        except Exception as e:
+            print("TOKENIZATION FAILED")
+            for i, s in enumerate(batch["sentences"]):
+                print("IDX:", i, "TYPE:", type(s), "VALUE:", s)
+            raise e
+        
 
         aligned_labels = align_labels_single_word(encodings=enc, labels=batch["labels"])
 

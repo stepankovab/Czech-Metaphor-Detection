@@ -1,0 +1,81 @@
+Namespace(train_languages=['sl', 'en'], train_counts=['50000', '50000'], test_language='cs', test_count=1000, train_only_pos=[], test_only_pos=[], output_dir='/storage/brno2/home/stepanb2/Czech-Metaphor-Detection/out', source_dir='/storage/brno2/home/stepanb2/Czech-Metaphor-Detection', model_name='xlm-roberta-large', seed=42, imbalance_weight=0.5, epochs=3, train_batch_size=32, test_batch_size=32, learning_rate=3e-05, weight_decay=0.01, warmup_ratio=0.06, loss='focal')
+train sl 50000 0.06166527043552782
+train en 50000 0.10964371045238533
+Total train percentage of metaphor 0.08461409012475606
+test cs 1000 0.10596026490066225
+Dataset({
+    features: ['labels', 'input_ids', 'attention_mask'],
+    num_rows: 24132
+}) Dataset({
+    features: ['labels', 'input_ids', 'attention_mask'],
+    num_rows: 47
+})
+{'loss': 0.0291, 'grad_norm': 0.3792157769203186, 'learning_rate': 1.036764705882353e-05, 'epoch': 0.07}
+{'loss': 0.014, 'grad_norm': 0.6626144051551819, 'learning_rate': 2.1397058823529413e-05, 'epoch': 0.13}
+{'loss': 0.012, 'grad_norm': 7.835846424102783, 'learning_rate': 2.984499765147957e-05, 'epoch': 0.2}
+{'loss': 0.0133, 'grad_norm': 0.5234182476997375, 'learning_rate': 2.914044152184124e-05, 'epoch': 0.26}
+{'loss': 0.0102, 'grad_norm': 0.19712193310260773, 'learning_rate': 2.8435885392202915e-05, 'epoch': 0.33}
+{'loss': 0.0096, 'grad_norm': 0.17584365606307983, 'learning_rate': 2.7731329262564583e-05, 'epoch': 0.4}
+{'loss': 0.0088, 'grad_norm': 0.4223201274871826, 'learning_rate': 2.702677313292626e-05, 'epoch': 0.46}
+{'loss': 0.0095, 'grad_norm': 0.5343338251113892, 'learning_rate': 2.6322217003287928e-05, 'epoch': 0.53}
+{'loss': 0.0082, 'grad_norm': 0.09704028069972992, 'learning_rate': 2.5617660873649603e-05, 'epoch': 0.6}
+{'loss': 0.0082, 'grad_norm': 0.26420262455940247, 'learning_rate': 2.4913104744011272e-05, 'epoch': 0.66}
+{'loss': 0.0071, 'grad_norm': 0.21324768662452698, 'learning_rate': 2.4208548614372948e-05, 'epoch': 0.73}
+{'loss': 0.0081, 'grad_norm': 0.22452756762504578, 'learning_rate': 2.3503992484734616e-05, 'epoch': 0.79}
+{'loss': 0.008, 'grad_norm': 0.2594497799873352, 'learning_rate': 2.279943635509629e-05, 'epoch': 0.86}
+{'loss': 0.0082, 'grad_norm': 0.22156274318695068, 'learning_rate': 2.209488022545796e-05, 'epoch': 0.93}
+{'loss': 0.0076, 'grad_norm': 0.2314833551645279, 'learning_rate': 2.1390324095819633e-05, 'epoch': 0.99}
+{'loss': 0.007, 'grad_norm': 0.14564110338687897, 'learning_rate': 2.0685767966181305e-05, 'epoch': 1.06}
+{'loss': 0.0071, 'grad_norm': 0.24122771620750427, 'learning_rate': 1.9981211836542977e-05, 'epoch': 1.13}
+{'loss': 0.0072, 'grad_norm': 0.2248891294002533, 'learning_rate': 1.927665570690465e-05, 'epoch': 1.19}
+{'loss': 0.0066, 'grad_norm': 0.1659063845872879, 'learning_rate': 1.857209957726632e-05, 'epoch': 1.26}
+{'loss': 0.0066, 'grad_norm': 0.12246185541152954, 'learning_rate': 1.7867543447627997e-05, 'epoch': 1.32}
+{'loss': 0.0069, 'grad_norm': 0.21826080977916718, 'learning_rate': 1.7162987317989666e-05, 'epoch': 1.39}
+{'loss': 0.0055, 'grad_norm': 0.14036965370178223, 'learning_rate': 1.645843118835134e-05, 'epoch': 1.46}
+{'loss': 0.0065, 'grad_norm': 0.28816479444503784, 'learning_rate': 1.575387505871301e-05, 'epoch': 1.52}
+{'loss': 0.0061, 'grad_norm': 0.10559623688459396, 'learning_rate': 1.5049318929074684e-05, 'epoch': 1.59}
+{'loss': 0.0065, 'grad_norm': 0.12728209793567657, 'learning_rate': 1.4344762799436355e-05, 'epoch': 1.66}
+{'loss': 0.0064, 'grad_norm': 0.15314187109470367, 'learning_rate': 1.3640206669798027e-05, 'epoch': 1.72}
+{'loss': 0.0066, 'grad_norm': 0.2321549952030182, 'learning_rate': 1.2935650540159699e-05, 'epoch': 1.79}
+{'loss': 0.0058, 'grad_norm': 0.09936627745628357, 'learning_rate': 1.2231094410521371e-05, 'epoch': 1.85}
+{'loss': 0.006, 'grad_norm': 0.28649529814720154, 'learning_rate': 1.1526538280883043e-05, 'epoch': 1.92}
+{'loss': 0.0063, 'grad_norm': 0.29513293504714966, 'learning_rate': 1.0821982151244715e-05, 'epoch': 1.99}
+{'loss': 0.0051, 'grad_norm': 0.09519883990287781, 'learning_rate': 1.0117426021606388e-05, 'epoch': 2.05}
+{'loss': 0.005, 'grad_norm': 0.09945987910032272, 'learning_rate': 9.412869891968062e-06, 'epoch': 2.12}
+{'loss': 0.0053, 'grad_norm': 0.21378456056118011, 'learning_rate': 8.708313762329734e-06, 'epoch': 2.19}
+{'loss': 0.0049, 'grad_norm': 0.17357948422431946, 'learning_rate': 8.003757632691406e-06, 'epoch': 2.25}
+{'loss': 0.0051, 'grad_norm': 0.2707909345626831, 'learning_rate': 7.299201503053076e-06, 'epoch': 2.32}
+{'loss': 0.0048, 'grad_norm': 0.2926434278488159, 'learning_rate': 6.5946453734147485e-06, 'epoch': 2.38}
+{'loss': 0.0051, 'grad_norm': 0.20243820548057556, 'learning_rate': 5.890089243776421e-06, 'epoch': 2.45}
+{'loss': 0.0046, 'grad_norm': 0.12835386395454407, 'learning_rate': 5.185533114138094e-06, 'epoch': 2.52}
+{'loss': 0.0046, 'grad_norm': 0.1582222282886505, 'learning_rate': 4.480976984499766e-06, 'epoch': 2.58}
+{'loss': 0.0045, 'grad_norm': 0.15852172672748566, 'learning_rate': 3.7764208548614376e-06, 'epoch': 2.65}
+{'loss': 0.0049, 'grad_norm': 0.1621083915233612, 'learning_rate': 3.0718647252231098e-06, 'epoch': 2.72}
+{'loss': 0.0049, 'grad_norm': 0.06365280598402023, 'learning_rate': 2.367308595584782e-06, 'epoch': 2.78}
+{'loss': 0.0044, 'grad_norm': 0.21776485443115234, 'learning_rate': 1.662752465946454e-06, 'epoch': 2.85}
+{'loss': 0.005, 'grad_norm': 0.20660853385925293, 'learning_rate': 9.581963363081259e-07, 'epoch': 2.91}
+{'loss': 0.0045, 'grad_norm': 0.1383609175682068, 'learning_rate': 2.53640206669798e-07, 'epoch': 2.98}
+{'train_runtime': 146.6815, 'train_samples_per_second': 493.559, 'train_steps_per_second': 15.442, 'train_loss': 0.007343805859288895, 'epoch': 3.0}
+{'test_loss': 0.020815135911107063, 'test_accuracy': 0.9227373068432672, 'test_precision': 0.8823529411764706, 'test_recall': 0.3125, 'test_f1': 0.46153846153846156, 'test_runtime': 0.0414, 'test_samples_per_second': 1134.921, 'test_steps_per_second': 48.294}
+results dupm at: 7e517eb3-6605-4265-b1d4-dda0e80e7526
+      pos  preds  labels  total
+0     ADJ      0       5    101
+1     ADP     31      41     79
+2     ADV      0       0     57
+3     AUX      0       1     31
+4   CCONJ      0       0     47
+5     DET      0       0     41
+6    NOUN      1      13    180
+7     NUM      0       0      6
+8    PART      0       0      9
+9    PRON      0       3     50
+10  PROPN      0       0     27
+11  PUNCT      0       0    130
+12  SCONJ      0       0     27
+13   VERB      2      33    111
+14      X      0       0      3
+15      _      0       0      7
+
+**********************************************************************************************************
+
+The SCRATCHes have been SUCCESSFULLY cleaned...

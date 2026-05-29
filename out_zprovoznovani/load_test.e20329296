@@ -1,0 +1,41 @@
+Map:   0%|          | 0/2905 [00:00<?, ? examples/s]Map:  34%|███▍      | 1000/2905 [00:00<00:00, 3598.32 examples/s]Map:  69%|██████▉   | 2000/2905 [00:00<00:00, 3979.57 examples/s]Map:  69%|██████▉   | 2000/2905 [00:00<00:00, 3740.69 examples/s]
+Traceback (most recent call last):
+  File "/storage/brno2/home/stepanb2/Czech-Metaphor-Detection/Experiments/model_training/model_training.py", line 187, in <module>
+    main(main_args)
+  File "/storage/brno2/home/stepanb2/Czech-Metaphor-Detection/Experiments/model_training/model_training.py", line 107, in main
+    train_tokenized, test_tokenized, test_raw = prepare_data(args.train_languages, 
+                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/auto/brno2/brno2/stepanb2/Czech-Metaphor-Detection/Experiments/model_training/prepare_data.py", line 112, in prepare_data
+    train_tokenized = train_ds.map(tokenize_batch, batched=True, remove_columns=train_ds.column_names)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/storage/brno2/home/stepanb2/.conda/envs/cuda-snad/lib/python3.11/site-packages/datasets/arrow_dataset.py", line 562, in wrapper
+    out: Union["Dataset", "DatasetDict"] = func(self, *args, **kwargs)
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/storage/brno2/home/stepanb2/.conda/envs/cuda-snad/lib/python3.11/site-packages/datasets/arrow_dataset.py", line 3341, in map
+    for rank, done, content in Dataset._map_single(**unprocessed_kwargs):
+  File "/storage/brno2/home/stepanb2/.conda/envs/cuda-snad/lib/python3.11/site-packages/datasets/arrow_dataset.py", line 3697, in _map_single
+    for i, batch in iter_outputs(shard_iterable):
+  File "/storage/brno2/home/stepanb2/.conda/envs/cuda-snad/lib/python3.11/site-packages/datasets/arrow_dataset.py", line 3647, in iter_outputs
+    yield i, apply_function(example, i, offset=offset)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/storage/brno2/home/stepanb2/.conda/envs/cuda-snad/lib/python3.11/site-packages/datasets/arrow_dataset.py", line 3570, in apply_function
+    processed_inputs = function(*fn_args, *additional_args, **fn_kwargs)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/auto/brno2/brno2/stepanb2/Czech-Metaphor-Detection/Experiments/model_training/prepare_data.py", line 104, in tokenize_batch
+    raise e
+  File "/auto/brno2/brno2/stepanb2/Czech-Metaphor-Detection/Experiments/model_training/prepare_data.py", line 95, in tokenize_batch
+    enc = tokenizer(
+          ^^^^^^^^^^
+  File "/storage/brno2/home/stepanb2/.conda/envs/cuda-snad/lib/python3.11/site-packages/transformers/tokenization_utils_base.py", line 3073, in __call__
+    encodings = self._call_one(text=text, text_pair=text_pair, **all_kwargs)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/storage/brno2/home/stepanb2/.conda/envs/cuda-snad/lib/python3.11/site-packages/transformers/tokenization_utils_base.py", line 3161, in _call_one
+    return self.batch_encode_plus(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/storage/brno2/home/stepanb2/.conda/envs/cuda-snad/lib/python3.11/site-packages/transformers/tokenization_utils_base.py", line 3362, in batch_encode_plus
+    return self._batch_encode_plus(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/storage/brno2/home/stepanb2/.conda/envs/cuda-snad/lib/python3.11/site-packages/transformers/tokenization_utils_fast.py", line 553, in _batch_encode_plus
+    encodings = self._tokenizer.encode_batch(
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: PreTokenizedEncodeInput must be Union[PreTokenizedInputSequence, Tuple[PreTokenizedInputSequence, PreTokenizedInputSequence]]

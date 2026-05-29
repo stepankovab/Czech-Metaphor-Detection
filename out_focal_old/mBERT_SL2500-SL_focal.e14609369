@@ -1,0 +1,59 @@
+Matplotlib is building the font cache; this may take a moment.
+Map:   0%|          | 0/2500 [00:00<?, ? examples/s]Map:  40%|████      | 1000/2500 [00:00<00:00, 1547.51 examples/s]Map:  80%|████████  | 2000/2500 [00:00<00:00, 2111.21 examples/s]Map: 100%|██████████| 2500/2500 [00:01<00:00, 2525.15 examples/s]Map: 100%|██████████| 2500/2500 [00:01<00:00, 2080.85 examples/s]
+Map:   0%|          | 0/2793 [00:00<?, ? examples/s]Map:  36%|███▌      | 1000/2793 [00:00<00:00, 3219.78 examples/s]Map:  72%|███████▏  | 2000/2793 [00:00<00:00, 3194.53 examples/s]Map: 100%|██████████| 2793/2793 [00:00<00:00, 2964.81 examples/s]Map: 100%|██████████| 2793/2793 [00:00<00:00, 3015.91 examples/s]
+Some weights of BertForTokenClassification were not initialized from the model checkpoint at bert-base-multilingual-cased and are newly initialized: ['classifier.bias', 'classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/storage/brno2/home/stepanb2/Czech-Metaphor-Detection/Experiments/model_training/model_training.py:67: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `FocalTokenTrainer.__init__`. Use `processing_class` instead.
+  super().__init__(*args, **kwargs)
+  0%|          | 0/237 [00:00<?, ?it/s]Traceback (most recent call last):
+  File "/storage/brno2/home/stepanb2/.conda/envs/deeplearning/lib/python3.11/site-packages/transformers/tokenization_utils_base.py", line 777, in convert_to_tensors
+    tensor = as_tensor(value)
+             ^^^^^^^^^^^^^^^^
+  File "/storage/brno2/home/stepanb2/.conda/envs/deeplearning/lib/python3.11/site-packages/transformers/tokenization_utils_base.py", line 739, in as_tensor
+    return torch.tensor(value)
+           ^^^^^^^^^^^^^^^^^^^
+ValueError: expected sequence of length 125 at dim 1 (got 193)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/storage/brno2/home/stepanb2/Czech-Metaphor-Detection/Experiments/model_training/model_training.py", line 182, in <module>
+    main(main_args)
+  File "/storage/brno2/home/stepanb2/Czech-Metaphor-Detection/Experiments/model_training/model_training.py", line 169, in main
+    trainer.train()
+  File "/storage/brno2/home/stepanb2/.conda/envs/deeplearning/lib/python3.11/site-packages/transformers/trainer.py", line 2245, in train
+    return inner_training_loop(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/storage/brno2/home/stepanb2/.conda/envs/deeplearning/lib/python3.11/site-packages/transformers/trainer.py", line 2514, in _inner_training_loop
+    batch_samples, num_items_in_batch = self.get_batch_samples(epoch_iterator, num_batches, args.device)
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/storage/brno2/home/stepanb2/.conda/envs/deeplearning/lib/python3.11/site-packages/transformers/trainer.py", line 5243, in get_batch_samples
+    batch_samples.append(next(epoch_iterator))
+                         ^^^^^^^^^^^^^^^^^^^^
+  File "/storage/brno2/home/stepanb2/.conda/envs/deeplearning/lib/python3.11/site-packages/accelerate/data_loader.py", line 566, in __iter__
+    current_batch = next(dataloader_iter)
+                    ^^^^^^^^^^^^^^^^^^^^^
+  File "/storage/brno2/home/stepanb2/.conda/envs/deeplearning/lib/python3.11/site-packages/torch/utils/data/dataloader.py", line 708, in __next__
+    data = self._next_data()
+           ^^^^^^^^^^^^^^^^^
+  File "/storage/brno2/home/stepanb2/.conda/envs/deeplearning/lib/python3.11/site-packages/torch/utils/data/dataloader.py", line 764, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/storage/brno2/home/stepanb2/.conda/envs/deeplearning/lib/python3.11/site-packages/torch/utils/data/_utils/fetch.py", line 55, in fetch
+    return self.collate_fn(data)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/storage/brno2/home/stepanb2/.conda/envs/deeplearning/lib/python3.11/site-packages/transformers/data/data_collator.py", line 272, in __call__
+    batch = pad_without_fast_tokenizer_warning(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/storage/brno2/home/stepanb2/.conda/envs/deeplearning/lib/python3.11/site-packages/transformers/data/data_collator.py", line 67, in pad_without_fast_tokenizer_warning
+    padded = tokenizer.pad(*pad_args, **pad_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/storage/brno2/home/stepanb2/.conda/envs/deeplearning/lib/python3.11/site-packages/transformers/tokenization_utils_base.py", line 3407, in pad
+    return BatchEncoding(batch_outputs, tensor_type=return_tensors)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/storage/brno2/home/stepanb2/.conda/envs/deeplearning/lib/python3.11/site-packages/transformers/tokenization_utils_base.py", line 241, in __init__
+    self.convert_to_tensors(tensor_type=tensor_type, prepend_batch_axis=prepend_batch_axis)
+  File "/storage/brno2/home/stepanb2/.conda/envs/deeplearning/lib/python3.11/site-packages/transformers/tokenization_utils_base.py", line 793, in convert_to_tensors
+    raise ValueError(
+ValueError: Unable to create tensor, you should probably activate truncation and/or padding with 'padding=True' 'truncation=True' to have batched tensors with the same length. Perhaps your features (`labels` in this case) have excessive nesting (inputs type `list` where type `int` is expected).
+  0%|          | 0/237 [00:01<?, ?it/s]

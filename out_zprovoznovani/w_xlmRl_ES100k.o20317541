@@ -1,0 +1,9 @@
+Namespace(train_languages=['en', 'es'], train_counts=['100', '100000'], test_language='es', test_count=10000, train_only_pos=[], test_only_pos=[], output_dir='/storage/brno2/home/stepanb2/Czech-Metaphor-Detection/out', source_dir='/storage/brno2/home/stepanb2/Czech-Metaphor-Detection', model_name='xlm-roberta-large', seed=42, imbalance_weight=0.5, epochs=3, train_batch_size=16, test_batch_size=16, learning_rate=2e-05, weight_decay=0.01, warmup_ratio=0.06, loss='focal')
+train en 100 0.11764705882352941
+train es 100000 0.018364458929222324
+Total train percentage of metaphor 0.02095492654812742
+test es 10000 0.018187188792303147
+
+**********************************************************************************************************
+
+The SCRATCHes have been SUCCESSFULLY cleaned...

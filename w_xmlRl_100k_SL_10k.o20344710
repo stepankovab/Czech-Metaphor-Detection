@@ -1,0 +1,56 @@
+Namespace(train_languages=['sl'], train_counts=['100000'], test_language='sl', test_count=10000, train_only_pos=[], test_only_pos=[], output_dir='/storage/brno2/home/stepanb2/Czech-Metaphor-Detection/out', source_dir='/storage/brno2/home/stepanb2/Czech-Metaphor-Detection', model_name='xlm-roberta-large', seed=42, imbalance_weight=0.5, epochs=3, train_batch_size=32, test_batch_size=32, learning_rate=3e-05, weight_decay=0.01, warmup_ratio=0.06, loss='weighted')
+train sl 100000 0.06166527043552782
+Total train percentage of metaphor 0.06166527043552782
+test sl 10000 0.06452787519883478
+Dataset({
+    features: ['labels', 'input_ids', 'attention_mask'],
+    num_rows: 11170
+}) Dataset({
+    features: ['labels', 'input_ids', 'attention_mask'],
+    num_rows: 2793
+})
+{'loss': 0.3952, 'grad_norm': 30.862844467163086, 'learning_rate': 2.095238095238095e-05, 'epoch': 0.14}
+{'loss': 0.1627, 'grad_norm': 5.400014877319336, 'learning_rate': 2.905775075987842e-05, 'epoch': 0.29}
+{'loss': 0.1375, 'grad_norm': 2.869136095046997, 'learning_rate': 2.7537993920972642e-05, 'epoch': 0.43}
+{'loss': 0.1399, 'grad_norm': 2.2321858406066895, 'learning_rate': 2.601823708206687e-05, 'epoch': 0.57}
+{'loss': 0.1212, 'grad_norm': 1.6870895624160767, 'learning_rate': 2.4498480243161097e-05, 'epoch': 0.71}
+{'loss': 0.1121, 'grad_norm': 0.8232223987579346, 'learning_rate': 2.297872340425532e-05, 'epoch': 0.86}
+{'loss': 0.1177, 'grad_norm': 5.477321147918701, 'learning_rate': 2.1458966565349545e-05, 'epoch': 1.0}
+{'loss': 0.1027, 'grad_norm': 1.0023630857467651, 'learning_rate': 1.9939209726443772e-05, 'epoch': 1.14}
+{'loss': 0.1012, 'grad_norm': 3.945643663406372, 'learning_rate': 1.8419452887537996e-05, 'epoch': 1.29}
+{'loss': 0.0959, 'grad_norm': 2.158071279525757, 'learning_rate': 1.689969604863222e-05, 'epoch': 1.43}
+{'loss': 0.0982, 'grad_norm': 2.2355782985687256, 'learning_rate': 1.5379939209726444e-05, 'epoch': 1.57}
+{'loss': 0.1018, 'grad_norm': 3.8575100898742676, 'learning_rate': 1.3860182370820669e-05, 'epoch': 1.71}
+{'loss': 0.1022, 'grad_norm': 1.249362826347351, 'learning_rate': 1.2340425531914893e-05, 'epoch': 1.86}
+{'loss': 0.098, 'grad_norm': 6.734074592590332, 'learning_rate': 1.0820668693009119e-05, 'epoch': 2.0}
+{'loss': 0.0814, 'grad_norm': 1.7028194665908813, 'learning_rate': 9.300911854103344e-06, 'epoch': 2.14}
+{'loss': 0.0712, 'grad_norm': 1.562211513519287, 'learning_rate': 7.78115501519757e-06, 'epoch': 2.29}
+{'loss': 0.0731, 'grad_norm': 1.8853758573532104, 'learning_rate': 6.261398176291794e-06, 'epoch': 2.43}
+{'loss': 0.0796, 'grad_norm': 2.212972402572632, 'learning_rate': 4.741641337386018e-06, 'epoch': 2.57}
+{'loss': 0.0699, 'grad_norm': 1.7993450164794922, 'learning_rate': 3.221884498480243e-06, 'epoch': 2.71}
+{'loss': 0.0678, 'grad_norm': 2.633068561553955, 'learning_rate': 1.7021276595744682e-06, 'epoch': 2.86}
+{'loss': 0.0707, 'grad_norm': 5.554302215576172, 'learning_rate': 1.8237082066869301e-07, 'epoch': 3.0}
+{'train_runtime': 73.4747, 'train_samples_per_second': 456.075, 'train_steps_per_second': 14.291, 'train_loss': 0.11428203355698359, 'epoch': 3.0}
+{'test_loss': 0.11390574276447296, 'test_accuracy': 0.9613829318308131, 'test_precision': 0.7107231920199502, 'test_recall': 0.6771606771606772, 'test_f1': 0.6935361216730038, 'test_runtime': 1.7793, 'test_samples_per_second': 1569.755, 'test_steps_per_second': 49.459}
+results dupm at: 523b1859-9b4e-42d4-aca0-a6b64de9a101
+      pos  preds  labels  total
+0     ADJ    134     203   5504
+1     ADP   2281    2014   4518
+2     ADV     38      71   2468
+3     AUX      5      26   3365
+4   CCONJ      1      11   2343
+5     DET     12      19   1717
+6    INTJ      0       0     30
+7    NOUN    393     554  10438
+8     NUM      6       8    814
+9    PART      2      12   1570
+10   PRON     37      60   2133
+11  PROPN      1      13   2297
+12  PUNCT      0      13   8207
+13  SCONJ      7      21   1664
+14   VERB    291     341   4851
+15      X      0       1    260
+
+**********************************************************************************************************
+
+The SCRATCHes have been SUCCESSFULLY cleaned...

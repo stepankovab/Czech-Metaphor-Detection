@@ -15,7 +15,7 @@ def load_dataset(language, count, purpose, source_dir):
         with open(source_dir + f"/Data/cometa_dataset_v1/cometa_{purpose}_sentences.json", 'r', encoding='utf-8') as f:
             data_df = pd.read_json(f)[:count]
 
-    print(purpose, language, count, sum([sum(l) for l in data_df['labels']])/sum([len(l) for l in data_df['labels']]))
+    print(purpose, language, "requested:", count, "provided:", data_df.shape[0], sum([sum(l) for l in data_df['labels']])/sum([len(l) for l in data_df['labels']]))
     return data_df
 
 
@@ -71,7 +71,7 @@ def prepare_data(train_languages, train_counts, test_language, test_count, train
         
         if len(train_only_pos) > 0:
             temp_train_df = filter_labels_by_pos(df=temp_train_df, pos_to_keep=train_only_pos)
-            print("Keeping only metaphors in", train_only_pos, language, count, sum([sum(l) for l in temp_train_df['labels']])/sum([len(l) for l in temp_train_df['labels']]))
+            print("Keeping only metaphors in", train_only_pos, language, "requested:", count, "provided:", temp_train_df.shape[0], sum([sum(l) for l in temp_train_df['labels']])/sum([len(l) for l in temp_train_df['labels']]))
 
         # HERE i append all training data after each other in order of the languages
         train_sentences.extend(temp_train_df["sentences"])
@@ -91,21 +91,11 @@ def prepare_data(train_languages, train_counts, test_language, test_count, train
     test_ds = Dataset.from_pandas(temp_test_df)
 
     def tokenize_batch(batch):
-        try:
-            enc = tokenizer(
-                batch["sentences"],
-                truncation=True,
-                is_split_into_words=True,
-                # padding = "longest"
-                # padding="max_length",
-                # max_length=256
-            )
-        except Exception as e:
-            print("TOKENIZATION FAILED")
-            for i, s in enumerate(batch["sentences"]):
-                print("IDX:", i, "TYPE:", type(s), "VALUE:", s)
-            raise e
-        
+        enc = tokenizer(
+            batch["sentences"],
+            truncation=True,
+            is_split_into_words=True,
+        )
 
         aligned_labels = align_labels_single_word(encodings=enc, labels=batch["labels"])
 

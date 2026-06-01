@@ -69,20 +69,39 @@ def compute_POS_percentages(test_data, logits, labels):
     df = pd.DataFrame({"words": words, "pos": pos, "preds": true_preds, "labels": true_labels})
 
 
-    # print percentage of different categhories
+    results = []
 
-    # print examples of correct and incorrect
+    for pos, group in df.groupby("pos"):
 
-    # Count true and predicted metaphors per POS
-    counts = (
-        df.groupby("pos")[["preds", "labels"]]
-        .sum()  # count how many are 1 per pos
-        .astype(int)
-        .reset_index()
-    )
+        y_pred = group["preds"].values
+        y_true = group["labels"].values
 
-    # Optional: also count total per POS if you want percentages later
-    counts["total"] = df.groupby("pos").size().values
+        tp = np.sum((y_pred == 1) & (y_true == 1))
+        pred_pos = np.sum(y_pred == 1)
+        true_pos = np.sum(y_true == 1)
+
+        precision = tp / pred_pos if pred_pos > 0 else 0.0
+        recall = tp / true_pos if true_pos > 0 else 0.0
+
+        f1 = (
+            2 * precision * recall / (precision + recall)
+            if (precision + recall) > 0
+            else 0.0
+        )
+
+        results.append({
+            "pos": pos,
+            "tp": int(tp),
+            "pred_pos": int(pred_pos),
+            "true_pos": int(true_pos),
+            "precision": precision,
+            "recall": recall,
+            "f1": f1,
+            "total": len(group)
+        })
+
+    counts = pd.DataFrame(results)
+
 
     return counts
 

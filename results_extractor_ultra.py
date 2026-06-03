@@ -300,13 +300,52 @@ def md_table_data_amount(results):
         print(md_table)
 
 
+import matplotlib.pyplot as plt
+
+def plot_language_results(results, lang, outfile):
+    lang_results = results[lang]
+
+    # sort by N
+    ns = sorted(lang_results.keys())
+
+    accuracy = [lang_results[n]["test_accuracy"] for n in ns]
+    precision = [lang_results[n]["test_precision"] for n in ns]
+    recall = [lang_results[n]["test_recall"] for n in ns]
+    f1 = [lang_results[n]["test_f1"] for n in ns]
+
+    adj_f1 = [lang_results[n]["ADJ"]["f1"] for n in ns]
+    noun_f1 = [lang_results[n]["NOUN"]["f1"] for n in ns]
+    verb_f1 = [lang_results[n]["VERB"]["f1"] for n in ns]
+
+    plt.figure(figsize=(12, 6))
+
+    plt.plot(ns, accuracy, marker="o", label="Accuracy")
+    plt.plot(ns, precision, marker="o", label="Precision")
+    plt.plot(ns, recall, marker="o", label="Recall")
+    plt.plot(ns, f1, marker="o", label="F1")
+
+    plt.plot(ns, adj_f1, marker="o", linestyle="--", label="ADJ F1")
+    plt.plot(ns, noun_f1, marker="o", linestyle="--", label="NOUN F1")
+    plt.plot(ns, verb_f1, marker="o", linestyle="--", label="VERB F1")
+
+    plt.xlabel("N")
+    plt.ylabel("Score")
+    plt.title(f"Metrics for {lang}")
+
+    plt.legend()
+    plt.grid(True)
+
+    plt.tight_layout()
+    plt.savefig(outfile, dpi=300, bbox_inches="tight")
+
+
 if __name__ == "__main__":
-    # file_name = "/storage/brno2/home/stepanb2/Czech-Metaphor-Detection/Monolingual_data_amount_mm.o20772848"
-    # file_name = "/storage/brno2/home/stepanb2/Czech-Metaphor-Detection/Monolingual_data_amount.o20772810"
-    file_name = "/storage/brno2/home/stepanb2/Czech-Metaphor-Detection/unannotated_data_amount_mm.o20810683"
-    # file_name = "/storage/brno2/home/stepanb2/Czech-Metaphor-Detection/Multilingual_data_amount_2_mm.o20772847"
-    # file_name = "/storage/brno2/home/stepanb2/Czech-Metaphor-Detection/Multilingual_data_amount_2.o20772811"
-    # file_name = "/storage/brno2/home/stepanb2/Czech-Metaphor-Detection/language_permutations.o20772805"
+    # file_name = "/storage/brno2/home/stepanb2/Czech-Metaphor-Detection/out_large_scale/Monolingual_data_amount_mm.o20772848"
+    # file_name = "/storage/brno2/home/stepanb2/Czech-Metaphor-Detection/out_large_scale/Monolingual_data_amount.o20772810"
+    # file_name = "/storage/brno2/home/stepanb2/Czech-Metaphor-Detection/out_large_scale/unannotated_data_amount_mm.o20810683"
+    file_name = "/storage/brno2/home/stepanb2/Czech-Metaphor-Detection/out_large_scale/Multilingual_data_amount_2_mm.o20772847"
+    # file_name = "/storage/brno2/home/stepanb2/Czech-Metaphor-Detection/out_large_scale/Multilingual_data_amount_2.o20772811"
+    # file_name = "/storage/brno2/home/stepanb2/Czech-Metaphor-Detection/out_large_scale/language_permutations.o20772805"
 
     entries = read_and_parse_entries(file_name)
     
@@ -316,7 +355,9 @@ if __name__ == "__main__":
 
     # md_table_lang_order(b)
 
-    md_table_data_amount(a)
+    # md_table_data_amount(a)
+    # plot_language_results(a, "cs_unannotated", "fig_cs_unannotated")
+    plot_language_results(a, "es", "fig_es_multilingual")
 
 
 

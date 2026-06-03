@@ -1,0 +1,846 @@
+Namespace(train_languages=['cs_unannotated', 'cs'], train_counts=['10', '1000'], test_language='cs', test_count=10000, train_only_pos=[], test_only_pos=[], output_dir='/storage/brno2/home/stepanb2/Czech-Metaphor-Detection/out', source_dir='/storage/brno2/home/stepanb2/Czech-Metaphor-Detection', model_name='jhu-clsp/mmBERT-base', seed=42, imbalance_weight=0.5, epochs=3, train_batch_size=32, test_batch_size=32, learning_rate=3e-05, weight_decay=0.01, warmup_ratio=0.06, loss='weighted')
+train cs_unannotated requested: 10 provided: 10 0.0
+train cs requested: 1000 provided: 189 0.10524913402611244
+Total train percentage of metaphor 0.10061130922058074
+test cs requested: 10000 provided: 47 0.10596026490066225
+Dataset({
+    features: ['labels', 'input_ids', 'attention_mask'],
+    num_rows: 199
+}) Dataset({
+    features: ['labels', 'input_ids', 'attention_mask'],
+    num_rows: 47
+})
+{'train_runtime': 29.9686, 'train_samples_per_second': 19.921, 'train_steps_per_second': 0.701, 'train_loss': 0.41649664015997023, 'epoch': 3.0}
+{'test_loss': 0.2550112307071686, 'test_accuracy': 0.9028697571743929, 'test_precision': 0.6428571428571429, 'test_recall': 0.1875, 'test_f1': 0.2903225806451613, 'test_runtime': 4.1635, 'test_samples_per_second': 11.289, 'test_steps_per_second': 0.48}
+results dupm at: 2fa0b11a-5194-4b52-a151-e819314226ea
+      pos  tp  pred_pos  true_pos  precision    recall        f1  total
+0     ADJ   0         0         5   0.000000  0.000000  0.000000    101
+1     ADP  17        24        41   0.708333  0.414634  0.523077     79
+2     ADV   0         0         0   0.000000  0.000000  0.000000     57
+3     AUX   0         0         1   0.000000  0.000000  0.000000     31
+4   CCONJ   0         0         0   0.000000  0.000000  0.000000     47
+5     DET   0         0         0   0.000000  0.000000  0.000000     41
+6    NOUN   0         1        13   0.000000  0.000000  0.000000    180
+7     NUM   0         0         0   0.000000  0.000000  0.000000      6
+8    PART   0         0         0   0.000000  0.000000  0.000000      9
+9    PRON   0         0         3   0.000000  0.000000  0.000000     50
+10  PROPN   0         0         0   0.000000  0.000000  0.000000     27
+11  PUNCT   0         0         0   0.000000  0.000000  0.000000    130
+12  SCONJ   0         0         0   0.000000  0.000000  0.000000     27
+13   VERB   1         3        33   0.333333  0.030303  0.055556    111
+14      X   0         0         0   0.000000  0.000000  0.000000      3
+15      _   0         0         0   0.000000  0.000000  0.000000      7
+Namespace(train_languages=['cs_unannotated', 'cs'], train_counts=['50', '1000'], test_language='cs', test_count=10000, train_only_pos=[], test_only_pos=[], output_dir='/storage/brno2/home/stepanb2/Czech-Metaphor-Detection/out', source_dir='/storage/brno2/home/stepanb2/Czech-Metaphor-Detection', model_name='jhu-clsp/mmBERT-base', seed=42, imbalance_weight=0.5, epochs=3, train_batch_size=32, test_batch_size=32, learning_rate=3e-05, weight_decay=0.01, warmup_ratio=0.06, loss='weighted')
+train cs_unannotated requested: 50 provided: 50 0.0
+train cs requested: 1000 provided: 189 0.10524913402611244
+Total train percentage of metaphor 0.0872157209096931
+test cs requested: 10000 provided: 47 0.10596026490066225
+Dataset({
+    features: ['labels', 'input_ids', 'attention_mask'],
+    num_rows: 239
+}) Dataset({
+    features: ['labels', 'input_ids', 'attention_mask'],
+    num_rows: 47
+})
+{'train_runtime': 8.0751, 'train_samples_per_second': 88.791, 'train_steps_per_second': 2.972, 'train_loss': 0.3395875295003255, 'epoch': 3.0}
+{'test_loss': 0.25029662251472473, 'test_accuracy': 0.9072847682119205, 'test_precision': 0.62, 'test_recall': 0.3229166666666667, 'test_f1': 0.4246575342465753, 'test_runtime': 1.0045, 'test_samples_per_second': 46.787, 'test_steps_per_second': 1.991}
+results dupm at: 1f5114ef-51b3-4a3b-823b-f95d23b517d0
+      pos  tp  pred_pos  true_pos  precision    recall        f1  total
+0     ADJ   0         0         5   0.000000  0.000000  0.000000    101
+1     ADP  24        37        41   0.648649  0.585366  0.615385     79
+2     ADV   0         0         0   0.000000  0.000000  0.000000     57
+3     AUX   0         0         1   0.000000  0.000000  0.000000     31
+4   CCONJ   0         0         0   0.000000  0.000000  0.000000     47
+5     DET   0         0         0   0.000000  0.000000  0.000000     41
+6    NOUN   1         4        13   0.250000  0.076923  0.117647    180
+7     NUM   0         0         0   0.000000  0.000000  0.000000      6
+8    PART   0         0         0   0.000000  0.000000  0.000000      9
+9    PRON   0         0         3   0.000000  0.000000  0.000000     50
+10  PROPN   0         0         0   0.000000  0.000000  0.000000     27
+11  PUNCT   0         0         0   0.000000  0.000000  0.000000    130
+12  SCONJ   0         0         0   0.000000  0.000000  0.000000     27
+13   VERB   6         9        33   0.666667  0.181818  0.285714    111
+14      X   0         0         0   0.000000  0.000000  0.000000      3
+15      _   0         0         0   0.000000  0.000000  0.000000      7
+Namespace(train_languages=['cs_unannotated', 'cs'], train_counts=['100', '1000'], test_language='cs', test_count=10000, train_only_pos=[], test_only_pos=[], output_dir='/storage/brno2/home/stepanb2/Czech-Metaphor-Detection/out', source_dir='/storage/brno2/home/stepanb2/Czech-Metaphor-Detection', model_name='jhu-clsp/mmBERT-base', seed=42, imbalance_weight=0.5, epochs=3, train_batch_size=32, test_batch_size=32, learning_rate=3e-05, weight_decay=0.01, warmup_ratio=0.06, loss='weighted')
+train cs_unannotated requested: 100 provided: 100 0.0
+train cs requested: 1000 provided: 189 0.10524913402611244
+Total train percentage of metaphor 0.07344737820751208
+test cs requested: 10000 provided: 47 0.10596026490066225
+Dataset({
+    features: ['labels', 'input_ids', 'attention_mask'],
+    num_rows: 289
+}) Dataset({
+    features: ['labels', 'input_ids', 'attention_mask'],
+    num_rows: 47
+})
+{'train_runtime': 11.4567, 'train_samples_per_second': 75.676, 'train_steps_per_second': 2.619, 'train_loss': 0.27791643142700195, 'epoch': 3.0}
+{'test_loss': 0.25103798508644104, 'test_accuracy': 0.9116997792494481, 'test_precision': 0.75, 'test_recall': 0.25, 'test_f1': 0.375, 'test_runtime': 0.997, 'test_samples_per_second': 47.142, 'test_steps_per_second': 2.006}
+results dupm at: c90d4472-6725-4657-bdda-2abe8a16f0ff
+      pos  tp  pred_pos  true_pos  precision    recall        f1  total
+0     ADJ   0         1         5   0.000000  0.000000  0.000000    101
+1     ADP  20        22        41   0.909091  0.487805  0.634921     79
+2     ADV   0         0         0   0.000000  0.000000  0.000000     57
+3     AUX   0         0         1   0.000000  0.000000  0.000000     31
+4   CCONJ   0         0         0   0.000000  0.000000  0.000000     47
+5     DET   0         0         0   0.000000  0.000000  0.000000     41
+6    NOUN   0         2        13   0.000000  0.000000  0.000000    180
+7     NUM   0         0         0   0.000000  0.000000  0.000000      6
+8    PART   0         0         0   0.000000  0.000000  0.000000      9
+9    PRON   0         0         3   0.000000  0.000000  0.000000     50
+10  PROPN   0         0         0   0.000000  0.000000  0.000000     27
+11  PUNCT   0         0         0   0.000000  0.000000  0.000000    130
+12  SCONJ   0         0         0   0.000000  0.000000  0.000000     27
+13   VERB   4         7        33   0.571429  0.121212  0.200000    111
+14      X   0         0         0   0.000000  0.000000  0.000000      3
+15      _   0         0         0   0.000000  0.000000  0.000000      7
+Namespace(train_languages=['cs_unannotated', 'cs'], train_counts=['200', '1000'], test_language='cs', test_count=10000, train_only_pos=[], test_only_pos=[], output_dir='/storage/brno2/home/stepanb2/Czech-Metaphor-Detection/out', source_dir='/storage/brno2/home/stepanb2/Czech-Metaphor-Detection', model_name='jhu-clsp/mmBERT-base', seed=42, imbalance_weight=0.5, epochs=3, train_batch_size=32, test_batch_size=32, learning_rate=3e-05, weight_decay=0.01, warmup_ratio=0.06, loss='weighted')
+train cs_unannotated requested: 200 provided: 200 0.0
+train cs requested: 1000 provided: 189 0.10524913402611244
+Total train percentage of metaphor 0.0583628841607565
+test cs requested: 10000 provided: 47 0.10596026490066225
+Dataset({
+    features: ['labels', 'input_ids', 'attention_mask'],
+    num_rows: 389
+}) Dataset({
+    features: ['labels', 'input_ids', 'attention_mask'],
+    num_rows: 47
+})
+{'train_runtime': 8.6693, 'train_samples_per_second': 134.614, 'train_steps_per_second': 4.499, 'train_loss': 0.244568726955316, 'epoch': 3.0}
+{'test_loss': 0.26157939434051514, 'test_accuracy': 0.9017660044150111, 'test_precision': 0.6, 'test_recall': 0.21875, 'test_f1': 0.32061068702290074, 'test_runtime': 0.8972, 'test_samples_per_second': 52.386, 'test_steps_per_second': 2.229}
+results dupm at: 9ff1737d-c983-4b52-8492-7f43c3039d57
+      pos  tp  pred_pos  true_pos  precision    recall        f1  total
+0     ADJ   0         0         5   0.000000  0.000000  0.000000    101
+1     ADP  17        25        41   0.680000  0.414634  0.515152     79
+2     ADV   0         0         0   0.000000  0.000000  0.000000     57
+3     AUX   0         0         1   0.000000  0.000000  0.000000     31
+4   CCONJ   0         0         0   0.000000  0.000000  0.000000     47
+5     DET   0         0         0   0.000000  0.000000  0.000000     41
+6    NOUN   0         3        13   0.000000  0.000000  0.000000    180
+7     NUM   0         0         0   0.000000  0.000000  0.000000      6
+8    PART   0         0         0   0.000000  0.000000  0.000000      9
+9    PRON   0         0         3   0.000000  0.000000  0.000000     50
+10  PROPN   0         0         0   0.000000  0.000000  0.000000     27
+11  PUNCT   0         0         0   0.000000  0.000000  0.000000    130
+12  SCONJ   0         0         0   0.000000  0.000000  0.000000     27
+13   VERB   4         7        33   0.571429  0.121212  0.200000    111
+14      X   0         0         0   0.000000  0.000000  0.000000      3
+15      _   0         0         0   0.000000  0.000000  0.000000      7
+Namespace(train_languages=['cs_unannotated', 'cs'], train_counts=['300', '1000'], test_language='cs', test_count=10000, train_only_pos=[], test_only_pos=[], output_dir='/storage/brno2/home/stepanb2/Czech-Metaphor-Detection/out', source_dir='/storage/brno2/home/stepanb2/Czech-Metaphor-Detection', model_name='jhu-clsp/mmBERT-base', seed=42, imbalance_weight=0.5, epochs=3, train_batch_size=32, test_batch_size=32, learning_rate=3e-05, weight_decay=0.01, warmup_ratio=0.06, loss='weighted')
+train cs_unannotated requested: 300 provided: 300 0.0
+train cs requested: 1000 provided: 189 0.10524913402611244
+Total train percentage of metaphor 0.048194241093216204
+test cs requested: 10000 provided: 47 0.10596026490066225
+Dataset({
+    features: ['labels', 'input_ids', 'attention_mask'],
+    num_rows: 489
+}) Dataset({
+    features: ['labels', 'input_ids', 'attention_mask'],
+    num_rows: 47
+})
+{'train_runtime': 9.6068, 'train_samples_per_second': 152.704, 'train_steps_per_second': 4.996, 'train_loss': 0.18366495768229166, 'epoch': 3.0}
+{'test_loss': 0.2593785226345062, 'test_accuracy': 0.9028697571743929, 'test_precision': 0.6333333333333333, 'test_recall': 0.19791666666666666, 'test_f1': 0.30158730158730157, 'test_runtime': 0.8862, 'test_samples_per_second': 53.037, 'test_steps_per_second': 2.257}
+results dupm at: b08a421b-6565-4c27-a00e-401cd0c0a6fc
+      pos  tp  pred_pos  true_pos  precision    recall        f1  total
+0     ADJ   0         1         5   0.000000  0.000000  0.000000    101
+1     ADP  15        19        41   0.789474  0.365854  0.500000     79
+2     ADV   0         1         0   0.000000  0.000000  0.000000     57
+3     AUX   0         0         1   0.000000  0.000000  0.000000     31
+4   CCONJ   0         0         0   0.000000  0.000000  0.000000     47
+5     DET   0         0         0   0.000000  0.000000  0.000000     41
+6    NOUN   0         1        13   0.000000  0.000000  0.000000    180
+7     NUM   0         0         0   0.000000  0.000000  0.000000      6
+8    PART   0         0         0   0.000000  0.000000  0.000000      9
+9    PRON   0         0         3   0.000000  0.000000  0.000000     50
+10  PROPN   0         0         0   0.000000  0.000000  0.000000     27
+11  PUNCT   0         0         0   0.000000  0.000000  0.000000    130
+12  SCONJ   0         0         0   0.000000  0.000000  0.000000     27
+13   VERB   4         8        33   0.500000  0.121212  0.195122    111
+14      X   0         0         0   0.000000  0.000000  0.000000      3
+15      _   0         0         0   0.000000  0.000000  0.000000      7
+Namespace(train_languages=['cs_unannotated', 'cs'], train_counts=['400', '1000'], test_language='cs', test_count=10000, train_only_pos=[], test_only_pos=[], output_dir='/storage/brno2/home/stepanb2/Czech-Metaphor-Detection/out', source_dir='/storage/brno2/home/stepanb2/Czech-Metaphor-Detection', model_name='jhu-clsp/mmBERT-base', seed=42, imbalance_weight=0.5, epochs=3, train_batch_size=32, test_batch_size=32, learning_rate=3e-05, weight_decay=0.01, warmup_ratio=0.06, loss='weighted')
+train cs_unannotated requested: 400 provided: 400 0.0
+train cs requested: 1000 provided: 189 0.10524913402611244
+Total train percentage of metaphor 0.040097452035326366
+test cs requested: 10000 provided: 47 0.10596026490066225
+Dataset({
+    features: ['labels', 'input_ids', 'attention_mask'],
+    num_rows: 589
+}) Dataset({
+    features: ['labels', 'input_ids', 'attention_mask'],
+    num_rows: 47
+})
+{'loss': 0.202, 'grad_norm': 1.343113660812378, 'learning_rate': 6.226415094339623e-06, 'epoch': 2.63}
+{'train_runtime': 10.088, 'train_samples_per_second': 175.158, 'train_steps_per_second': 5.65, 'train_loss': 0.1852632734859199, 'epoch': 3.0}
+{'test_loss': 0.26618528366088867, 'test_accuracy': 0.9017660044150111, 'test_precision': 0.6296296296296297, 'test_recall': 0.17708333333333334, 'test_f1': 0.2764227642276423, 'test_runtime': 0.8785, 'test_samples_per_second': 53.497, 'test_steps_per_second': 2.276}
+results dupm at: c6ea9961-944a-4e7d-90d7-dedb77361470
+      pos  tp  pred_pos  true_pos  precision    recall        f1  total
+0     ADJ   0         0         5        0.0  0.000000  0.000000    101
+1     ADP  14        20        41        0.7  0.341463  0.459016     79
+2     ADV   0         0         0        0.0  0.000000  0.000000     57
+3     AUX   0         0         1        0.0  0.000000  0.000000     31
+4   CCONJ   0         0         0        0.0  0.000000  0.000000     47
+5     DET   0         0         0        0.0  0.000000  0.000000     41
+6    NOUN   1         2        13        0.5  0.076923  0.133333    180
+7     NUM   0         0         0        0.0  0.000000  0.000000      6
+8    PART   0         0         0        0.0  0.000000  0.000000      9
+9    PRON   0         0         3        0.0  0.000000  0.000000     50
+10  PROPN   0         0         0        0.0  0.000000  0.000000     27
+11  PUNCT   0         0         0        0.0  0.000000  0.000000    130
+12  SCONJ   0         0         0        0.0  0.000000  0.000000     27
+13   VERB   2         5        33        0.4  0.060606  0.105263    111
+14      X   0         0         0        0.0  0.000000  0.000000      3
+15      _   0         0         0        0.0  0.000000  0.000000      7
+Namespace(train_languages=['cs_unannotated', 'cs'], train_counts=['500', '1000'], test_language='cs', test_count=10000, train_only_pos=[], test_only_pos=[], output_dir='/storage/brno2/home/stepanb2/Czech-Metaphor-Detection/out', source_dir='/storage/brno2/home/stepanb2/Czech-Metaphor-Detection', model_name='jhu-clsp/mmBERT-base', seed=42, imbalance_weight=0.5, epochs=3, train_batch_size=32, test_batch_size=32, learning_rate=3e-05, weight_decay=0.01, warmup_ratio=0.06, loss='weighted')
+train cs_unannotated requested: 500 provided: 500 0.0
+train cs requested: 1000 provided: 189 0.10524913402611244
+Total train percentage of metaphor 0.03434782608695652
+test cs requested: 10000 provided: 47 0.10596026490066225
+Dataset({
+    features: ['labels', 'input_ids', 'attention_mask'],
+    num_rows: 689
+}) Dataset({
+    features: ['labels', 'input_ids', 'attention_mask'],
+    num_rows: 47
+})
+{'loss': 0.181, 'grad_norm': 2.342625856399536, 'learning_rate': 9.67741935483871e-06, 'epoch': 2.27}
+{'train_runtime': 10.2061, 'train_samples_per_second': 202.525, 'train_steps_per_second': 6.467, 'train_loss': 0.1453820647615375, 'epoch': 3.0}
+{'test_loss': 0.29765409231185913, 'test_accuracy': 0.9061810154525386, 'test_precision': 0.6896551724137931, 'test_recall': 0.20833333333333334, 'test_f1': 0.32, 'test_runtime': 0.9677, 'test_samples_per_second': 48.567, 'test_steps_per_second': 2.067}
+results dupm at: f76ac30e-890f-4b08-b555-3edc45abc94f
+      pos  tp  pred_pos  true_pos  precision    recall        f1  total
+0     ADJ   0         0         5   0.000000  0.000000  0.000000    101
+1     ADP  15        18        41   0.833333  0.365854  0.508475     79
+2     ADV   0         0         0   0.000000  0.000000  0.000000     57
+3     AUX   0         0         1   0.000000  0.000000  0.000000     31
+4   CCONJ   0         0         0   0.000000  0.000000  0.000000     47
+5     DET   0         0         0   0.000000  0.000000  0.000000     41
+6    NOUN   1         2        13   0.500000  0.076923  0.133333    180
+7     NUM   0         0         0   0.000000  0.000000  0.000000      6
+8    PART   0         0         0   0.000000  0.000000  0.000000      9
+9    PRON   0         0         3   0.000000  0.000000  0.000000     50
+10  PROPN   0         0         0   0.000000  0.000000  0.000000     27
+11  PUNCT   0         0         0   0.000000  0.000000  0.000000    130
+12  SCONJ   0         0         0   0.000000  0.000000  0.000000     27
+13   VERB   4         9        33   0.444444  0.121212  0.190476    111
+14      X   0         0         0   0.000000  0.000000  0.000000      3
+15      _   0         0         0   0.000000  0.000000  0.000000      7
+Namespace(train_languages=['cs_unannotated', 'cs'], train_counts=['750', '1000'], test_language='cs', test_count=10000, train_only_pos=[], test_only_pos=[], output_dir='/storage/brno2/home/stepanb2/Czech-Metaphor-Detection/out', source_dir='/storage/brno2/home/stepanb2/Czech-Metaphor-Detection', model_name='jhu-clsp/mmBERT-base', seed=42, imbalance_weight=0.5, epochs=3, train_batch_size=32, test_batch_size=32, learning_rate=3e-05, weight_decay=0.01, warmup_ratio=0.06, loss='weighted')
+train cs_unannotated requested: 750 provided: 750 0.0
+train cs requested: 1000 provided: 189 0.10524913402611244
+Total train percentage of metaphor 0.025536591673131628
+test cs requested: 10000 provided: 47 0.10596026490066225
+Dataset({
+    features: ['labels', 'input_ids', 'attention_mask'],
+    num_rows: 939
+}) Dataset({
+    features: ['labels', 'input_ids', 'attention_mask'],
+    num_rows: 47
+})
+{'loss': 0.1683, 'grad_norm': 0.673945426940918, 'learning_rate': 1.5714285714285715e-05, 'epoch': 1.67}
+{'train_runtime': 10.6277, 'train_samples_per_second': 265.063, 'train_steps_per_second': 8.468, 'train_loss': 0.10577808618545533, 'epoch': 3.0}
+{'test_loss': 0.3638247549533844, 'test_accuracy': 0.9050772626931567, 'test_precision': 0.65625, 'test_recall': 0.21875, 'test_f1': 0.328125, 'test_runtime': 0.7794, 'test_samples_per_second': 60.304, 'test_steps_per_second': 2.566}
+results dupm at: d4326e01-480b-4a4a-8757-43710aa5f799
+      pos  tp  pred_pos  true_pos  precision    recall        f1  total
+0     ADJ   1         3         5   0.333333  0.200000  0.250000    101
+1     ADP  14        17        41   0.823529  0.341463  0.482759     79
+2     ADV   0         0         0   0.000000  0.000000  0.000000     57
+3     AUX   0         0         1   0.000000  0.000000  0.000000     31
+4   CCONJ   0         0         0   0.000000  0.000000  0.000000     47
+5     DET   0         0         0   0.000000  0.000000  0.000000     41
+6    NOUN   3         5        13   0.600000  0.230769  0.333333    180
+7     NUM   0         0         0   0.000000  0.000000  0.000000      6
+8    PART   0         0         0   0.000000  0.000000  0.000000      9
+9    PRON   0         0         3   0.000000  0.000000  0.000000     50
+10  PROPN   0         0         0   0.000000  0.000000  0.000000     27
+11  PUNCT   0         0         0   0.000000  0.000000  0.000000    130
+12  SCONJ   0         0         0   0.000000  0.000000  0.000000     27
+13   VERB   3         7        33   0.428571  0.090909  0.150000    111
+14      X   0         0         0   0.000000  0.000000  0.000000      3
+15      _   0         0         0   0.000000  0.000000  0.000000      7
+Namespace(train_languages=['cs_unannotated', 'cs'], train_counts=['1000', '1000'], test_language='cs', test_count=10000, train_only_pos=[], test_only_pos=[], output_dir='/storage/brno2/home/stepanb2/Czech-Metaphor-Detection/out', source_dir='/storage/brno2/home/stepanb2/Czech-Metaphor-Detection', model_name='jhu-clsp/mmBERT-base', seed=42, imbalance_weight=0.5, epochs=3, train_batch_size=32, test_batch_size=32, learning_rate=3e-05, weight_decay=0.01, warmup_ratio=0.06, loss='weighted')
+train cs_unannotated requested: 1000 provided: 1000 0.0
+train cs requested: 1000 provided: 189 0.10524913402611244
+Total train percentage of metaphor 0.020187049624367556
+test cs requested: 10000 provided: 47 0.10596026490066225
+Dataset({
+    features: ['labels', 'input_ids', 'attention_mask'],
+    num_rows: 1189
+}) Dataset({
+    features: ['labels', 'input_ids', 'attention_mask'],
+    num_rows: 47
+})
+{'loss': 0.1615, 'grad_norm': 3.5463123321533203, 'learning_rate': 1.9065420560747663e-05, 'epoch': 1.32}
+{'loss': 0.0316, 'grad_norm': 0.637346088886261, 'learning_rate': 5.046728971962617e-06, 'epoch': 2.63}
+{'train_runtime': 12.4398, 'train_samples_per_second': 286.742, 'train_steps_per_second': 9.164, 'train_loss': 0.0866194670660454, 'epoch': 3.0}
+{'test_loss': 0.3446866273880005, 'test_accuracy': 0.9061810154525386, 'test_precision': 0.6666666666666666, 'test_recall': 0.22916666666666666, 'test_f1': 0.34108527131782945, 'test_runtime': 0.79, 'test_samples_per_second': 59.492, 'test_steps_per_second': 2.532}
+results dupm at: 7d03fe34-f5dd-49f9-8ea5-3139c134296c
+      pos  tp  pred_pos  true_pos  precision    recall        f1  total
+0     ADJ   1         2         5   0.500000  0.200000  0.285714    101
+1     ADP  15        18        41   0.833333  0.365854  0.508475     79
+2     ADV   0         0         0   0.000000  0.000000  0.000000     57
+3     AUX   0         0         1   0.000000  0.000000  0.000000     31
+4   CCONJ   0         0         0   0.000000  0.000000  0.000000     47
+5     DET   0         0         0   0.000000  0.000000  0.000000     41
+6    NOUN   1         3        13   0.333333  0.076923  0.125000    180
+7     NUM   0         0         0   0.000000  0.000000  0.000000      6
+8    PART   0         0         0   0.000000  0.000000  0.000000      9
+9    PRON   0         0         3   0.000000  0.000000  0.000000     50
+10  PROPN   0         0         0   0.000000  0.000000  0.000000     27
+11  PUNCT   0         0         0   0.000000  0.000000  0.000000    130
+12  SCONJ   0         0         0   0.000000  0.000000  0.000000     27
+13   VERB   5        10        33   0.500000  0.151515  0.232558    111
+14      X   0         0         0   0.000000  0.000000  0.000000      3
+15      _   0         0         0   0.000000  0.000000  0.000000      7
+Namespace(train_languages=['cs_unannotated', 'cs'], train_counts=['1500', '1000'], test_language='cs', test_count=10000, train_only_pos=[], test_only_pos=[], output_dir='/storage/brno2/home/stepanb2/Czech-Metaphor-Detection/out', source_dir='/storage/brno2/home/stepanb2/Czech-Metaphor-Detection', model_name='jhu-clsp/mmBERT-base', seed=42, imbalance_weight=0.5, epochs=3, train_batch_size=32, test_batch_size=32, learning_rate=3e-05, weight_decay=0.01, warmup_ratio=0.06, loss='weighted')
+train cs_unannotated requested: 1500 provided: 1500 0.0
+train cs requested: 1000 provided: 189 0.10524913402611244
+Total train percentage of metaphor 0.014704787432060159
+test cs requested: 10000 provided: 47 0.10596026490066225
+Dataset({
+    features: ['labels', 'input_ids', 'attention_mask'],
+    num_rows: 1689
+}) Dataset({
+    features: ['labels', 'input_ids', 'attention_mask'],
+    num_rows: 47
+})
+{'loss': 0.1387, 'grad_norm': 0.8183728456497192, 'learning_rate': 2.25503355704698e-05, 'epoch': 0.94}
+{'loss': 0.0313, 'grad_norm': 0.6573818325996399, 'learning_rate': 1.2483221476510069e-05, 'epoch': 1.89}
+{'loss': 0.0135, 'grad_norm': 0.4133847951889038, 'learning_rate': 2.4161073825503354e-06, 'epoch': 2.83}
+{'train_runtime': 15.0384, 'train_samples_per_second': 336.937, 'train_steps_per_second': 10.573, 'train_loss': 0.05833884352033243, 'epoch': 3.0}
+{'test_loss': 0.381022185087204, 'test_accuracy': 0.9017660044150111, 'test_precision': 0.6060606060606061, 'test_recall': 0.20833333333333334, 'test_f1': 0.31007751937984496, 'test_runtime': 0.8196, 'test_samples_per_second': 57.344, 'test_steps_per_second': 2.44}
+results dupm at: b7271510-b8b4-4e95-bfbd-be2f326f807d
+      pos  tp  pred_pos  true_pos  precision    recall        f1  total
+0     ADJ   0         0         5   0.000000  0.000000  0.000000    101
+1     ADP  14        17        41   0.823529  0.341463  0.482759     79
+2     ADV   0         0         0   0.000000  0.000000  0.000000     57
+3     AUX   0         0         1   0.000000  0.000000  0.000000     31
+4   CCONJ   0         0         0   0.000000  0.000000  0.000000     47
+5     DET   0         0         0   0.000000  0.000000  0.000000     41
+6    NOUN   3         8        13   0.375000  0.230769  0.285714    180
+7     NUM   0         0         0   0.000000  0.000000  0.000000      6
+8    PART   0         0         0   0.000000  0.000000  0.000000      9
+9    PRON   0         0         3   0.000000  0.000000  0.000000     50
+10  PROPN   0         0         0   0.000000  0.000000  0.000000     27
+11  PUNCT   0         0         0   0.000000  0.000000  0.000000    130
+12  SCONJ   0         0         0   0.000000  0.000000  0.000000     27
+13   VERB   3         8        33   0.375000  0.090909  0.146341    111
+14      X   0         0         0   0.000000  0.000000  0.000000      3
+15      _   0         0         0   0.000000  0.000000  0.000000      7
+Namespace(train_languages=['cs_unannotated', 'cs'], train_counts=['2000', '1000'], test_language='cs', test_count=10000, train_only_pos=[], test_only_pos=[], output_dir='/storage/brno2/home/stepanb2/Czech-Metaphor-Detection/out', source_dir='/storage/brno2/home/stepanb2/Czech-Metaphor-Detection', model_name='jhu-clsp/mmBERT-base', seed=42, imbalance_weight=0.5, epochs=3, train_batch_size=32, test_batch_size=32, learning_rate=3e-05, weight_decay=0.01, warmup_ratio=0.06, loss='weighted')
+train cs_unannotated requested: 2000 provided: 2000 0.0
+train cs requested: 1000 provided: 189 0.10524913402611244
+Total train percentage of metaphor 0.011526452478916805
+test cs requested: 10000 provided: 47 0.10596026490066225
+Dataset({
+    features: ['labels', 'input_ids', 'attention_mask'],
+    num_rows: 2189
+}) Dataset({
+    features: ['labels', 'input_ids', 'attention_mask'],
+    num_rows: 47
+})
+{'loss': 0.1554, 'grad_norm': 0.7042397856712341, 'learning_rate': 2.4896907216494846e-05, 'epoch': 0.72}
+{'loss': 0.0336, 'grad_norm': 0.19540831446647644, 'learning_rate': 1.7164948453608248e-05, 'epoch': 1.45}
+{'loss': 0.0201, 'grad_norm': 0.2012643814086914, 'learning_rate': 9.432989690721649e-06, 'epoch': 2.17}
+{'loss': 0.0093, 'grad_norm': 0.5051702857017517, 'learning_rate': 1.7010309278350516e-06, 'epoch': 2.9}
+{'train_runtime': 18.2547, 'train_samples_per_second': 359.744, 'train_steps_per_second': 11.34, 'train_loss': 0.05304604048890192, 'epoch': 3.0}
+{'test_loss': 0.3661304712295532, 'test_accuracy': 0.9061810154525386, 'test_precision': 0.6666666666666666, 'test_recall': 0.22916666666666666, 'test_f1': 0.34108527131782945, 'test_runtime': 0.7925, 'test_samples_per_second': 59.308, 'test_steps_per_second': 2.524}
+results dupm at: 950fbdc1-a9d3-4b54-8fc8-e516746386ac
+      pos  tp  pred_pos  true_pos  precision    recall        f1  total
+0     ADJ   0         1         5   0.000000  0.000000  0.000000    101
+1     ADP  16        18        41   0.888889  0.390244  0.542373     79
+2     ADV   0         0         0   0.000000  0.000000  0.000000     57
+3     AUX   0         0         1   0.000000  0.000000  0.000000     31
+4   CCONJ   0         0         0   0.000000  0.000000  0.000000     47
+5     DET   0         0         0   0.000000  0.000000  0.000000     41
+6    NOUN   2         5        13   0.400000  0.153846  0.222222    180
+7     NUM   0         0         0   0.000000  0.000000  0.000000      6
+8    PART   0         0         0   0.000000  0.000000  0.000000      9
+9    PRON   0         0         3   0.000000  0.000000  0.000000     50
+10  PROPN   0         0         0   0.000000  0.000000  0.000000     27
+11  PUNCT   0         0         0   0.000000  0.000000  0.000000    130
+12  SCONJ   0         0         0   0.000000  0.000000  0.000000     27
+13   VERB   4         9        33   0.444444  0.121212  0.190476    111
+14      X   0         0         0   0.000000  0.000000  0.000000      3
+15      _   0         0         0   0.000000  0.000000  0.000000      7
+Namespace(train_languages=['cs_unannotated', 'cs'], train_counts=['2500', '1000'], test_language='cs', test_count=10000, train_only_pos=[], test_only_pos=[], output_dir='/storage/brno2/home/stepanb2/Czech-Metaphor-Detection/out', source_dir='/storage/brno2/home/stepanb2/Czech-Metaphor-Detection', model_name='jhu-clsp/mmBERT-base', seed=42, imbalance_weight=0.5, epochs=3, train_batch_size=32, test_batch_size=32, learning_rate=3e-05, weight_decay=0.01, warmup_ratio=0.06, loss='weighted')
+train cs_unannotated requested: 2500 provided: 2500 0.0
+train cs requested: 1000 provided: 189 0.10524913402611244
+Total train percentage of metaphor 0.00986636692893718
+test cs requested: 10000 provided: 47 0.10596026490066225
+Dataset({
+    features: ['labels', 'input_ids', 'attention_mask'],
+    num_rows: 2689
+}) Dataset({
+    features: ['labels', 'input_ids', 'attention_mask'],
+    num_rows: 47
+})
+{'loss': 0.1516, 'grad_norm': 0.5315821170806885, 'learning_rate': 2.6234309623430962e-05, 'epoch': 0.59}
+{'loss': 0.0315, 'grad_norm': 0.39989355206489563, 'learning_rate': 1.99581589958159e-05, 'epoch': 1.18}
+{'loss': 0.0195, 'grad_norm': 0.4955134689807892, 'learning_rate': 1.3682008368200839e-05, 'epoch': 1.76}
+{'loss': 0.0123, 'grad_norm': 0.0279455054551363, 'learning_rate': 7.405857740585774e-06, 'epoch': 2.35}
+{'loss': 0.004, 'grad_norm': 0.20988044142723083, 'learning_rate': 1.1297071129707113e-06, 'epoch': 2.94}
+{'train_runtime': 21.4253, 'train_samples_per_second': 376.518, 'train_steps_per_second': 11.902, 'train_loss': 0.04298322142704445, 'epoch': 3.0}
+{'test_loss': 0.44687750935554504, 'test_accuracy': 0.9094922737306843, 'test_precision': 0.7333333333333333, 'test_recall': 0.22916666666666666, 'test_f1': 0.3492063492063492, 'test_runtime': 0.7848, 'test_samples_per_second': 59.889, 'test_steps_per_second': 2.548}
+results dupm at: 455994a8-1702-46f3-96b4-6426f8995e55
+      pos  tp  pred_pos  true_pos  precision    recall        f1  total
+0     ADJ   0         0         5   0.000000  0.000000  0.000000    101
+1     ADP  17        19        41   0.894737  0.414634  0.566667     79
+2     ADV   0         0         0   0.000000  0.000000  0.000000     57
+3     AUX   0         0         1   0.000000  0.000000  0.000000     31
+4   CCONJ   0         0         0   0.000000  0.000000  0.000000     47
+5     DET   0         0         0   0.000000  0.000000  0.000000     41
+6    NOUN   1         4        13   0.250000  0.076923  0.117647    180
+7     NUM   0         0         0   0.000000  0.000000  0.000000      6
+8    PART   0         0         0   0.000000  0.000000  0.000000      9
+9    PRON   0         0         3   0.000000  0.000000  0.000000     50
+10  PROPN   0         0         0   0.000000  0.000000  0.000000     27
+11  PUNCT   0         0         0   0.000000  0.000000  0.000000    130
+12  SCONJ   0         0         0   0.000000  0.000000  0.000000     27
+13   VERB   4         7        33   0.571429  0.121212  0.200000    111
+14      X   0         0         0   0.000000  0.000000  0.000000      3
+15      _   0         0         0   0.000000  0.000000  0.000000      7
+Namespace(train_languages=['cs_unannotated', 'cs'], train_counts=['3000', '1000'], test_language='cs', test_count=10000, train_only_pos=[], test_only_pos=[], output_dir='/storage/brno2/home/stepanb2/Czech-Metaphor-Detection/out', source_dir='/storage/brno2/home/stepanb2/Czech-Metaphor-Detection', model_name='jhu-clsp/mmBERT-base', seed=42, imbalance_weight=0.5, epochs=3, train_batch_size=32, test_batch_size=32, learning_rate=3e-05, weight_decay=0.01, warmup_ratio=0.06, loss='weighted')
+train cs_unannotated requested: 3000 provided: 3000 0.0
+train cs requested: 1000 provided: 189 0.10524913402611244
+Total train percentage of metaphor 0.008592747286214623
+test cs requested: 10000 provided: 47 0.10596026490066225
+Dataset({
+    features: ['labels', 'input_ids', 'attention_mask'],
+    num_rows: 3189
+}) Dataset({
+    features: ['labels', 'input_ids', 'attention_mask'],
+    num_rows: 47
+})
+{'loss': 0.1537, 'grad_norm': 2.6256003379821777, 'learning_rate': 2.702127659574468e-05, 'epoch': 0.5}
+{'loss': 0.0368, 'grad_norm': 1.9044101238250732, 'learning_rate': 2.170212765957447e-05, 'epoch': 1.0}
+{'loss': 0.0207, 'grad_norm': 0.10074096918106079, 'learning_rate': 1.6382978723404255e-05, 'epoch': 1.5}
+{'loss': 0.0167, 'grad_norm': 1.8258002996444702, 'learning_rate': 1.1063829787234042e-05, 'epoch': 2.0}
+{'loss': 0.0056, 'grad_norm': 0.6187111139297485, 'learning_rate': 5.74468085106383e-06, 'epoch': 2.5}
+{'loss': 0.0045, 'grad_norm': 0.11197832971811295, 'learning_rate': 4.2553191489361704e-07, 'epoch': 3.0}
+{'train_runtime': 23.6641, 'train_samples_per_second': 404.283, 'train_steps_per_second': 12.677, 'train_loss': 0.03964856515328089, 'epoch': 3.0}
+{'test_loss': 0.47601810097694397, 'test_accuracy': 0.9039735099337748, 'test_precision': 0.7368421052631579, 'test_recall': 0.14583333333333334, 'test_f1': 0.24347826086956523, 'test_runtime': 0.7948, 'test_samples_per_second': 59.134, 'test_steps_per_second': 2.516}
+results dupm at: 28c245c8-e7ea-4d06-96ae-afd148d7c807
+      pos  tp  pred_pos  true_pos  precision    recall        f1  total
+0     ADJ   0         0         5   0.000000  0.000000  0.000000    101
+1     ADP  10        12        41   0.833333  0.243902  0.377358     79
+2     ADV   0         0         0   0.000000  0.000000  0.000000     57
+3     AUX   0         0         1   0.000000  0.000000  0.000000     31
+4   CCONJ   0         0         0   0.000000  0.000000  0.000000     47
+5     DET   0         0         0   0.000000  0.000000  0.000000     41
+6    NOUN   1         2        13   0.500000  0.076923  0.133333    180
+7     NUM   0         0         0   0.000000  0.000000  0.000000      6
+8    PART   0         0         0   0.000000  0.000000  0.000000      9
+9    PRON   0         0         3   0.000000  0.000000  0.000000     50
+10  PROPN   0         0         0   0.000000  0.000000  0.000000     27
+11  PUNCT   0         0         0   0.000000  0.000000  0.000000    130
+12  SCONJ   0         0         0   0.000000  0.000000  0.000000     27
+13   VERB   3         5        33   0.600000  0.090909  0.157895    111
+14      X   0         0         0   0.000000  0.000000  0.000000      3
+15      _   0         0         0   0.000000  0.000000  0.000000      7
+Namespace(train_languages=['cs_unannotated', 'cs'], train_counts=['4000', '1000'], test_language='cs', test_count=10000, train_only_pos=[], test_only_pos=[], output_dir='/storage/brno2/home/stepanb2/Czech-Metaphor-Detection/out', source_dir='/storage/brno2/home/stepanb2/Czech-Metaphor-Detection', model_name='jhu-clsp/mmBERT-base', seed=42, imbalance_weight=0.5, epochs=3, train_batch_size=32, test_batch_size=32, learning_rate=3e-05, weight_decay=0.01, warmup_ratio=0.06, loss='weighted')
+train cs_unannotated requested: 4000 provided: 4000 0.0
+train cs requested: 1000 provided: 189 0.10524913402611244
+Total train percentage of metaphor 0.006870640622010401
+test cs requested: 10000 provided: 47 0.10596026490066225
+Dataset({
+    features: ['labels', 'input_ids', 'attention_mask'],
+    num_rows: 4189
+}) Dataset({
+    features: ['labels', 'input_ids', 'attention_mask'],
+    num_rows: 47
+})
+{'loss': 0.147, 'grad_norm': 0.6188413500785828, 'learning_rate': 2.821138211382114e-05, 'epoch': 0.38}
+{'loss': 0.032, 'grad_norm': 0.5467895865440369, 'learning_rate': 2.4146341463414638e-05, 'epoch': 0.76}
+{'loss': 0.0212, 'grad_norm': 0.14369481801986694, 'learning_rate': 2.008130081300813e-05, 'epoch': 1.15}
+{'loss': 0.0157, 'grad_norm': 0.455461710691452, 'learning_rate': 1.6016260162601627e-05, 'epoch': 1.53}
+{'loss': 0.0107, 'grad_norm': 0.23258572816848755, 'learning_rate': 1.1951219512195123e-05, 'epoch': 1.91}
+{'loss': 0.007, 'grad_norm': 0.06456266343593597, 'learning_rate': 7.886178861788618e-06, 'epoch': 2.29}
+{'loss': 0.0027, 'grad_norm': 0.017133215442299843, 'learning_rate': 3.821138211382114e-06, 'epoch': 2.67}
+{'train_runtime': 28.9857, 'train_samples_per_second': 433.559, 'train_steps_per_second': 13.558, 'train_loss': 0.030525029881006586, 'epoch': 3.0}
+{'test_loss': 0.4599607288837433, 'test_accuracy': 0.9061810154525386, 'test_precision': 0.7391304347826086, 'test_recall': 0.17708333333333334, 'test_f1': 0.2857142857142857, 'test_runtime': 0.8248, 'test_samples_per_second': 56.982, 'test_steps_per_second': 2.425}
+results dupm at: ee071ebe-8fe9-4923-a9a2-6d5c5db96226
+      pos  tp  pred_pos  true_pos  precision    recall        f1  total
+0     ADJ   1         1         5   1.000000  0.200000  0.333333    101
+1     ADP  12        14        41   0.857143  0.292683  0.436364     79
+2     ADV   0         0         0   0.000000  0.000000  0.000000     57
+3     AUX   0         0         1   0.000000  0.000000  0.000000     31
+4   CCONJ   0         0         0   0.000000  0.000000  0.000000     47
+5     DET   0         0         0   0.000000  0.000000  0.000000     41
+6    NOUN   1         3        13   0.333333  0.076923  0.125000    180
+7     NUM   0         0         0   0.000000  0.000000  0.000000      6
+8    PART   0         0         0   0.000000  0.000000  0.000000      9
+9    PRON   0         0         3   0.000000  0.000000  0.000000     50
+10  PROPN   0         0         0   0.000000  0.000000  0.000000     27
+11  PUNCT   0         0         0   0.000000  0.000000  0.000000    130
+12  SCONJ   0         0         0   0.000000  0.000000  0.000000     27
+13   VERB   3         5        33   0.600000  0.090909  0.157895    111
+14      X   0         0         0   0.000000  0.000000  0.000000      3
+15      _   0         0         0   0.000000  0.000000  0.000000      7
+Namespace(train_languages=['cs_unannotated', 'cs'], train_counts=['5000', '1000'], test_language='cs', test_count=10000, train_only_pos=[], test_only_pos=[], output_dir='/storage/brno2/home/stepanb2/Czech-Metaphor-Detection/out', source_dir='/storage/brno2/home/stepanb2/Czech-Metaphor-Detection', model_name='jhu-clsp/mmBERT-base', seed=42, imbalance_weight=0.5, epochs=3, train_batch_size=32, test_batch_size=32, learning_rate=3e-05, weight_decay=0.01, warmup_ratio=0.06, loss='weighted')
+train cs_unannotated requested: 5000 provided: 5000 0.0
+train cs requested: 1000 provided: 189 0.10524913402611244
+Total train percentage of metaphor 0.005724886589271998
+test cs requested: 10000 provided: 47 0.10596026490066225
+Dataset({
+    features: ['labels', 'input_ids', 'attention_mask'],
+    num_rows: 5189
+}) Dataset({
+    features: ['labels', 'input_ids', 'attention_mask'],
+    num_rows: 47
+})
+{'loss': 0.1579, 'grad_norm': 0.9210860729217529, 'learning_rate': 2.8954248366013073e-05, 'epoch': 0.31}
+{'loss': 0.0266, 'grad_norm': 0.1810927838087082, 'learning_rate': 2.568627450980392e-05, 'epoch': 0.61}
+{'loss': 0.0226, 'grad_norm': 0.08131883293390274, 'learning_rate': 2.2418300653594775e-05, 'epoch': 0.92}
+{'loss': 0.0154, 'grad_norm': 0.644031286239624, 'learning_rate': 1.9150326797385622e-05, 'epoch': 1.23}
+{'loss': 0.0152, 'grad_norm': 0.2946149706840515, 'learning_rate': 1.5882352941176473e-05, 'epoch': 1.53}
+{'loss': 0.0106, 'grad_norm': 1.3724027872085571, 'learning_rate': 1.261437908496732e-05, 'epoch': 1.84}
+{'loss': 0.0077, 'grad_norm': 0.13092868030071259, 'learning_rate': 9.34640522875817e-06, 'epoch': 2.15}
+{'loss': 0.0037, 'grad_norm': 1.2320365905761719, 'learning_rate': 6.07843137254902e-06, 'epoch': 2.45}
+{'loss': 0.0024, 'grad_norm': 0.06981174647808075, 'learning_rate': 2.810457516339869e-06, 'epoch': 2.76}
+{'train_runtime': 35.7895, 'train_samples_per_second': 434.96, 'train_steps_per_second': 13.663, 'train_loss': 0.02705612483078229, 'epoch': 3.0}
+{'test_loss': 0.46575942635536194, 'test_accuracy': 0.9028697571743929, 'test_precision': 0.7, 'test_recall': 0.14583333333333334, 'test_f1': 0.2413793103448276, 'test_runtime': 0.8097, 'test_samples_per_second': 58.044, 'test_steps_per_second': 2.47}
+results dupm at: 3ce4a6d7-d4e5-44af-9f21-9ef75f795057
+      pos  tp  pred_pos  true_pos  precision    recall        f1  total
+0     ADJ   1         1         5   1.000000  0.200000  0.333333    101
+1     ADP  11        13        41   0.846154  0.268293  0.407407     79
+2     ADV   0         0         0   0.000000  0.000000  0.000000     57
+3     AUX   0         0         1   0.000000  0.000000  0.000000     31
+4   CCONJ   0         0         0   0.000000  0.000000  0.000000     47
+5     DET   0         0         0   0.000000  0.000000  0.000000     41
+6    NOUN   0         1        13   0.000000  0.000000  0.000000    180
+7     NUM   0         0         0   0.000000  0.000000  0.000000      6
+8    PART   0         0         0   0.000000  0.000000  0.000000      9
+9    PRON   0         0         3   0.000000  0.000000  0.000000     50
+10  PROPN   0         0         0   0.000000  0.000000  0.000000     27
+11  PUNCT   0         0         0   0.000000  0.000000  0.000000    130
+12  SCONJ   0         0         0   0.000000  0.000000  0.000000     27
+13   VERB   2         5        33   0.400000  0.060606  0.105263    111
+14      X   0         0         0   0.000000  0.000000  0.000000      3
+15      _   0         0         0   0.000000  0.000000  0.000000      7
+Namespace(train_languages=['cs_unannotated', 'cs'], train_counts=['6000', '1000'], test_language='cs', test_count=10000, train_only_pos=[], test_only_pos=[], output_dir='/storage/brno2/home/stepanb2/Czech-Metaphor-Detection/out', source_dir='/storage/brno2/home/stepanb2/Czech-Metaphor-Detection', model_name='jhu-clsp/mmBERT-base', seed=42, imbalance_weight=0.5, epochs=3, train_batch_size=32, test_batch_size=32, learning_rate=3e-05, weight_decay=0.01, warmup_ratio=0.06, loss='weighted')
+train cs_unannotated requested: 6000 provided: 6000 0.0
+train cs requested: 1000 provided: 189 0.10524913402611244
+Total train percentage of metaphor 0.004790724187699361
+test cs requested: 10000 provided: 47 0.10596026490066225
+Dataset({
+    features: ['labels', 'input_ids', 'attention_mask'],
+    num_rows: 6189
+}) Dataset({
+    features: ['labels', 'input_ids', 'attention_mask'],
+    num_rows: 47
+})
+{'loss': 0.1651, 'grad_norm': 0.6030910015106201, 'learning_rate': 2.939670932358318e-05, 'epoch': 0.26}
+{'loss': 0.019, 'grad_norm': 0.032063886523246765, 'learning_rate': 2.6654478976234003e-05, 'epoch': 0.52}
+{'loss': 0.0311, 'grad_norm': 0.9667658805847168, 'learning_rate': 2.391224862888483e-05, 'epoch': 0.77}
+{'loss': 0.0192, 'grad_norm': 0.2879573702812195, 'learning_rate': 2.117001828153565e-05, 'epoch': 1.03}
+{'loss': 0.0115, 'grad_norm': 0.8156048059463501, 'learning_rate': 1.8427787934186472e-05, 'epoch': 1.29}
+{'loss': 0.009, 'grad_norm': 0.2058725655078888, 'learning_rate': 1.5685557586837294e-05, 'epoch': 1.55}
+{'loss': 0.0082, 'grad_norm': 3.9585185050964355, 'learning_rate': 1.2943327239488118e-05, 'epoch': 1.8}
+{'loss': 0.0059, 'grad_norm': 0.15917347371578217, 'learning_rate': 1.020109689213894e-05, 'epoch': 2.06}
+{'loss': 0.0026, 'grad_norm': 0.5520142912864685, 'learning_rate': 7.458866544789763e-06, 'epoch': 2.32}
+{'loss': 0.0019, 'grad_norm': 0.016379503533244133, 'learning_rate': 4.716636197440585e-06, 'epoch': 2.58}
+{'loss': 0.0025, 'grad_norm': 0.009800554253160954, 'learning_rate': 1.9744058500914075e-06, 'epoch': 2.84}
+{'train_runtime': 41.4855, 'train_samples_per_second': 447.554, 'train_steps_per_second': 14.029, 'train_loss': 0.02385157433776921, 'epoch': 3.0}
+{'test_loss': 0.5569360256195068, 'test_accuracy': 0.9061810154525386, 'test_precision': 0.7619047619047619, 'test_recall': 0.16666666666666666, 'test_f1': 0.27350427350427353, 'test_runtime': 0.8183, 'test_samples_per_second': 57.437, 'test_steps_per_second': 2.444}
+results dupm at: 91df5798-c89a-4b66-8bc3-b233ec7119ab
+      pos  tp  pred_pos  true_pos  precision    recall        f1  total
+0     ADJ   0         0         5   0.000000  0.000000  0.000000    101
+1     ADP  12        13        41   0.923077  0.292683  0.444444     79
+2     ADV   0         0         0   0.000000  0.000000  0.000000     57
+3     AUX   0         0         1   0.000000  0.000000  0.000000     31
+4   CCONJ   0         0         0   0.000000  0.000000  0.000000     47
+5     DET   0         0         0   0.000000  0.000000  0.000000     41
+6    NOUN   1         4        13   0.250000  0.076923  0.117647    180
+7     NUM   0         0         0   0.000000  0.000000  0.000000      6
+8    PART   0         0         0   0.000000  0.000000  0.000000      9
+9    PRON   0         0         3   0.000000  0.000000  0.000000     50
+10  PROPN   0         0         0   0.000000  0.000000  0.000000     27
+11  PUNCT   0         0         0   0.000000  0.000000  0.000000    130
+12  SCONJ   0         0         0   0.000000  0.000000  0.000000     27
+13   VERB   3         4        33   0.750000  0.090909  0.162162    111
+14      X   0         0         0   0.000000  0.000000  0.000000      3
+15      _   0         0         0   0.000000  0.000000  0.000000      7
+Namespace(train_languages=['cs_unannotated', 'cs'], train_counts=['7000', '1000'], test_language='cs', test_count=10000, train_only_pos=[], test_only_pos=[], output_dir='/storage/brno2/home/stepanb2/Czech-Metaphor-Detection/out', source_dir='/storage/brno2/home/stepanb2/Czech-Metaphor-Detection', model_name='jhu-clsp/mmBERT-base', seed=42, imbalance_weight=0.5, epochs=3, train_batch_size=32, test_batch_size=32, learning_rate=3e-05, weight_decay=0.01, warmup_ratio=0.06, loss='weighted')
+train cs_unannotated requested: 7000 provided: 7000 0.0
+train cs requested: 1000 provided: 189 0.10524913402611244
+Total train percentage of metaphor 0.004107096438783467
+test cs requested: 10000 provided: 47 0.10596026490066225
+Dataset({
+    features: ['labels', 'input_ids', 'attention_mask'],
+    num_rows: 7189
+}) Dataset({
+    features: ['labels', 'input_ids', 'attention_mask'],
+    num_rows: 47
+})
+{'loss': 0.1649, 'grad_norm': 0.6339952349662781, 'learning_rate': 2.9763406940063094e-05, 'epoch': 0.22}
+{'loss': 0.024, 'grad_norm': 0.08216948807239532, 'learning_rate': 2.7397476340694006e-05, 'epoch': 0.44}
+{'loss': 0.0189, 'grad_norm': 1.1316674947738647, 'learning_rate': 2.503154574132492e-05, 'epoch': 0.67}
+{'loss': 0.0178, 'grad_norm': 0.02091781236231327, 'learning_rate': 2.2665615141955837e-05, 'epoch': 0.89}
+{'loss': 0.0148, 'grad_norm': 0.16184377670288086, 'learning_rate': 2.0299684542586752e-05, 'epoch': 1.11}
+{'loss': 0.0066, 'grad_norm': 0.036802832037210464, 'learning_rate': 1.7933753943217664e-05, 'epoch': 1.33}
+{'loss': 0.0098, 'grad_norm': 0.049711812287569046, 'learning_rate': 1.556782334384858e-05, 'epoch': 1.56}
+{'loss': 0.0071, 'grad_norm': 0.013378588482737541, 'learning_rate': 1.3201892744479495e-05, 'epoch': 1.78}
+{'loss': 0.0079, 'grad_norm': 0.38680386543273926, 'learning_rate': 1.083596214511041e-05, 'epoch': 2.0}
+{'loss': 0.0014, 'grad_norm': 0.027374625205993652, 'learning_rate': 8.470031545741326e-06, 'epoch': 2.22}
+{'loss': 0.0021, 'grad_norm': 0.03065274842083454, 'learning_rate': 6.10410094637224e-06, 'epoch': 2.44}
+{'loss': 0.0028, 'grad_norm': 0.014958586543798447, 'learning_rate': 3.738170347003155e-06, 'epoch': 2.67}
+{'loss': 0.0006, 'grad_norm': 0.005517333745956421, 'learning_rate': 1.3722397476340694e-06, 'epoch': 2.89}
+{'train_runtime': 73.7962, 'train_samples_per_second': 292.251, 'train_steps_per_second': 9.147, 'train_loss': 0.020728893644279905, 'epoch': 3.0}
+{'test_loss': 0.520927369594574, 'test_accuracy': 0.9050772626931567, 'test_precision': 0.75, 'test_recall': 0.15625, 'test_f1': 0.25862068965517243, 'test_runtime': 1.0946, 'test_samples_per_second': 42.936, 'test_steps_per_second': 1.827}
+results dupm at: 83092814-90d4-4e38-be60-ddb4d4a82d83
+      pos  tp  pred_pos  true_pos  precision    recall        f1  total
+0     ADJ   1         1         5   1.000000  0.200000  0.333333    101
+1     ADP  10        11        41   0.909091  0.243902  0.384615     79
+2     ADV   0         0         0   0.000000  0.000000  0.000000     57
+3     AUX   0         0         1   0.000000  0.000000  0.000000     31
+4   CCONJ   0         0         0   0.000000  0.000000  0.000000     47
+5     DET   0         0         0   0.000000  0.000000  0.000000     41
+6    NOUN   1         4        13   0.250000  0.076923  0.117647    180
+7     NUM   0         0         0   0.000000  0.000000  0.000000      6
+8    PART   0         0         0   0.000000  0.000000  0.000000      9
+9    PRON   0         0         3   0.000000  0.000000  0.000000     50
+10  PROPN   0         0         0   0.000000  0.000000  0.000000     27
+11  PUNCT   0         0         0   0.000000  0.000000  0.000000    130
+12  SCONJ   0         0         0   0.000000  0.000000  0.000000     27
+13   VERB   3         4        33   0.750000  0.090909  0.162162    111
+14      X   0         0         0   0.000000  0.000000  0.000000      3
+15      _   0         0         0   0.000000  0.000000  0.000000      7
+Namespace(train_languages=['cs_unannotated', 'cs'], train_counts=['8000', '1000'], test_language='cs', test_count=10000, train_only_pos=[], test_only_pos=[], output_dir='/storage/brno2/home/stepanb2/Czech-Metaphor-Detection/out', source_dir='/storage/brno2/home/stepanb2/Czech-Metaphor-Detection', model_name='jhu-clsp/mmBERT-base', seed=42, imbalance_weight=0.5, epochs=3, train_batch_size=32, test_batch_size=32, learning_rate=3e-05, weight_decay=0.01, warmup_ratio=0.06, loss='weighted')
+train cs_unannotated requested: 8000 provided: 8000 0.0
+train cs requested: 1000 provided: 189 0.10524913402611244
+Total train percentage of metaphor 0.0034803601952526123
+test cs requested: 10000 provided: 47 0.10596026490066225
+Dataset({
+    features: ['labels', 'input_ids', 'attention_mask'],
+    num_rows: 8189
+}) Dataset({
+    features: ['labels', 'input_ids', 'attention_mask'],
+    num_rows: 47
+})
+{'loss': 0.1732, 'grad_norm': 0.16434738039970398, 'learning_rate': 2.9361702127659574e-05, 'epoch': 0.2}
+{'loss': 0.0236, 'grad_norm': 0.3563547432422638, 'learning_rate': 2.7961165048543692e-05, 'epoch': 0.39}
+{'loss': 0.0191, 'grad_norm': 1.6795700788497925, 'learning_rate': 2.5880721220527046e-05, 'epoch': 0.59}
+{'loss': 0.0193, 'grad_norm': 0.40389007329940796, 'learning_rate': 2.3800277392510403e-05, 'epoch': 0.78}
+{'loss': 0.0138, 'grad_norm': 0.08576874434947968, 'learning_rate': 2.171983356449376e-05, 'epoch': 0.98}
+{'loss': 0.0077, 'grad_norm': 0.21020309627056122, 'learning_rate': 1.9639389736477116e-05, 'epoch': 1.17}
+{'loss': 0.0047, 'grad_norm': 0.011763068847358227, 'learning_rate': 1.755894590846047e-05, 'epoch': 1.37}
+{'loss': 0.0074, 'grad_norm': 0.08459854871034622, 'learning_rate': 1.5478502080443827e-05, 'epoch': 1.56}
+{'loss': 0.0065, 'grad_norm': 0.3698784112930298, 'learning_rate': 1.3398058252427185e-05, 'epoch': 1.76}
+{'loss': 0.0093, 'grad_norm': 1.181801676750183, 'learning_rate': 1.131761442441054e-05, 'epoch': 1.95}
+{'loss': 0.0053, 'grad_norm': 0.008056160062551498, 'learning_rate': 9.237170596393897e-06, 'epoch': 2.15}
+{'loss': 0.0022, 'grad_norm': 0.006473334971815348, 'learning_rate': 7.156726768377254e-06, 'epoch': 2.34}
+{'loss': 0.0011, 'grad_norm': 0.0062956721521914005, 'learning_rate': 5.07628294036061e-06, 'epoch': 2.54}
+{'loss': 0.0012, 'grad_norm': 0.36063647270202637, 'learning_rate': 2.9958391123439667e-06, 'epoch': 2.73}
+{'loss': 0.0019, 'grad_norm': 0.009023310616612434, 'learning_rate': 9.153952843273232e-07, 'epoch': 2.93}
+{'train_runtime': 73.3402, 'train_samples_per_second': 334.973, 'train_steps_per_second': 10.472, 'train_loss': 0.019316792815516237, 'epoch': 3.0}
+{'test_loss': 0.5018041133880615, 'test_accuracy': 0.9050772626931567, 'test_precision': 0.7272727272727273, 'test_recall': 0.16666666666666666, 'test_f1': 0.2711864406779661, 'test_runtime': 1.055, 'test_samples_per_second': 44.549, 'test_steps_per_second': 1.896}
+results dupm at: a06121af-0d41-42d5-ab97-deac32aa808a
+      pos  tp  pred_pos  true_pos  precision    recall        f1  total
+0     ADJ   1         1         5   1.000000  0.200000  0.333333    101
+1     ADP  11        12        41   0.916667  0.268293  0.415094     79
+2     ADV   0         0         0   0.000000  0.000000  0.000000     57
+3     AUX   0         0         1   0.000000  0.000000  0.000000     31
+4   CCONJ   0         0         0   0.000000  0.000000  0.000000     47
+5     DET   0         0         0   0.000000  0.000000  0.000000     41
+6    NOUN   1         4        13   0.250000  0.076923  0.117647    180
+7     NUM   0         0         0   0.000000  0.000000  0.000000      6
+8    PART   0         0         0   0.000000  0.000000  0.000000      9
+9    PRON   0         0         3   0.000000  0.000000  0.000000     50
+10  PROPN   0         0         0   0.000000  0.000000  0.000000     27
+11  PUNCT   0         0         0   0.000000  0.000000  0.000000    130
+12  SCONJ   0         0         0   0.000000  0.000000  0.000000     27
+13   VERB   3         5        33   0.600000  0.090909  0.157895    111
+14      X   0         0         0   0.000000  0.000000  0.000000      3
+15      _   0         0         0   0.000000  0.000000  0.000000      7
+Namespace(train_languages=['cs_unannotated', 'cs'], train_counts=['9000', '1000'], test_language='cs', test_count=10000, train_only_pos=[], test_only_pos=[], output_dir='/storage/brno2/home/stepanb2/Czech-Metaphor-Detection/out', source_dir='/storage/brno2/home/stepanb2/Czech-Metaphor-Detection', model_name='jhu-clsp/mmBERT-base', seed=42, imbalance_weight=0.5, epochs=3, train_batch_size=32, test_batch_size=32, learning_rate=3e-05, weight_decay=0.01, warmup_ratio=0.06, loss='weighted')
+train cs_unannotated requested: 9000 provided: 8278 0.0
+train cs requested: 1000 provided: 189 0.10524913402611244
+Total train percentage of metaphor 0.0033580154553723997
+test cs requested: 10000 provided: 47 0.10596026490066225
+Dataset({
+    features: ['labels', 'input_ids', 'attention_mask'],
+    num_rows: 8467
+}) Dataset({
+    features: ['labels', 'input_ids', 'attention_mask'],
+    num_rows: 47
+})
+{'loss': 0.1753, 'grad_norm': 0.6118363738059998, 'learning_rate': 2.875e-05, 'epoch': 0.19}
+{'loss': 0.021, 'grad_norm': 2.894895553588867, 'learning_rate': 2.8072289156626508e-05, 'epoch': 0.38}
+{'loss': 0.0174, 'grad_norm': 0.020079802721738815, 'learning_rate': 2.606425702811245e-05, 'epoch': 0.57}
+{'loss': 0.0169, 'grad_norm': 0.0735597163438797, 'learning_rate': 2.4056224899598393e-05, 'epoch': 0.75}
+{'loss': 0.0113, 'grad_norm': 0.31628260016441345, 'learning_rate': 2.204819277108434e-05, 'epoch': 0.94}
+{'loss': 0.0089, 'grad_norm': 0.0034256598446518183, 'learning_rate': 2.0040160642570282e-05, 'epoch': 1.13}
+{'loss': 0.0053, 'grad_norm': 0.030685456469655037, 'learning_rate': 1.8032128514056225e-05, 'epoch': 1.32}
+{'loss': 0.0067, 'grad_norm': 0.004074898548424244, 'learning_rate': 1.6024096385542168e-05, 'epoch': 1.51}
+{'loss': 0.0093, 'grad_norm': 0.4385693669319153, 'learning_rate': 1.4016064257028112e-05, 'epoch': 1.7}
+{'loss': 0.0039, 'grad_norm': 0.05854382365942001, 'learning_rate': 1.2008032128514056e-05, 'epoch': 1.89}
+{'loss': 0.005, 'grad_norm': 0.02437075413763523, 'learning_rate': 9.999999999999999e-06, 'epoch': 2.08}
+{'loss': 0.0018, 'grad_norm': 0.3220379054546356, 'learning_rate': 7.991967871485944e-06, 'epoch': 2.26}
+{'loss': 0.0012, 'grad_norm': 0.0015080797020345926, 'learning_rate': 5.983935742971888e-06, 'epoch': 2.45}
+{'loss': 0.0019, 'grad_norm': 0.49855929613113403, 'learning_rate': 3.975903614457832e-06, 'epoch': 2.64}
+{'loss': 0.002, 'grad_norm': 0.008535845205187798, 'learning_rate': 1.967871485943775e-06, 'epoch': 2.83}
+{'train_runtime': 70.8321, 'train_samples_per_second': 358.609, 'train_steps_per_second': 11.224, 'train_loss': 0.01821168579114308, 'epoch': 3.0}
+{'test_loss': 0.4645995795726776, 'test_accuracy': 0.9094922737306843, 'test_precision': 0.85, 'test_recall': 0.17708333333333334, 'test_f1': 0.29310344827586204, 'test_runtime': 0.945, 'test_samples_per_second': 49.735, 'test_steps_per_second': 2.116}
+results dupm at: b735393b-4607-4a3e-87ac-c2ef1a5f28d9
+      pos  tp  pred_pos  true_pos  precision    recall        f1  total
+0     ADJ   1         2         5   0.500000  0.200000  0.285714    101
+1     ADP  12        13        41   0.923077  0.292683  0.444444     79
+2     ADV   0         0         0   0.000000  0.000000  0.000000     57
+3     AUX   0         0         1   0.000000  0.000000  0.000000     31
+4   CCONJ   0         0         0   0.000000  0.000000  0.000000     47
+5     DET   0         0         0   0.000000  0.000000  0.000000     41
+6    NOUN   2         3        13   0.666667  0.153846  0.250000    180
+7     NUM   0         0         0   0.000000  0.000000  0.000000      6
+8    PART   0         0         0   0.000000  0.000000  0.000000      9
+9    PRON   0         0         3   0.000000  0.000000  0.000000     50
+10  PROPN   0         0         0   0.000000  0.000000  0.000000     27
+11  PUNCT   0         0         0   0.000000  0.000000  0.000000    130
+12  SCONJ   0         0         0   0.000000  0.000000  0.000000     27
+13   VERB   2         2        33   1.000000  0.060606  0.114286    111
+14      X   0         0         0   0.000000  0.000000  0.000000      3
+15      _   0         0         0   0.000000  0.000000  0.000000      7
+Namespace(train_languages=['cs_unannotated', 'cs'], train_counts=['10000', '1000'], test_language='cs', test_count=10000, train_only_pos=[], test_only_pos=[], output_dir='/storage/brno2/home/stepanb2/Czech-Metaphor-Detection/out', source_dir='/storage/brno2/home/stepanb2/Czech-Metaphor-Detection', model_name='jhu-clsp/mmBERT-base', seed=42, imbalance_weight=0.5, epochs=3, train_batch_size=32, test_batch_size=32, learning_rate=3e-05, weight_decay=0.01, warmup_ratio=0.06, loss='weighted')
+train cs_unannotated requested: 10000 provided: 8278 0.0
+train cs requested: 1000 provided: 189 0.10524913402611244
+Total train percentage of metaphor 0.0033580154553723997
+test cs requested: 10000 provided: 47 0.10596026490066225
+Dataset({
+    features: ['labels', 'input_ids', 'attention_mask'],
+    num_rows: 8467
+}) Dataset({
+    features: ['labels', 'input_ids', 'attention_mask'],
+    num_rows: 47
+})
+{'loss': 0.1753, 'grad_norm': 0.6052371859550476, 'learning_rate': 2.875e-05, 'epoch': 0.19}
+{'loss': 0.0208, 'grad_norm': 2.885188341140747, 'learning_rate': 2.8072289156626508e-05, 'epoch': 0.38}
+{'loss': 0.0175, 'grad_norm': 0.011866592802107334, 'learning_rate': 2.606425702811245e-05, 'epoch': 0.57}
+{'loss': 0.0167, 'grad_norm': 0.08597195148468018, 'learning_rate': 2.4056224899598393e-05, 'epoch': 0.75}
+{'loss': 0.0139, 'grad_norm': 0.04691263660788536, 'learning_rate': 2.204819277108434e-05, 'epoch': 0.94}
+{'loss': 0.0088, 'grad_norm': 0.014201773330569267, 'learning_rate': 2.0040160642570282e-05, 'epoch': 1.13}
+{'loss': 0.006, 'grad_norm': 0.09189080446958542, 'learning_rate': 1.8032128514056225e-05, 'epoch': 1.32}
+{'loss': 0.0083, 'grad_norm': 0.006125051993876696, 'learning_rate': 1.6024096385542168e-05, 'epoch': 1.51}
+{'loss': 0.0099, 'grad_norm': 0.3858666718006134, 'learning_rate': 1.4016064257028112e-05, 'epoch': 1.7}
+{'loss': 0.0039, 'grad_norm': 0.10861444473266602, 'learning_rate': 1.2008032128514056e-05, 'epoch': 1.89}
+{'loss': 0.0049, 'grad_norm': 0.038050051778554916, 'learning_rate': 9.999999999999999e-06, 'epoch': 2.08}
+{'loss': 0.0014, 'grad_norm': 0.43762099742889404, 'learning_rate': 7.991967871485944e-06, 'epoch': 2.26}
+{'loss': 0.0015, 'grad_norm': 0.0028147189877927303, 'learning_rate': 5.983935742971888e-06, 'epoch': 2.45}
+{'loss': 0.0021, 'grad_norm': 1.210675597190857, 'learning_rate': 3.975903614457832e-06, 'epoch': 2.64}
+{'loss': 0.0026, 'grad_norm': 0.011152379214763641, 'learning_rate': 1.967871485943775e-06, 'epoch': 2.83}
+{'train_runtime': 65.4068, 'train_samples_per_second': 388.354, 'train_steps_per_second': 12.155, 'train_loss': 0.018623611077947435, 'epoch': 3.0}
+{'test_loss': 0.500314474105835, 'test_accuracy': 0.9039735099337748, 'test_precision': 0.7647058823529411, 'test_recall': 0.13541666666666666, 'test_f1': 0.23008849557522124, 'test_runtime': 0.8814, 'test_samples_per_second': 53.326, 'test_steps_per_second': 2.269}
+results dupm at: e0652f6c-3714-4d5f-8af8-086b9b11529b
+      pos  tp  pred_pos  true_pos  precision    recall        f1  total
+0     ADJ   1         1         5   1.000000  0.200000  0.333333    101
+1     ADP   9        11        41   0.818182  0.219512  0.346154     79
+2     ADV   0         0         0   0.000000  0.000000  0.000000     57
+3     AUX   0         0         1   0.000000  0.000000  0.000000     31
+4   CCONJ   0         0         0   0.000000  0.000000  0.000000     47
+5     DET   0         0         0   0.000000  0.000000  0.000000     41
+6    NOUN   0         2        13   0.000000  0.000000  0.000000    180
+7     NUM   0         0         0   0.000000  0.000000  0.000000      6
+8    PART   0         0         0   0.000000  0.000000  0.000000      9
+9    PRON   0         0         3   0.000000  0.000000  0.000000     50
+10  PROPN   0         0         0   0.000000  0.000000  0.000000     27
+11  PUNCT   0         0         0   0.000000  0.000000  0.000000    130
+12  SCONJ   0         0         0   0.000000  0.000000  0.000000     27
+13   VERB   3         3        33   1.000000  0.090909  0.166667    111
+14      X   0         0         0   0.000000  0.000000  0.000000      3
+15      _   0         0         0   0.000000  0.000000  0.000000      7
+Namespace(train_languages=['cs_unannotated', 'cs'], train_counts=['11000', '1000'], test_language='cs', test_count=10000, train_only_pos=[], test_only_pos=[], output_dir='/storage/brno2/home/stepanb2/Czech-Metaphor-Detection/out', source_dir='/storage/brno2/home/stepanb2/Czech-Metaphor-Detection', model_name='jhu-clsp/mmBERT-base', seed=42, imbalance_weight=0.5, epochs=3, train_batch_size=32, test_batch_size=32, learning_rate=3e-05, weight_decay=0.01, warmup_ratio=0.06, loss='weighted')
+train cs_unannotated requested: 11000 provided: 8278 0.0
+train cs requested: 1000 provided: 189 0.10524913402611244
+Total train percentage of metaphor 0.0033580154553723997
+test cs requested: 10000 provided: 47 0.10596026490066225
+Dataset({
+    features: ['labels', 'input_ids', 'attention_mask'],
+    num_rows: 8467
+}) Dataset({
+    features: ['labels', 'input_ids', 'attention_mask'],
+    num_rows: 47
+})
+{'loss': 0.1753, 'grad_norm': 0.5906187295913696, 'learning_rate': 2.875e-05, 'epoch': 0.19}
+{'loss': 0.0204, 'grad_norm': 2.6141180992126465, 'learning_rate': 2.8072289156626508e-05, 'epoch': 0.38}
+{'loss': 0.0168, 'grad_norm': 0.009168317541480064, 'learning_rate': 2.606425702811245e-05, 'epoch': 0.57}
+{'loss': 0.0178, 'grad_norm': 0.05628158524632454, 'learning_rate': 2.4056224899598393e-05, 'epoch': 0.75}
+{'loss': 0.0122, 'grad_norm': 0.3249792456626892, 'learning_rate': 2.204819277108434e-05, 'epoch': 0.94}
+{'loss': 0.0091, 'grad_norm': 0.027984382584691048, 'learning_rate': 2.0040160642570282e-05, 'epoch': 1.13}
+{'loss': 0.0049, 'grad_norm': 0.007706375326961279, 'learning_rate': 1.8032128514056225e-05, 'epoch': 1.32}
+{'loss': 0.0071, 'grad_norm': 0.0025049583055078983, 'learning_rate': 1.6024096385542168e-05, 'epoch': 1.51}
+{'loss': 0.0116, 'grad_norm': 0.5819941759109497, 'learning_rate': 1.4016064257028112e-05, 'epoch': 1.7}
+{'loss': 0.0045, 'grad_norm': 0.04946143925189972, 'learning_rate': 1.2008032128514056e-05, 'epoch': 1.89}
+{'loss': 0.0055, 'grad_norm': 0.03779611364006996, 'learning_rate': 9.999999999999999e-06, 'epoch': 2.08}
+{'loss': 0.0016, 'grad_norm': 0.7180891036987305, 'learning_rate': 7.991967871485944e-06, 'epoch': 2.26}
+{'loss': 0.0022, 'grad_norm': 0.00730843236669898, 'learning_rate': 5.983935742971888e-06, 'epoch': 2.45}
+{'loss': 0.0018, 'grad_norm': 0.6378588676452637, 'learning_rate': 3.975903614457832e-06, 'epoch': 2.64}
+{'loss': 0.002, 'grad_norm': 0.012545048259198666, 'learning_rate': 1.967871485943775e-06, 'epoch': 2.83}
+{'train_runtime': 62.5343, 'train_samples_per_second': 406.193, 'train_steps_per_second': 12.713, 'train_loss': 0.01855752076367912, 'epoch': 3.0}
+{'test_loss': 0.47597602009773254, 'test_accuracy': 0.9072847682119205, 'test_precision': 0.8, 'test_recall': 0.16666666666666666, 'test_f1': 0.27586206896551724, 'test_runtime': 0.8675, 'test_samples_per_second': 54.178, 'test_steps_per_second': 2.305}
+results dupm at: 2a5b2c15-f308-4277-b7de-7d990e339efb
+      pos  tp  pred_pos  true_pos  precision    recall        f1  total
+0     ADJ   1         1         5   1.000000  0.200000  0.333333    101
+1     ADP  12        13        41   0.923077  0.292683  0.444444     79
+2     ADV   0         0         0   0.000000  0.000000  0.000000     57
+3     AUX   0         0         1   0.000000  0.000000  0.000000     31
+4   CCONJ   0         0         0   0.000000  0.000000  0.000000     47
+5     DET   0         0         0   0.000000  0.000000  0.000000     41
+6    NOUN   0         2        13   0.000000  0.000000  0.000000    180
+7     NUM   0         0         0   0.000000  0.000000  0.000000      6
+8    PART   0         0         0   0.000000  0.000000  0.000000      9
+9    PRON   0         0         3   0.000000  0.000000  0.000000     50
+10  PROPN   0         0         0   0.000000  0.000000  0.000000     27
+11  PUNCT   0         0         0   0.000000  0.000000  0.000000    130
+12  SCONJ   0         0         0   0.000000  0.000000  0.000000     27
+13   VERB   3         4        33   0.750000  0.090909  0.162162    111
+14      X   0         0         0   0.000000  0.000000  0.000000      3
+15      _   0         0         0   0.000000  0.000000  0.000000      7
+Namespace(train_languages=['cs_unannotated', 'cs'], train_counts=['12000', '1000'], test_language='cs', test_count=10000, train_only_pos=[], test_only_pos=[], output_dir='/storage/brno2/home/stepanb2/Czech-Metaphor-Detection/out', source_dir='/storage/brno2/home/stepanb2/Czech-Metaphor-Detection', model_name='jhu-clsp/mmBERT-base', seed=42, imbalance_weight=0.5, epochs=3, train_batch_size=32, test_batch_size=32, learning_rate=3e-05, weight_decay=0.01, warmup_ratio=0.06, loss='weighted')
+train cs_unannotated requested: 12000 provided: 8278 0.0
+train cs requested: 1000 provided: 189 0.10524913402611244
+Total train percentage of metaphor 0.0033580154553723997
+test cs requested: 10000 provided: 47 0.10596026490066225
+Dataset({
+    features: ['labels', 'input_ids', 'attention_mask'],
+    num_rows: 8467
+}) Dataset({
+    features: ['labels', 'input_ids', 'attention_mask'],
+    num_rows: 47
+})
+{'loss': 0.1753, 'grad_norm': 0.6285828948020935, 'learning_rate': 2.875e-05, 'epoch': 0.19}
+{'loss': 0.0208, 'grad_norm': 2.82562255859375, 'learning_rate': 2.8072289156626508e-05, 'epoch': 0.38}
+{'loss': 0.0174, 'grad_norm': 0.019725972786545753, 'learning_rate': 2.606425702811245e-05, 'epoch': 0.57}
+{'loss': 0.0163, 'grad_norm': 0.09588024020195007, 'learning_rate': 2.4056224899598393e-05, 'epoch': 0.75}
+{'loss': 0.0109, 'grad_norm': 0.9201790690422058, 'learning_rate': 2.204819277108434e-05, 'epoch': 0.94}
+{'loss': 0.008, 'grad_norm': 0.013435465283691883, 'learning_rate': 2.0040160642570282e-05, 'epoch': 1.13}
+{'loss': 0.0045, 'grad_norm': 0.016013331711292267, 'learning_rate': 1.8032128514056225e-05, 'epoch': 1.32}
+{'loss': 0.007, 'grad_norm': 0.0036445322912186384, 'learning_rate': 1.6024096385542168e-05, 'epoch': 1.51}
+{'loss': 0.0098, 'grad_norm': 0.4100019931793213, 'learning_rate': 1.4016064257028112e-05, 'epoch': 1.7}
+{'loss': 0.0037, 'grad_norm': 0.04752445966005325, 'learning_rate': 1.2008032128514056e-05, 'epoch': 1.89}
+{'loss': 0.0047, 'grad_norm': 0.06155427545309067, 'learning_rate': 9.999999999999999e-06, 'epoch': 2.08}
+{'loss': 0.002, 'grad_norm': 2.9835546016693115, 'learning_rate': 7.991967871485944e-06, 'epoch': 2.26}
+{'loss': 0.0018, 'grad_norm': 0.0012788231251761317, 'learning_rate': 5.983935742971888e-06, 'epoch': 2.45}
+{'loss': 0.002, 'grad_norm': 0.6055883765220642, 'learning_rate': 3.975903614457832e-06, 'epoch': 2.64}
+{'loss': 0.0018, 'grad_norm': 0.007884221151471138, 'learning_rate': 1.967871485943775e-06, 'epoch': 2.83}
+{'train_runtime': 64.4084, 'train_samples_per_second': 394.374, 'train_steps_per_second': 12.343, 'train_loss': 0.018079158420082907, 'epoch': 3.0}
+{'test_loss': 0.5010338425636292, 'test_accuracy': 0.9061810154525386, 'test_precision': 0.8666666666666667, 'test_recall': 0.13541666666666666, 'test_f1': 0.23423423423423423, 'test_runtime': 1.0296, 'test_samples_per_second': 45.648, 'test_steps_per_second': 1.942}
+results dupm at: cf96d307-2ecd-486c-8b67-f2df1cb24829
+      pos  tp  pred_pos  true_pos  precision    recall        f1  total
+0     ADJ   1         1         5   1.000000  0.200000  0.333333    101
+1     ADP  11        12        41   0.916667  0.268293  0.415094     79
+2     ADV   0         0         0   0.000000  0.000000  0.000000     57
+3     AUX   0         0         1   0.000000  0.000000  0.000000     31
+4   CCONJ   0         0         0   0.000000  0.000000  0.000000     47
+5     DET   0         0         0   0.000000  0.000000  0.000000     41
+6    NOUN   0         1        13   0.000000  0.000000  0.000000    180
+7     NUM   0         0         0   0.000000  0.000000  0.000000      6
+8    PART   0         0         0   0.000000  0.000000  0.000000      9
+9    PRON   0         0         3   0.000000  0.000000  0.000000     50
+10  PROPN   0         0         0   0.000000  0.000000  0.000000     27
+11  PUNCT   0         0         0   0.000000  0.000000  0.000000    130
+12  SCONJ   0         0         0   0.000000  0.000000  0.000000     27
+13   VERB   1         1        33   1.000000  0.030303  0.058824    111
+14      X   0         0         0   0.000000  0.000000  0.000000      3
+15      _   0         0         0   0.000000  0.000000  0.000000      7
+
+**********************************************************************************************************
+
+The SCRATCHes have been SUCCESSFULLY cleaned...

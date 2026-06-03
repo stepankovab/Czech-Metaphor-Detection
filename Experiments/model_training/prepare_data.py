@@ -21,6 +21,9 @@ def load_dataset(language, count, purpose, source_dir):
     elif language == "cs_unannotated":
         with open(source_dir + f"/Data/CZECH_unannotated/czech_unannotated_sentences.json", 'r', encoding='utf-8') as f:
             data_df = pd.read_json(f)[:count]
+    elif language == "cs_en":
+        with open(source_dir + f"/Data/CZECH_ENGLISH_translation/cs_to_en_sentences.json", 'r', encoding='utf-8') as f:
+            data_df = pd.read_json(f)[:count]
 
     print(purpose, language, "requested:", count, "provided:", data_df.shape[0], sum([sum(l) for l in data_df['labels']])/sum([len(l) for l in data_df['labels']]))
     return data_df

@@ -1,0 +1,57 @@
+Namespace(train_languages=['en'], train_counts=['12000'], test_language='cs_en', test_count=10000, train_only_pos=[], test_only_pos=[], output_dir='/storage/brno2/home/stepanb2/Czech-Metaphor-Detection/out', source_dir='/storage/brno2/home/stepanb2/Czech-Metaphor-Detection', model_name='jhu-clsp/mmBERT-base', seed=42, imbalance_weight=0.5, epochs=3, train_batch_size=32, test_batch_size=32, learning_rate=3e-05, weight_decay=0.01, warmup_ratio=0.06, loss='weighted')
+train en requested: 12000 provided: 12000 0.11113632924799516
+Total train percentage of metaphor 0.11113632924799516
+test cs_en requested: 10000 provided: 52 0.0
+Dataset({
+    features: ['labels', 'input_ids', 'attention_mask'],
+    num_rows: 12000
+}) Dataset({
+    features: ['labels', 'input_ids', 'attention_mask'],
+    num_rows: 52
+})
+{'loss': 0.5869, 'grad_norm': 3.9878294467926025, 'learning_rate': 1.9411764705882355e-05, 'epoch': 0.13}
+{'loss': 0.1789, 'grad_norm': 4.368596076965332, 'learning_rate': 2.9262062440870388e-05, 'epoch': 0.27}
+{'loss': 0.1619, 'grad_norm': 3.5096304416656494, 'learning_rate': 2.784295175023652e-05, 'epoch': 0.4}
+{'loss': 0.1464, 'grad_norm': 2.3241970539093018, 'learning_rate': 2.6423841059602647e-05, 'epoch': 0.53}
+{'loss': 0.1445, 'grad_norm': 1.5775004625320435, 'learning_rate': 2.500473036896878e-05, 'epoch': 0.67}
+{'loss': 0.1305, 'grad_norm': 3.7536816596984863, 'learning_rate': 2.358561967833491e-05, 'epoch': 0.8}
+{'loss': 0.1269, 'grad_norm': 1.5735385417938232, 'learning_rate': 2.216650898770104e-05, 'epoch': 0.93}
+{'loss': 0.1141, 'grad_norm': 2.043459892272949, 'learning_rate': 2.0747398297067172e-05, 'epoch': 1.07}
+{'loss': 0.0818, 'grad_norm': 1.5378950834274292, 'learning_rate': 1.935666982024598e-05, 'epoch': 1.2}
+{'loss': 0.0869, 'grad_norm': 1.9036948680877686, 'learning_rate': 1.793755912961211e-05, 'epoch': 1.33}
+{'loss': 0.0812, 'grad_norm': 1.4617418050765991, 'learning_rate': 1.6518448438978242e-05, 'epoch': 1.47}
+{'loss': 0.0819, 'grad_norm': 3.591681718826294, 'learning_rate': 1.5099337748344372e-05, 'epoch': 1.6}
+{'loss': 0.0795, 'grad_norm': 2.0097312927246094, 'learning_rate': 1.3680227057710502e-05, 'epoch': 1.73}
+{'loss': 0.0754, 'grad_norm': 2.1428585052490234, 'learning_rate': 1.2261116367076631e-05, 'epoch': 1.87}
+{'loss': 0.0771, 'grad_norm': 1.511836290359497, 'learning_rate': 1.0842005676442762e-05, 'epoch': 2.0}
+{'loss': 0.0314, 'grad_norm': 2.0776870250701904, 'learning_rate': 9.422894985808894e-06, 'epoch': 2.13}
+{'loss': 0.0294, 'grad_norm': 1.0394171476364136, 'learning_rate': 8.003784295175025e-06, 'epoch': 2.27}
+{'loss': 0.0316, 'grad_norm': 1.231439232826233, 'learning_rate': 6.584673604541154e-06, 'epoch': 2.4}
+{'loss': 0.0286, 'grad_norm': 2.0189781188964844, 'learning_rate': 5.165562913907285e-06, 'epoch': 2.53}
+{'loss': 0.0319, 'grad_norm': 2.0416200160980225, 'learning_rate': 3.7464522232734155e-06, 'epoch': 2.67}
+{'loss': 0.0268, 'grad_norm': 1.823691725730896, 'learning_rate': 2.327341532639546e-06, 'epoch': 2.8}
+{'loss': 0.0236, 'grad_norm': 1.5956299304962158, 'learning_rate': 9.082308420056765e-07, 'epoch': 2.93}
+{'train_runtime': 92.0074, 'train_samples_per_second': 391.273, 'train_steps_per_second': 12.227, 'train_loss': 0.10533524317211575, 'epoch': 3.0}
+{'test_loss': 0.46079573035240173, 'test_accuracy': 0.9106145251396648, 'test_precision': 0.0, 'test_recall': 0.0, 'test_f1': 0.0, 'test_runtime': 2.8201, 'test_samples_per_second': 18.439, 'test_steps_per_second': 0.709}
+results dupm at: 857ab3da-a7c1-48e4-a25c-57fda0b1ec9f
+      pos  tp  pred_pos  true_pos  precision  recall   f1  total
+0     ADJ   0         7         0        0.0     0.0  0.0     81
+1     ADP   0        35         0        0.0     0.0  0.0    125
+2     ADV   0         0         0        0.0     0.0  0.0     63
+3     AUX   0         0         0        0.0     0.0  0.0     53
+4   CCONJ   0         0         0        0.0     0.0  0.0     34
+5     DET   0         5         0        0.0     0.0  0.0    101
+6    INTJ   0         0         0        0.0     0.0  0.0      3
+7    NOUN   0        15         0        0.0     0.0  0.0    187
+8     NUM   0         0         0        0.0     0.0  0.0      2
+9    PART   0         0         0        0.0     0.0  0.0     26
+10   PRON   0         4         0        0.0     0.0  0.0     94
+11  PROPN   0         0         0        0.0     0.0  0.0     40
+12  PUNCT   0         0         0        0.0     0.0  0.0    116
+13  SCONJ   0         2         0        0.0     0.0  0.0     24
+14   VERB   0        28         0        0.0     0.0  0.0    119
+15      _   0         0         0        0.0     0.0  0.0      6
+
+**********************************************************************************************************
+
+The SCRATCHes have been SUCCESSFULLY cleaned...

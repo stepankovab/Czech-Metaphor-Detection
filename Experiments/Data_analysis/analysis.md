@@ -105,7 +105,7 @@ most common metaphorical POS:
 most common POS in dataset:
 - [('NOUN', 21425), ('ADP', 17043), ('DET', 15863), ('PUNCT', 12729), ('VERB', 9487), ('ADJ', 9409), ('PROPN', 6803), ('SCONJ', 4664), ('PRON', 4372), ('ADV', 4083)]
 
-![POS Spanish](graphs/POS_Spanish_all.png)
+![POS Spanish](graphs/POS_spanish_all.png)
 
 
 ## Spanish TEST
@@ -217,4 +217,40 @@ most common POS in dataset:
 
 ![POS Czech](graphs/POS_Czech.png)
 
+
+
+
+## Czech Poetry
+
+`0.17226277372262774%` of metaphors
+
+685 words, 118 metaphors
+
+- 43 sentences:
+    - shortest sentence: 6
+    - longest sentence: 60
+    - mean length: 15.930232558139535
+    - median length: 11.0
+
+- sentences with metaphor: 32
+
+- most common sentence structure:
+    - [(('NOUN', 'DET', 'AUX', 'ADJ', 'PUNCT', 'CCONJ', 'ADV', 'ADV', 'AUX', 'PRON', 'PUNCT'), 2), (('NOUN', 'PRON', 'VERB', 'VERB', 'ADJ', 'NOUN', 'PUNCT'), 2), (('NOUN', 'ADV', 'VERB', 'NOUN', 'NOUN', 'PUNCT', 'PRON', 'VERB', 'ADJ', 'NOUN', 'PUNCT'), 1), (('PRON', 'ADJ', 'ADV', 'NOUN', 'VERB', 'PUNCT', 'CCONJ', 'PRON', 'VERB', 'ADJ', 'NOUN', 'PUNCT'), 1), (('NOUN', 'VERB', 'CCONJ', 'VERB', 'PUNCT', 'CCONJ', 'ADP', 'ADJ', 'NOUN', 'NOUN', 'NOUN', 'PRON', 'VERB', 'PUNCT', 'SCONJ', 'PRON', 'PRON', 'VERB', 'NOUN', 'PUNCT'), 1)]
+
+- 118 metaphors in the dataset:
+    - min metaphors in sentence: 0
+    - max metaphors in sentence: 11
+    - mean metaphors in sentence: 2.744186046511628
+    - median metaphors in sentence: 2.0
+
+most common metaphorical words:
+- [('srdce', 4), ('utíkal', 2), ('v', 2), ('černá', 2), ('země', 2), ('na', 2), ('sladký', 2), ('modří', 2), ('do', 2), ('k', 2)]
+
+most common metaphorical POS:
+- [('NOUN', 59), ('VERB', 26), ('ADJ', 20), ('ADP', 11), ('DET', 1), ('PROPN', 1)]
+
+most common POS in dataset:
+- [('NOUN', 152), ('PUNCT', 94), ('VERB', 90), ('PRON', 66), ('ADJ', 60), ('ADP', 58), ('DET', 50), ('ADV', 39), ('CCONJ', 32), ('AUX', 29)]
+
+![POS Czech Poetry](graphs/POS_Czech_Poetry.png)
 

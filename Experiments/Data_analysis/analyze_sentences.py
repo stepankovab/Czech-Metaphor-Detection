@@ -136,57 +136,60 @@ most common POS in dataset:
 
 
 
-LANG = 'English'
-SPLIT = 'train'
+# LANG = 'English'
+# SPLIT = 'train'
 
-if LANG == 'Slovenian':
-    with open('Data/Komet_Slovenian/komet_sentences.json', 'r', encoding='utf-8') as f:
-        df = pd.read_json(f)
+# if LANG == 'Slovenian':
+#     with open('Data/Komet_Slovenian/komet_sentences.json', 'r', encoding='utf-8') as f:
+#         df = pd.read_json(f)
 
     
-    if SPLIT == 'train':
-        with open('Data/Komet_Slovenian/komet_train_sentences.json', 'r', encoding='utf-8') as f:
-            df = pd.read_json(f)
+#     if SPLIT == 'train':
+#         with open('Data/Komet_Slovenian/komet_train_sentences.json', 'r', encoding='utf-8') as f:
+#             df = pd.read_json(f)
 
-    elif SPLIT == 'test':
-        with open('Data/Komet_Slovenian/komet_test_sentences.json', 'r', encoding='utf-8') as f:
-            df = pd.read_json(f)
+#     elif SPLIT == 'test':
+#         with open('Data/Komet_Slovenian/komet_test_sentences.json', 'r', encoding='utf-8') as f:
+#             df = pd.read_json(f)
 
 
-elif LANG == 'English':
-    with open('Data/VUA/VUA_sentences.json', 'r', encoding='utf-8') as f:
-        df = pd.read_json(f)
+# elif LANG == 'English':
+#     with open('Data/VUA/VUA_sentences.json', 'r', encoding='utf-8') as f:
+#         df = pd.read_json(f)
     
     
-    if SPLIT == 'train':
-        with open('Data/VUA/VUA_train_sentences.json', 'r', encoding='utf-8') as f:
-            df = pd.read_json(f)
+#     if SPLIT == 'train':
+#         with open('Data/VUA/VUA_train_sentences.json', 'r', encoding='utf-8') as f:
+#             df = pd.read_json(f)
 
-    elif SPLIT == 'test':
-        with open('Data/VUA/VUA_test_sentences.json', 'r', encoding='utf-8') as f:
-            df = pd.read_json(f)
+#     elif SPLIT == 'test':
+#         with open('Data/VUA/VUA_test_sentences.json', 'r', encoding='utf-8') as f:
+#             df = pd.read_json(f)
 
-elif LANG == 'Spanish':
-    with open('Data\cometa_dataset_v1\cometa_test_sentences.json', 'r', encoding='utf-8') as f:
-        df1 = pd.read_json(f)
-    with open('Data\cometa_dataset_v1\cometa_train_sentences.json', 'r', encoding='utf-8') as f:
-        df2 = pd.read_json(f)
+# elif LANG == 'Spanish':
+#     with open('Data\cometa_dataset_v1\cometa_test_sentences.json', 'r', encoding='utf-8') as f:
+#         df1 = pd.read_json(f)
+#     with open('Data\cometa_dataset_v1\cometa_train_sentences.json', 'r', encoding='utf-8') as f:
+#         df2 = pd.read_json(f)
     
-    df = pd.concat([df1, df2])
+#     df = pd.concat([df1, df2])
 
-elif LANG == 'Czech':
-    with open('Data/CZECH_Dalibor/czech_metaphors_sentences.json', 'r', encoding='utf-8') as f:
-        df = pd.read_json(f)
+# elif LANG == 'Czech':
+#     with open('Data/CZECH_Dalibor/czech_metaphors_sentences.json', 'r', encoding='utf-8') as f:
+#         df = pd.read_json(f)
 
-    if SPLIT == 'train':
-        with open('Data/CZECH_Dalibor/czech_metaphors_train_sentences.json', 'r', encoding='utf-8') as f:
-            df = pd.read_json(f)
+#     if SPLIT == 'train':
+#         with open('Data/CZECH_Dalibor/czech_metaphors_train_sentences.json', 'r', encoding='utf-8') as f:
+#             df = pd.read_json(f)
 
-    elif SPLIT == 'test':
-        with open('Data/CZECH_Dalibor/czech_metaphors_test_sentences.json', 'r', encoding='utf-8') as f:
-            df = pd.read_json(f)
+#     elif SPLIT == 'test':
+#         with open('Data/CZECH_Dalibor/czech_metaphors_test_sentences.json', 'r', encoding='utf-8') as f:
+#             df = pd.read_json(f)
 
-analyze(df, LANG)
+# analyze(df, LANG)
 
+with open('Data/CZECH_poetry_sample/czech_poetry_metaphors_sentences.json', 'r', encoding='utf-8') as f:
+    df = pd.read_json(f)
 
+analyze(df, "Czech Poetry")
 

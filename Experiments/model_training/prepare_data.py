@@ -1,8 +1,25 @@
 import pandas as pd
+import numpy as np
 from datasets import Dataset
 
-def load_dataset(language, count, purpose, source_dir):
-    if language == "en":
+def load_dataset(language, count, purpose, source_dir, fold=None, n_folds=None):
+    if n_folds != None and language == "cs":
+        # fold is number from 0 to n-1
+        with open(source_dir + f"/Data/CZECH_Dalibor/czech_metaphors_sentences.json", 'r', encoding='utf-8') as f:
+            all_data_df = pd.read_json(f)
+
+        all_data_df = all_data_df.sample(frac=1, random_state=42).reset_index(drop=True)
+        
+        folds = np.array_split(all_data_df.index, n_folds)
+        test_idx = folds[fold]
+
+        if purpose == "train":
+            data_df = all_data_df.drop(test_idx)
+
+        if purpose == "test":
+            data_df = all_data_df.loc[test_idx]
+        
+    elif language == "en":
         with open(source_dir + f"/Data/VUA/VUA_{purpose}_sentences.json", 'r', encoding='utf-8') as f:
             data_df = pd.read_json(f)[:count]
     elif language == "sl":
@@ -29,7 +46,7 @@ def load_dataset(language, count, purpose, source_dir):
     return data_df
 
 
-def prepare_data(train_languages, train_counts, test_language, test_count, train_only_pos, test_only_pos, source_dir, tokenizer):
+def prepare_data(train_languages, train_counts, test_language, test_count, train_only_pos, test_only_pos, source_dir, tokenizer, fold=None, n_folds=None):
     def align_labels_single_word(encodings, labels):
         aligned_labels = []
 
@@ -77,7 +94,9 @@ def prepare_data(train_languages, train_counts, test_language, test_count, train
         temp_train_df = load_dataset(language=language,
                                count=int(count),
                                purpose="train",
-                               source_dir=source_dir)
+                               source_dir=source_dir,
+                               fold=fold,
+                               n_folds=n_folds)
         
         if len(train_only_pos) > 0:
             temp_train_df = filter_labels_by_pos(df=temp_train_df, pos_to_keep=train_only_pos)
@@ -92,7 +111,7 @@ def prepare_data(train_languages, train_counts, test_language, test_count, train
     train_ds = Dataset.from_dict({"sentences": train_sentences,
                                   "labels": train_labels})
     
-    temp_test_df = load_dataset(test_language, test_count, "test", source_dir=source_dir)
+    temp_test_df = load_dataset(test_language, test_count, "test", source_dir=source_dir, fold=fold, n_folds=n_folds)
 
     if len(test_only_pos) > 0:
         temp_test_df = filter_labels_by_pos(df=temp_test_df, pos_to_keep=test_only_pos)

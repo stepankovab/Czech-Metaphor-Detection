@@ -41,6 +41,10 @@ parser.add_argument("--warmup_ratio", default=0.06, type=float, help="Warmup rat
 parser.add_argument("--loss", default='focal', type=str, help="focal, weighted")
 
 
+parser.add_argument("--fold", default=None, type=int, help="Fold number in k-fold eval")
+parser.add_argument("--n_folds", default=None, type=int, help="Number of folds in k-fold eval.")
+
+
 class WeightedTokenTrainer(Trainer):
     def __init__(self, *args, class_weights=None, **kwargs):
         super().__init__(*args, **kwargs)
@@ -111,7 +115,9 @@ def main(args):
                                                     args.train_only_pos,
                                                     args.test_only_pos,
                                                     args.source_dir,
-                                                    tokenizer)
+                                                    tokenizer,
+                                                    fold=args.fold,
+                                                    n_folds=args.n_folds)
 
     print(train_tokenized, test_tokenized)
 

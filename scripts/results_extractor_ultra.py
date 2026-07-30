@@ -1,3 +1,4 @@
+import numpy as np
 import ast
 from pathlib import Path
 from argparse import Namespace
@@ -173,6 +174,24 @@ def gather_by_train_language_train_amount(entries):
 
 
 
+def gather_by_fold(entries):
+    table_dict = {}
+
+    for entry in entries:
+        args = extract_args(entry)
+        if args.fold not in table_dict:
+            table_dict[args.fold] = {}
+
+        results_dict = extract_result_dict(entry)
+        results_dict.update(extract_pos_results(entry))
+
+        table_dict[args.fold] = results_dict
+
+    print(args.model_name)
+    return table_dict
+
+
+
 
 def gather_by_train_language_permutation(entries):
     table_dict = {}
@@ -300,6 +319,59 @@ def md_table_data_amount(results):
         print(md_table)
 
 
+
+def md_table_epochs(results):
+
+    rows = []
+
+    for langs, metrics in results.items():
+        rows.append([
+            langs,   # no arrows
+            metrics["test_f1"],
+            metrics["test_precision"],
+            metrics["test_recall"],
+            metrics["ADJ"]["f1"],
+            metrics["NOUN"]["f1"],
+            metrics["VERB"]["f1"],
+        ])
+
+    # Order by F1 descending
+    rows = sorted(rows, key=lambda x: x[1], reverse=True)
+
+    # Average row
+    avg_row = ["Average"]
+    for col in range(1, len(rows[0])):
+        avg_row.append(sum(row[col] for row in rows) / len(rows))
+
+    rows.append(avg_row)
+
+
+    # Format numbers
+    formatted_rows = [
+        [row[0], *[f"{x:.3f}" for x in row[1:]]]
+        for row in rows
+    ]
+
+    headers = [
+        "folds",
+        "F1",
+        "Precision",
+        "Recall",
+        "ADJ F1",
+        "NOUN F1",
+        "VERB F1",
+    ]
+
+    md_table = tabulate(
+        formatted_rows,
+        headers=headers,
+        tablefmt="github"
+    )
+
+    print(md_table)
+
+
+
 import matplotlib.pyplot as plt
 
 def plot_language_results(results, lang, outfile):
@@ -343,21 +415,33 @@ if __name__ == "__main__":
     # file_name = "/storage/brno2/home/stepanb2/Czech-Metaphor-Detection/out_large_scale/Monolingual_data_amount_mm.o20772848"
     # file_name = "/storage/brno2/home/stepanb2/Czech-Metaphor-Detection/out_large_scale/Monolingual_data_amount.o20772810"
     # file_name = "/storage/brno2/home/stepanb2/Czech-Metaphor-Detection/out_large_scale/unannotated_data_amount_mm.o20810683"
-    file_name = "/storage/brno2/home/stepanb2/Czech-Metaphor-Detection/out_large_scale/Multilingual_data_amount_2_mm.o20772847"
+    # file_name = "/storage/brno2/home/stepanb2/Czech-Metaphor-Detection/out_large_scale/Multilingual_data_amount_2_mm.o20772847"
     # file_name = "/storage/brno2/home/stepanb2/Czech-Metaphor-Detection/out_large_scale/Multilingual_data_amount_2.o20772811"
     # file_name = "/storage/brno2/home/stepanb2/Czech-Metaphor-Detection/out_large_scale/language_permutations.o20772805"
+    # file_name = "/storage/brno2/home/stepanb2/Czech-Metaphor-Detection/epochs_exp_05.o22300674"
+    # file_name = "/storage/brno2/home/stepanb2/Czech-Metaphor-Detection/epochs_exp_09.o22300672"
+    # file_name = "/storage/brno2/home/stepanb2/Czech-Metaphor-Detection/epochs_exp_09_further.o22305345"
+    # file_name = "/storage/brno2/home/stepanb2/Czech-Metaphor-Detection/kfold_czech.o22305580"
+    # file_name = "/storage/brno2/home/stepanb2/Czech-Metaphor-Detection/kfold_czech_3ep_05_500sent.o22305719"
+    # file_name = "/storage/brno2/home/stepanb2/Czech-Metaphor-Detection/kfold_czech_3ep_05_1000sent.o22305715"
+    # file_name = "/storage/brno2/home/stepanb2/Czech-Metaphor-Detection/kfold_czech_3ep_05.o22305707"
+    # file_name = "/storage/brno2/home/stepanb2/Czech-Metaphor-Detection/kfold_czech_7ep_09.o22305706"
+    # file_name = "/storage/brno2/home/stepanb2/Czech-Metaphor-Detection/kfold_ADJ_NOUN_VERB.o22332064"
+
+    file_name = "/storage/brno2/home/stepanb2/Czech-Metaphor-Detection/kfold_cs_only.o22523724"
 
     entries = read_and_parse_entries(file_name)
-    
-    a = gather_by_train_language_train_amount(entries)
+
+    a = gather_by_fold(entries)
+    # a = gather_by_train_language_train_amount(entries)
     # a = gather_by_train_language_permutation(entries)
     # b = only_relevant_metrics(a)
 
-    # md_table_lang_order(b)
+    md_table_epochs(a)
 
     # md_table_data_amount(a)
     # plot_language_results(a, "cs_unannotated", "fig_cs_unannotated")
-    plot_language_results(a, "es", "fig_es_multilingual")
+    # plot_language_results(a, "es", "fig_es_multilingual")
 
 
 

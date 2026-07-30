@@ -1,7 +1,0 @@
-{'train_runtime': 1538.6964, 'train_samples_per_second': 0.756, 'train_steps_per_second': 0.025, 'train_loss': 0.4233069297594902, 'epoch': 3.0}
-Evaluation on VUAMC: {'eval_loss': 0.34134748578071594, 'eval_accuracy': 0.8425, 'eval_precision': 0.5478991596638656, 'eval_recall': 0.8763440860215054, 'eval_f1': 0.6742502585315409, 'eval_runtime': 23.6675, 'eval_samples_per_second': 3.465, 'eval_steps_per_second': 0.127, 'epoch': 3.0}
-{'eval_loss': 0.34134748578071594, 'eval_accuracy': 0.8425, 'eval_precision': 0.5478991596638656, 'eval_recall': 0.8763440860215054, 'eval_f1': 0.6742502585315409, 'eval_runtime': 23.6675, 'eval_samples_per_second': 3.465, 'eval_steps_per_second': 0.127, 'epoch': 3.0}
-
-**********************************************************************************************************
-
-The SCRATCHes have been SUCCESSFULLY cleaned...

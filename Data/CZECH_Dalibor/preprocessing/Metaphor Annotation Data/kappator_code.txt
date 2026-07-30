@@ -1,0 +1,117 @@
+import xlrd
+import os
+
+#############################################
+## VSTUPY PROGRAMU
+
+file_location = "C:/data/ROUND2_FICFIN.xlsx"
+list_index = 0                                #výbìr listu xls dokumentu (od nuly)
+#############################################
+
+#F-ce pøevodu èísla sloupce do excelovského formátu
+def int_to_abc(n):
+    abeceda = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "z", "y", "z"]
+    vysledek_list = []
+    pismeno = []
+    while n > 0:
+        pocet_abeced = (n // 26)
+        zbytek = (n % 26)
+        n = pocet_abeced
+        vysledek_list.append(zbytek)
+
+    for i,j in enumerate(vysledek_list):
+        pismeno.append(abeceda[j-1])
+
+    XLS_list = pismeno[::-1]
+    XLS_kod = ''.join(XLS_list)    
+    return (XLS_kod)
+
+
+workbook = xlrd.open_workbook (file_location)
+sheet = workbook.sheet_by_index(list_index)
+n_anotatoru = 0
+
+for r in range(sheet.nrows):
+  if sheet.cell_value(r, 0) == 0 or sheet.cell_value(r, 0) == 1:
+    n_anotatoru = n_anotatoru + 1
+
+nula = []
+jedna = []
+pocet_nul = 0
+pocet_jednicek = 0
+seznam_chyb = []
+seznam_nesouhlasu = []
+seznam_metafor_111 = []
+
+for c in range(sheet.ncols):
+  for r in range(2, sheet.nrows):
+    hodnota_bunky = sheet.cell_value(r, c)
+    if hodnota_bunky == 1:
+      pocet_jednicek = pocet_jednicek + 1
+    elif hodnota_bunky == 0:
+      pocet_nul = pocet_nul + 1
+#Kontrola integrity dat    
+  if pocet_jednicek + pocet_nul != n_anotatoru:
+    seznam_chyb.append({"slovo" : sheet.cell_value(1, c), "sloupec od nuly" : c})
+#Hledání neshody anotátorù    
+  if pocet_jednicek != n_anotatoru and pocet_jednicek != 0:
+    seznam_nesouhlasu.append(c)
+#Hledání jednomyslných souhlasù, že je MRW    
+  if pocet_jednicek == n_anotatoru:
+    seznam_metafor_111.append(c)    
+
+  jedna.append(pocet_jednicek)
+  nula.append(pocet_nul)
+  pocet_nul = 0
+  pocet_jednicek = 0
+#Chybové hlášení pøi nekompletních datech
+if len(seznam_chyb) != 0:
+  print ("Data error: please, check your data")
+  print ("Errors found:")
+  print (seznam_chyb)
+  os.system('pause')
+  quit() 
+
+N_pripadu = sheet.ncols
+
+print ("token count =")
+print (N_pripadu)
+print ("annotator count =")
+print (n_anotatoru)
+
+p1 = sum (jedna) / (N_pripadu * n_anotatoru)
+p2 = sum (nula) / (N_pripadu * n_anotatoru)
+
+P = 0
+sum_P = 0
+
+for s in range(len(jedna)):
+  P = (1 / (n_anotatoru * (n_anotatoru - 1))) * (jedna[s] ** 2 + nula[s] ** 2 - n_anotatoru)
+  sum_P = sum_P + P
+
+mean_P = sum_P / N_pripadu
+P_e = p1 ** 2 + p2 ** 2
+
+kappa = (mean_P - P_e) / (1 - P_e)
+
+print ("Fleiss' kappa =")
+print (kappa)
+seznam_nesouhlasu_xls = []
+
+for x in range(len(seznam_nesouhlasu)):
+    seznam_nesouhlasu[x] = seznam_nesouhlasu[x] + 1
+    seznam_nesouhlasu_xls.append(int_to_abc(seznam_nesouhlasu[x]))
+
+print ("unanimously agreed MRWs count = ")
+print (len(seznam_metafor_111))
+print ("disagreement count = ")
+print (len(seznam_nesouhlasu))
+print ("list of rows containing disagreements:")
+print (seznam_nesouhlasu_xls)
+print ("list of rcd numbers:")
+print (seznam_nesouhlasu)
+
+
+
+
+

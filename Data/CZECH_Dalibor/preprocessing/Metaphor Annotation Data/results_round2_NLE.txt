@@ -1,0 +1,41 @@
+2nd round annotation:
+
+Všechno:
+token count = 2463
+Fleiss' kappa = 0.8802663987555106
+unanimously agreed MRWs count = 252
+disagreement count = 94
+
+Academic:
+token count = 640
+Fleiss' kappa = 0.8977240443195813
+unanimously agreed MRWs count = 92
+disagreement count = 27
+
+Fiction:
+token count = 614
+Fleiss' kappa = 0.8756013789909678
+unanimously agreed MRWs count = 53
+disagreement count = 21
+
+News:
+token count = 580
+Fleiss' kappa = 0.8847682119205295
+unanimously agreed MRWs count = 66
+disagreement count = 23
+
+Spoken:
+token count = 629
+Fleiss' kappa = 0.8420357267645014
+unanimously agreed MRWs count = 41
+disagreement count = 23
+
+
+NLE Fleiss' kappa:
+
+Všechno = 0.9377861567465668
+
+Academic = 0.9686363636363637
+Fiction = 0.8982074263764405
+News = 0.8988970588235297
+Spoken = 1.0
